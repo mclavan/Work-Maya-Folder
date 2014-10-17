@@ -1,0 +1,414 @@
+global proc shelf_W_Aaren () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    $gBuffStr = `toolButton -style iconOnly -doubleClickCommand "toolPropertyWindow" -cl toolCluster `;
+    $gBuffStr1 = `    polySplitCtx
+        -image1 "polySplitFacet.png" 
+        -image2 "vacantCell.png" 
+        -image3 "vacantCell.png" 
+        -subdivision 1
+        -precsnap 30
+        -magnetsnap 1
+        -enablesnap 1
+        -snaptoedge 0
+        -smoothingangle 0
+`;
+    toolButton -edit -tool $gBuffStr1 -toolImage1 $gBuffStr1 "polySplitFacet.png" $gBuffStr;
+    toolButton -edit -tool $gBuffStr1 $gBuffStr;
+
+    $gBuffStr = `toolButton -style iconOnly -doubleClickCommand "toolPropertyWindow" -cl toolCluster `;
+    $gBuffStr1 = `    polySelectEditCtx
+        -image1 "polySplitEdgeRing.png" 
+        -image2 "vacantCell.png" 
+        -image3 "vacantCell.png" 
+        -mode 1
+        -autoComplete 1
+        -divisions 2
+        -useEqualMultiplier 1
+        -fixQuads 1
+        -smoothingAngle 30
+        -splitType 1
+        -insertWithEdgeFlow 0
+        -adjustEdgeFlow 1
+`;
+    toolButton -edit -tool $gBuffStr1 -toolImage1 $gBuffStr1 "polySplitEdgeRing.png" $gBuffStr;
+    toolButton -edit -tool $gBuffStr1 $gBuffStr;
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "FreezeTransformations" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateParentConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Click to place joint. Click on existing joint to add to skeleton. Click-Drag to position joint." 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinJoint.png" 
+        -image1 "kinJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "JointTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create IK handle on joint chain" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK Handle Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "IKHandleTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Customize the joint scale" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Size..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "jdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Customize the IK handle scale" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK Handle Size..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IHS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ikHdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a cluster for each CV in the selected curve(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cluster Curve" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "selectCluster.png" 
+        -image1 "selectCluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ClusterCurve" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Orient" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateOrientConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "\nimport walker\nreload(walker)" 
+        -enableBackground 0
+        -align "center" 
+        -label "snap" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "snap" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "\nimport walker\nreload(walker)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "\n\tselected = pm.ls(selection=True)\n\t# print 'Current selection', selected \n\n\troot_joint = selected[0]\n\t#create empty group\n\t# empty = True\n\tpad = pm.group(empty=True)\n\n\t# move group to joint.\n\t\t#delete constraint.\n\tkenny = pm.pointConstraint(root_joint, pad)\n\tpm.delete(kenny)\t\n\n\t# Freeze transforms on group.\n\tpm.makeIdentity(pad, apply=True, t=1, r=1, s=1, n=0)\n\t# parent joint to group.\n\tpm.parent(root_joint,pad)\n\n\n\t#rename \n\tpad_name = root_joint.replace('01_bind', '00_pad')\n\tpad.rename(pad_name)\n\n\tprint 'Padding Group Created' \n\n# Error: line 1: unexpected indent\n#   File \"<maya console>\", line 3\n#     selected = pm.ls(selection=True)\n#    ^\n# IndentationError: unexpected indent # \n" 
+        -enableBackground 0
+        -align "center" 
+        -label "PAD" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PAD" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "\n\tselected = pm.ls(selection=True)\n\t# print 'Current selection', selected \n\n\troot_joint = selected[0]\n\t#create empty group\n\t# empty = True\n\tpad = pm.group(empty=True)\n\n\t# move group to joint.\n\t\t#delete constraint.\n\tkenny = pm.pointConstraint(root_joint, pad)\n\tpm.delete(kenny)\t\n\n\t# Freeze transforms on group.\n\tpm.makeIdentity(pad, apply=True, t=1, r=1, s=1, n=0)\n\t# parent joint to group.\n\tpm.parent(root_joint,pad)\n\n\n\t#rename \n\tpad_name = root_joint.replace('01_bind', '00_pad')\n\tpad.rename(pad_name)\n\n\tprint 'Padding Group Created' \n\n# Error: line 1: unexpected indent\n#   File \"<maya console>\", line 3\n#     selected = pm.ls(selection=True)\n#    ^\n# IndentationError: unexpected indent # \n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\n# Get selected\nselected = pm.ls(selection=True)\n# print 'Joints selected', selected\n# target_joint = selected[0]\nfor target_joint in selected:\n\t\n    control_icon_name = target_joint.replace('_bind', '_icon')\n    local_pad_name = target_joint.replace('_bind', '_local')\n    \n    #create control\n    #normal set to x radius is 1.8 \n    control_icon = pm.circle(normal=[1,0,0], radius=1.8,\n    name= control_icon_name)[0] \n    #group control (NOT EMPTY GROUP)\n    local_pad = pm.group(name= local_pad_name)\n    \n    print 'control_icon'\n    print 'pad created'\n    # Move group to target joint\n    # Delete kenny\n    \n    kenny = pm.parentConstraint(target_joint, local_pad)\n    pm.delete(kenny)\n    \n    #orientConstraint joint to control \n    pm.orientConstraint(control_icon, target_joint)\n    \n    \n    \n    print 'Local Oriented Controls Created'\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "PRIME" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PRIME" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\n# Get selected\nselected = pm.ls(selection=True)\n# print 'Joints selected', selected\n# target_joint = selected[0]\nfor target_joint in selected:\n\t\n    control_icon_name = target_joint.replace('_bind', '_icon')\n    local_pad_name = target_joint.replace('_bind', '_local')\n    \n    #create control\n    #normal set to x radius is 1.8 \n    control_icon = pm.circle(normal=[1,0,0], radius=1.8,\n    name= control_icon_name)[0] \n    #group control (NOT EMPTY GROUP)\n    local_pad = pm.group(name= local_pad_name)\n    \n    print 'control_icon'\n    print 'pad created'\n    # Move group to target joint\n    # Delete kenny\n    \n    kenny = pm.parentConstraint(target_joint, local_pad)\n    pm.delete(kenny)\n    \n    #orientConstraint joint to control \n    pm.orientConstraint(control_icon, target_joint)\n    \n    \n    \n    print 'Local Oriented Controls Created'\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "count = count + 1 " 
+        -enableBackground 0
+        -align "center" 
+        -label "NAME" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NAME" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "count = count + 1 " 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

@@ -1,0 +1,468 @@
+global proc shelf_hallTristan_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 1
+        -align "center" 
+        -label "History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freezes Transformations on Selected Object(s)" 
+        -enableBackground 1
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "FreezeTransformations" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Center Pivots on Selected Object(s)" 
+        -enableBackground 1
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freezes Transforms, Centers Pivots, and Deletes History on Selected Object(s)" 
+        -enableBackground 1
+        -align "center" 
+        -label "NUKE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NUKE" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory;\nFreezeTransformations;\nCenterPivot;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS Circle on the Grid" 
+        -enableBackground 1
+        -align "center" 
+        -label "Circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Circle" 
+        -overlayLabelColor 0.92795 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "circle -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 3.53146e-07 -s 8 -ch 1; objectMoveCommand" 
+        -sourceType "mel" 
+        -doubleClickCommand "CreateNURBSCircleOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS Square on the Grid" 
+        -enableBackground 1
+        -align "center" 
+        -label "Square" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Square" 
+        -overlayLabelColor 0.92795 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d -1 -p -1 0 -1 -p 1 0 -1 -p 1 0 1 -p -1 0 1 -p -1 0 -1 -k 0 -k 1 -k 2 -k 3 -k 4 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a NURBS Cube on the Grid" 
+        -enableBackground 1
+        -align "center" 
+        -label "Cube" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 0.92795 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p 2.584201 6.08012 2.567347 -p 2.584201 6.08012 -2.601056 -p -2.584201 6.08012 -2.601056 -p -2.584201 6.08012 2.567347 -p 2.584201 6.08012 2.567347 -p 2.584201 0.911717 2.567347 -p 2.584201 0.911717 -2.601056 -p 2.584201 6.08012 -2.601056 -p 2.584201 0.911717 -2.601056 -p -2.584201 0.911717 -2.601056 -p -2.584201 6.08012 -2.601056 -p -2.584201 0.911717 -2.601056 -p -2.584201 0.911717 2.567347 -p -2.584201 6.08012 2.567347 -p -2.584201 0.911717 2.567347 -p 2.584201 0.911717 2.567347 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a NURBS Arrow on the Grid" 
+        -enableBackground 1
+        -align "center" 
+        -label "Arrow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Arrow" 
+        -overlayLabelColor 0.92795 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p 0.940182 0.501604 -0.312278 -p 0.5 0.5025 -0.31487 -p 0.5 0.5025 1.351845 -p -0.5 0.5025 1.351845 -p -0.5 0.5025 -0.31487 -p -0.940182 0.501604 -0.312278 -p 0 0.501604 -1.978424 -p 0.940182 0.501604 -0.312278 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import Toolsets\nreload(Toolsets)\nToolsets.hierarchy()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "HIER" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "HIER" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Toolsets\nreload(Toolsets)\nToolsets.hierarchy()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "PAD" 
+        -enableBackground 0
+        -align "center" 
+        -label "PAD" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PAD" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Toolsets\nreload(Toolsets)\nToolsets.padding_tool()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import Toolsets\nreload(Toolsets)\nToolsets.joint_renamer()\n\nRigging Tools Active\nSelected Items: [nt.Joint(u'lt_middle_01_bind'), nt.Joint(u'lt_middle_02_bind'), nt.Joint(u'lt_middle_03_bind'), nt.Joint(u'lt_middle_04_waste')]\nNew Name: ct_finger_1_bind\nNew Name: ct_finger_2_bind\nNew Name: ct_finger_3_bind\nNew Name: ct_finger_4_bind\n# Error: line 1: rename() takes exactly 2 arguments (1 given)\n# Traceback (most recent call last):\n#   File \"<maya console>\", line 3, in <module>\n#   File \"/Users/tristanhall/Library/Preferences/Autodesk/maya/scripts/Toolsets.py\", line 189, in joint_renamer\n#     current_joint.rename()\n# TypeError: rename() takes exactly 2 arguments (1 given) # \n" 
+        -enableBackground 0
+        -align "center" 
+        -label "Rename" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Rename" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Toolsets\nreload(Toolsets)\nToolsets.joint_renamer()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import This\nreload(This)" 
+        -enableBackground 0
+        -align "center" 
+        -label "LOCK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LOCK" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import This\nreload(This)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import This2\nreload(This2)" 
+        -enableBackground 0
+        -align "center" 
+        -label "SHOW" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SHOW" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import This2\nreload(This2)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "ExtractFace;" 
+        -enableBackground 0
+        -align "center" 
+        -label "EXTRACT" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "EXTRACT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ExtractFace;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "polyUnite;" 
+        -enableBackground 0
+        -align "center" 
+        -label "COMBINE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "COMBINE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "polyUnite;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "polySeparate -ch 1 polySurfaceShape2;" 
+        -enableBackground 0
+        -align "center" 
+        -label "SEPARATE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SEPARATE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "polySeparate -ch 1 polySurfaceShape2;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "DetachComponent;" 
+        -enableBackground 0
+        -align "center" 
+        -label "DETACH" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "DETACH" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DetachComponent;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

@@ -1,0 +1,602 @@
+global proc shelf_Alanis_Jimenez_Adrian_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "Circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Ci" 
+        -overlayLabelColor 0 0 1 
+        -overlayLabelBackColor 0.691279 0.691279 0.691279 0.9 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.circle()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "Square" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Sq" 
+        -overlayLabelColor 0 0 1 
+        -overlayLabelBackColor 0.691279 0.691279 0.691279 0.9 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "mel_line=\"curve -d 0 -p 0 0 0 -p 0 0 2 -p 2 0 2 -p 2 0 0 -p 0 0 0 -k 0 -k 1 -k 2 -k 3 -k 4 ;\"\npm.mel.eval(mel_line)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cube" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 0 0 1 
+        -overlayLabelBackColor 0.691279 0.691279 0.691279 0.8 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "mel_line=\"curve -d 1 -p -1 1 1 -p -1 1 -1 -p 1 1 -1 -p 1 -1 -1 -p -1 -1 -1 -p -1 1 -1 -p 1 1 -1 -p 1 1 1 -p 1 -1 1 -p 1 -1 -1 -p -1 -1 -1 -p -1 -1 1 -p -1 1 1 -p -1 1 1 -p 1 1 1 -p 1 1 1 -p 1 -1 1 -p -1 -1 1 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 -k 17 ;\"\npm.mel.eval(mel_line)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "Arrow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Arrow" 
+        -overlayLabelColor 0 0 1 
+        -overlayLabelBackColor 0.691279 0.691279 0.691279 0.8 
+        -image "plane.png" 
+        -image1 "plane.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "mel_line=\"curve -d 1 -p -0.2 0 -0.2 -p -0.0666667 0 -0.2 -p -0.0666667 0 -0.0666667 -p 0 0 -0.0666667 -p -0.133333 0 0.133333 -p -0.266667 0 -0.0666667 -p -0.2 0 -0.0666667 -p -0.2 0 -0.2 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;\"\npm.mel.eval(mel_line)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 27
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "FT" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0.018 0.018 0.018 0.7 
+        -image "translate_NEX.png" 
+        -image1 "translate_NEX.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "DeleteHistory" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "DH" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0.018 0.018 0.018 0.8 
+        -image "deleteCacheHistory.png" 
+        -image1 "deleteCacheHistory.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.delete(ch=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 27
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 0.7 
+        -image "translate_NEX.png" 
+        -image1 "translate_NEX.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.xform (cp= True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "Clusters" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Clust" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.cluster('lt_middle_01_bind','lt_middle_04_waste')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "Ik handle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IK" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "kinConnect.png" 
+        -image1 "kinConnect.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.ikHandle( n = \"lt_middle_01_bind\",ee=\"lt_middle_04_waste\")" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "Hierarchy" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hier" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "detachSkin.png" 
+        -image1 "detachSkin.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Alanis_Jimenez_Adrian_riggingTools_cri1_1405\nreload (Alanis_Jimenez_Adrian_riggingTools_cri1_1405)\nAlanis_Jimenez_Adrian_riggingTools_cri1_1405.hierarchy_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import Alanis_Jimenez_Adrian_riggingTools_cri1_1405\nreload (Alanis_Jimenez_Adrian_riggingTools_cri1_1405)\nAlanis_Jimenez_Adrian_riggingTools_cri1_1405.renaming_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "ReName" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Name" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "detachSkin.png" 
+        -image1 "detachSkin.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Alanis_Jimenez_Adrian_riggingTools_cri1_1405\nreload (Alanis_Jimenez_Adrian_riggingTools_cri1_1405)\nAlanis_Jimenez_Adrian_riggingTools_cri1_1405.renaming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import Alanis_Jimenez_Adrian_riggingTools_cri1_1405\nreload (Alanis_Jimenez_Adrian_riggingTools_cri1_1405)\nAlanis_Jimenez_Adrian_riggingTools_cri1_1405.padding_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Pad" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Pad" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "detachSkin.png" 
+        -image1 "detachSkin.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Alanis_Jimenez_Adrian_riggingTools_cri1_1405\nreload (Alanis_Jimenez_Adrian_riggingTools_cri1_1405)\nAlanis_Jimenez_Adrian_riggingTools_cri1_1405.padding_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import Alanis_Jimenez_Adrian_riggingTools_cri1_1405\nreload (Alanis_Jimenez_Adrian_riggingTools_cri1_1405)\nAlanis_Jimenez_Adrian_riggingTools_cri1_1405.priming_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Prim" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Prim" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.8 
+        -image "detachSkin.png" 
+        -image1 "detachSkin.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Alanis_Jimenez_Adrian_riggingTools_cri1_1405\nreload (Alanis_Jimenez_Adrian_riggingTools_cri1_1405)\nAlanis_Jimenez_Adrian_riggingTools_cri1_1405.priming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import Alanis_Jimenez_Adrian_riggingTools_cri1_1405\nreload (Alanis_Jimenez_Adrian_riggingTools_cri1_1405)\nAlanis_Jimenez_Adrian_riggingTools_cri1_1405.unlock_show_trsv()" 
+        -enableBackground 0
+        -align "center" 
+        -label "UnlockShow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "u/s" 
+        -overlayLabelColor 0.2036 1 0 
+        -overlayLabelBackColor 0 0 0 0.4 
+        -image "lock.png" 
+        -image1 "lock.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Alanis_Jimenez_Adrian_riggingTools_cri1_1405\nreload (Alanis_Jimenez_Adrian_riggingTools_cri1_1405)\nAlanis_Jimenez_Adrian_riggingTools_cri1_1405.unlock_show_trsv()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 0
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import Alanis_Jimenez_Adrian_riggingTools_cri1_1405\nreload (Alanis_Jimenez_Adrian_riggingTools_cri1_1405)\nAlanis_Jimenez_Adrian_riggingTools_cri1_1405.lock_hide_rsv()" 
+        -enableBackground 0
+        -align "center" 
+        -label "LockHide" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "l/h" 
+        -overlayLabelColor 0.2036 1 0 
+        -overlayLabelBackColor 0 0 0 0.6 
+        -image "lock.png" 
+        -image1 "lock.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Alanis_Jimenez_Adrian_riggingTools_cri1_1405\nreload (Alanis_Jimenez_Adrian_riggingTools_cri1_1405)\nAlanis_Jimenez_Adrian_riggingTools_cri1_1405.lock_hide_rsv()" 
+        -sourceType "python" 
+        -commandRepeatable 0
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent Constraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "par" 
+        -overlayLabelColor 0 0.90604 0.90604 
+        -overlayLabelBackColor 0.577181 0.577181 0.577181 1 
+        -image "parent.png" 
+        -image1 "parent.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.parentConstraint('cube1','cube2')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "OrienConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Ori" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0.744966 0.744966 0.744966 0.7 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.orientConstraint('cube1','cube2')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "PointConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Point" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0.771812 0.771812 0.771812 0.7 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.pointConstraint('cube1','cube2')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "PoleVectorConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PoleV" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0.624161 0.624161 0.624161 0.7 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.poleVectorConstraint('cube1','cube2')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "Float" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Float" 
+        -overlayLabelColor 0.88 0.541188 0.37928 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "alignMax.png" 
+        -image1 "alignMax.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "selected =pm.ls(selection=True)\nfirst_selected =selected[0]\nfirst_selected.addAttr('Float', keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "Separator" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Sep" 
+        -overlayLabelColor 0.88 0.541188 0.37928 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "alignOnMax.png" 
+        -image1 "alignOnMax.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "selected =pm.ls(selection=True)\nfirst_selected =selected[0]\nfirst_selected.addAttr('Separator', at='enum', en='---', keyable=True)\nfirst_selected.Separator.set(lock=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Temp" 
+        -enableBackground 0
+        -align "center" 
+        -label "Temp" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Temp" 
+        -overlayLabelColor 0.88 0.541188 0.37928 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "alignOnMax.png" 
+        -image1 "alignOnMax.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "selected =pm.ls(selection=True)\nfirst_selected =selected[0]\nfirst_selected.addAttr('index_curl', keyable=True)\nfirst_selected.addAttr('middle_curl', keyable=True)\nfirst_selected.addAttr('pinky_curl', keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

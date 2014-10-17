@@ -1,0 +1,947 @@
+global proc shelf_shelf_BrownKevin_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Joint Size..." 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Size..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "jdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "divider" 
+        -enableBackground 0
+        -align "center" 
+        -label "divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Locks and Hides translates on selected" 
+        -enableBackground 0
+        -align "center" 
+        -label "Lock and Hide trans" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LH tr" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "moveNormal.png" 
+        -image1 "moveNormal.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.lock_and_hide_trans()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "locks and Hides rotates on selected" 
+        -enableBackground 0
+        -align "center" 
+        -label "Lock and Hide rotate" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LH ro" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "moveNormal.png" 
+        -image1 "moveNormal.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.lock_and_hide_rotate()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Locks and Hides scale on selected" 
+        -enableBackground 0
+        -align "center" 
+        -label "Lock and Hide scale" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LH sc" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "moveNormal.png" 
+        -image1 "moveNormal.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.lock_and_hide_scale()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Unlock and Show attributes" 
+        -enableBackground 0
+        -align "center" 
+        -label "Unlock and Show" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Ulock" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "selectTimeWarp.png" 
+        -image1 "selectTimeWarp.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.unlock_and_show()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "divider" 
+        -enableBackground 0
+        -align "center" 
+        -label "divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates IK system for legs" 
+        -enableBackground 0
+        -align "center" 
+        -label "Leg IK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LegIK" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "cvHardness.png" 
+        -image1 "cvHardness.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload(BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.leg_ik()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "User Script" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Renames joints type in Orientation then Joint type" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Renamer" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Jname" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "greasePencilPencil.png" 
+        -image1 "greasePencilPencil.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Primes joints" 
+        -enableBackground 0
+        -align "center" 
+        -label "Priming Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Prime" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "kinReroot.png" 
+        -image1 "kinReroot.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.priming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "creates pads for selected joints" 
+        -enableBackground 0
+        -align "center" 
+        -label "Padding Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Jpad" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "kinInsert.png" 
+        -image1 "kinInsert.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.padding_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates control Icons for selected joints" 
+        -enableBackground 0
+        -align "center" 
+        -label "Control Icons" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Icon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "kinSplineHandle.png" 
+        -image1 "kinSplineHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.control_icon()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "creates Hierarchy" 
+        -enableBackground 0
+        -align "center" 
+        -label "Hierarchy" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hrchy" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "arealight.png" 
+        -image1 "arealight.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.hierarchy()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "divider" 
+        -enableBackground 0
+        -align "center" 
+        -label "divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "colors selected blue" 
+        -enableBackground 0
+        -align "center" 
+        -label "Color blue" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "BLUE" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 1 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.color_blue()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Colors selected yellow" 
+        -enableBackground 0
+        -align "center" 
+        -label "Color yellow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "YELO" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 1 1 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.color_yellow()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Colors selected red" 
+        -enableBackground 0
+        -align "center" 
+        -label "Color red" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RED" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 1 0 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.color_red()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "creates a circle, double click to create a 16 point circle" 
+        -enableBackground 0
+        -align "center" 
+        -label "Create circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Crcle" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.circle_control()" 
+        -sourceType "python" 
+        -doubleClickCommand "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.circle_control16()" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "creates square control" 
+        -enableBackground 0
+        -align "center" 
+        -label "Square control" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Square" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.square_control()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates an arrow that is used for controls" 
+        -enableBackground 0
+        -align "center" 
+        -label "Arrow Control" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Arrow" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "directionallight.png" 
+        -image1 "directionallight.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.arrow_control()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "creates a cube to use as a conrol" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cube Control" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.cube_control()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "freezes transforms, and deletes history" 
+        -enableBackground 0
+        -align "center" 
+        -label "Nuke" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NUKE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "flameCurly.png" 
+        -image1 "flameCurly.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.nuke()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "creates a float attribute on selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Float Attribute" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FL att" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "fluidaddOceanLocator.png" 
+        -image1 "fluidaddOceanLocator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.float_att()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a spereater attribute on selected." 
+        -enableBackground 0
+        -align "center" 
+        -label "Seperater Attribute" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SP att" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "fluidaddOceanPreviewPlane.png" 
+        -image1 "fluidaddOceanPreviewPlane.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.sep_att()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Parent Constratin on selected objects and snaps to posistion, double-click maintains offset." 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent Constraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Pcon" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 1 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.parent_con()" 
+        -sourceType "python" 
+        -doubleClickCommand "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.parent_con_offset()" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Orient constraint selected objects with snapping, double-click maintains offset." 
+        -enableBackground 0
+        -align "center" 
+        -label "Orient Constraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Ocon" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 1 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.orient_con()" 
+        -sourceType "python" 
+        -doubleClickCommand "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.orient_con_offset()" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates point constraint on selected and snaps. double-click to maintain offset." 
+        -enableBackground 0
+        -align "center" 
+        -label "Point Constraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PtCo" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 1 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.point_con()" 
+        -sourceType "python" 
+        -doubleClickCommand "import BrownKevin_riggingTools_cri1_1408\nreload (BrownKevin_riggingTools_cri1_1408)\nBrownKevin_riggingTools_cri1_1408.point_con_offset()" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

@@ -1,0 +1,919 @@
+global proc shelf_pettyHuston_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freezes Transforms, Deletes History, and Centers Pivot all at once." 
+        -enableBackground 1
+        -align "center" 
+        -label "NUKE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/NUKE_icon.png" 
+        -image1 "Custom_Icons/NUKE_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected = pm.ls(selection=True)\n\nfor indiv in selected:\n\n\tpm.makeIdentity(indiv, a=True, t=1, r=1, s=1, n=0)\n\n\tpm.delete(indiv, constructionHistory=True)\n\n\tpm.xform(indiv, centerPivots=True)\n\nprint '!!!NUKED!!!'\n\t" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Deletes construction history of selected object(s)." 
+        -enableBackground 1
+        -align "center" 
+        -label "Delete History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/delete_history_icon.png" 
+        -image1 "Custom_Icons/delete_history_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected = pm.ls(selection=True)\n\nfor indiv in selected:\n\n\tpm.delete(indiv, constructionHistory=True)\n\nprint 'History Deleted Successfully'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freezes Tranformations of selected object(s)." 
+        -enableBackground 1
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/freeze_transforms_icon.png" 
+        -image1 "Custom_Icons/freeze_transforms_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected = pm.ls(selection=True)\n\nfor indiv in selected:\n\t\n\tpm.makeIdentity(indiv, a=True, t=1, r=1, s=1, n=0)\n\nprint 'Transforms Frozen Successfully'\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Centers pivot of selected object(s)." 
+        -enableBackground 1
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/center_pivot_icon.png" 
+        -image1 "Custom_Icons/center_pivot_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected = pm.ls(selection=True)\n\nfor indiv in selected:\n\tpm.xform(indiv, centerPivots=True)\n\nprint 'Pivot(s) Centered Successfully'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Divider Only; Not a Button" 
+        -enableBackground 0
+        -align "center" 
+        -label "Divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/Divider_icon.png" 
+        -image1 "Custom_Icons/Divider_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"Divider, Not a Button\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Primes selected icon and parents to selected joint; Select Icon FIRST and joint SECOND" 
+        -enableBackground 0
+        -align "center" 
+        -label "Prime" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/Prime_icon.png" 
+        -image1 "Custom_Icons/Prime_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "# Prime an Icon\n\n\nimport pymel.core as pm\n\n\n\n# make a null group\n# group the null group\n\n# name the groups\n\n# parent constrain the null to the proper joint\n# delete the constraint\n# directly parent the icon to the sdk group\n# freeze transforms on the icon\n\n# parent constrian icon to joint\n\n\n\npriming_objects = pm.ls(selection=True)\n\n\nsdk_grp = pm.group(name=\"sdk_grpName\", empty=True)\nvoid_grp = pm. group (sdk_grp, name=\"void_grpName\")\n\n\nsdk_grpName = priming_objects[0].replace(\"_icon\", \"_sdk\")\nvoid_grpName = priming_objects[0].replace(\"_icon\", \"_void\")\nsdk_grp.rename(sdk_grpName)\nvoid_grp.rename(void_grpName)\n\ntemp_constraint = pm.parentConstraint(priming_objects[1], void_grp, maintainOffset = False)\n\npm.delete(temp_constraint)\npm.parent(priming_objects[0], sdk_grp)\npm.makeIdentity(priming_objects[0], apply=True, t=True, r=True, s=True)\n\npm.parentConstraint(priming_objects[0], priming_objects[1], maintainOffset=False)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates Square Icon" 
+        -enableBackground 1
+        -align "center" 
+        -label "Square Icon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "Custom_Icons/sqaure_icon.png" 
+        -image1 "Custom_Icons/sqaure_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.curve(d=1, p=[[-1, 0, -1], [1, 0, -1], [1, 0, 1], [-1, 0, 1], [-1, 0, -1]], k=[0, 1, 2, 3, 4])\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates Circle Icon" 
+        -enableBackground 1
+        -align "center" 
+        -label "Circle Icon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/circle_icon.png" 
+        -image1 "Custom_Icons/circle_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.circle(normal=[0, 1, 0], n='circle_icon')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates Triangle Icon" 
+        -enableBackground 1
+        -align "center" 
+        -label "Triangle Icon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "Custom_Icons/triangle_icon.png" 
+        -image1 "Custom_Icons/triangle_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\ntriangle_icon = pm.circle(s=3, d=1, nr=[0, 1, 0], n='triangle_icon')\n\npm.makeIdentity(triangle_icon, apply=True, t=1, r=1, s=1, n=0)\n\npm.delete(triangle_icon, constructionHistory=True)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates an arrow shaped control icon" 
+        -enableBackground 1
+        -align "center" 
+        -label "Arrw" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/arrow_icon.png" 
+        -image1 "Custom_Icons/arrow_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.curve(d=1, p=[[-0.5, 0, 2], [0.5, 0, 2], [0.5, 0, 0], [1, 0, 0], [0, 0, -2], [-1, 0, 0], [-0.5, 0, 0], [-0.5, 0, 2]], k=[0, 1, 2, 3, 4, 5, 6, 7])" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a cube shaped control icon" 
+        -enableBackground 1
+        -align "center" 
+        -label "CUBE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/Cube_icon.png" 
+        -image1 "Custom_Icons/Cube_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nicon = pm.curve(degree=1, p=[[1, 2, 1], [-1, 2, 1], [-1, 2, -1], [1, 2, -1], [1, 2, 1], [1, 0, 1], [1, 0, -1], [1, 2, -1], [1, 0, -1], [-1, 0, -1], [-1, 2, -1], [-1, 0, -1], [-1, 0, 1], [-1, 2, 1], [-1, 0, 1], [1, 0, 1], [1, 2, 1]], k=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16])\n\npm.xform(icon, centerPivots=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a pyramid shaped control icon" 
+        -enableBackground 1
+        -align "center" 
+        -label "PYRM" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/pyramid_icon.png" 
+        -image1 "Custom_Icons/pyramid_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nicon = pm.curve(d=1, p=[[0, 0, 1], [0, 2, 0], [1, 0, 0], [0, 2, 0], [0, 0, -1], [0, 2, 0], [-1, 0, 0], [0, 0, 1], [1, 0, 0], [0, 0, -1], [-1, 0, 0]], k=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])\n\npm.xform(icon, centerPivots=True)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Divider Only; Not a Button" 
+        -enableBackground 0
+        -align "center" 
+        -label "Divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/Divider_icon.png" 
+        -image1 "Custom_Icons/Divider_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"Divider, Not a Button\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Click to place joint. Click on existing joint to add to skeleton. Click-Drag to position joint." 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinJoint.png" 
+        -image1 "kinJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "JointTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates Single Chain IK handle from selected joints, Select beginning joint FIRST and ending joint LAST" 
+        -enableBackground 0
+        -align "center" 
+        -label "Single Chain IK " 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/IKSC_icon.png" 
+        -image1 "Custom_Icons/IKSC_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected_joints = pm.ls(selection=True)\n\t\t\npm.ikHandle(sj=selected_joints[0], ee=selected_joints[1], sol= 'ikSCsolver')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates Rotate Plane IK handle from selected joints, Select beginning joint FIRST and ending joint LAST" 
+        -enableBackground 0
+        -align "center" 
+        -label "Rotate Plane IK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/IKRP_icon.png" 
+        -image1 "Custom_Icons/IKRP_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected_joints = pm.ls(selection=True)\n\npm.ikHandle(sj=selected_joints[0], ee=selected_joints[1], sol= 'ikRPsolver')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates Spline IK handle from selected joints and curve, Select beginning joint FIRST ,ending joint SECOND, and curve LAST" 
+        -enableBackground 0
+        -align "center" 
+        -label "Spline IK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/IKSline_icon.png" 
+        -image1 "Custom_Icons/IKSline_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected_objects = pm.ls(selection=True)\n\npm.ikHandle(sj=selected_objects[0], ee=selected_objects[1], curve=selected_objects[2], createCurve=False, parentCurve=False, solver='ikSplineSolver')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Clusters all selected control vertices on a nurbs curve" 
+        -enableBackground 0
+        -align "center" 
+        -label "Clust" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Clust" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected_verts = pm.ls(sl=True, fl=True)\n\nfor indiv_cv in selected_verts:\n    pm.cluster(indiv_cv)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Divider Only; Not a Button" 
+        -enableBackground 0
+        -align "center" 
+        -label "Divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/Divider_icon.png" 
+        -image1 "Custom_Icons/Divider_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"Divider, Not a Button\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Local Orient; Snaps SECOND object selected to the position and orientation of the FIRST selected object; SECOND selected = object being snaped, FIRST selected = object being snapped to\t\t\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "Snap to object" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/snap_icon.png" 
+        -image1 "Custom_Icons/snap_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected_objects = pm.ls(selection=True)\n\ntemp_constraint = pm.parentConstraint(selected_objects[0], selected_objects[1], mo=False)\n\npm.delete(temp_constraint)\n\t\t\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Parent Constraint; Parent Constrains based on selection order; DRIVER first, DRIVEN second; Icon first, Joint second" 
+        -enableBackground 0
+        -align "center" 
+        -label "PConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/parent_constraint_icon.png" 
+        -image1 "Custom_Icons/parent_constraint_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected_objects = pm.ls(selection=True)\n\npm.parentConstraint(selected_objects[0], selected_objects[1], mo=True)\n\t\t" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Orient Constraint; Orient Constrains based on selection order; DRIVER first, DRIVEN second; Icon first, Joint second" 
+        -enableBackground 0
+        -align "center" 
+        -label "OConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/orient_constraint_icon.png" 
+        -image1 "Custom_Icons/orient_constraint_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected_objects = pm.ls(selection=True)\n\npm.orientConstraint(selected_objects[0], selected_objects[1], mo=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Point Constraint; Point Constrains based on selection order; DRIVER first, DRIVEN second; Icon first, Joint second" 
+        -enableBackground 0
+        -align "center" 
+        -label "PtCon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/point_constraint_icon.png" 
+        -image1 "Custom_Icons/point_constraint_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected_objects = pm.ls(selection=True)\n\npm.pointConstraint(selected_objects[0], selected_objects[1], mo=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Pole Vector Constraint; Pole Vector Constrains based on selection order; DRIVER first, DRIVEN second; Icon first, IK handle second" 
+        -enableBackground 0
+        -align "center" 
+        -label "PVec" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/poleVector_constraint_icon.png" 
+        -image1 "Custom_Icons/poleVector_constraint_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected_objects = pm.ls(selection=True)\n\npm.poleVectorConstraint(selected_objects[0], selected_objects[1])" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Divider Only; Not a Button" 
+        -enableBackground 0
+        -align "center" 
+        -label "Divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/Divider_icon.png" 
+        -image1 "Custom_Icons/Divider_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"Divider, Not a Button\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Unlock and Show default attributes; Translate, Rotate, Scale, Visibility" 
+        -enableBackground 0
+        -align "center" 
+        -label "UnSh" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/UnlockNShow_icon.png" 
+        -image1 "Custom_Icons/UnlockNShow_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected_objects = pm.ls(selection=True)\n\nfor indiv_object in selected_objects:\n    indiv_object.tx.set(lock=False, keyable=True)\n    indiv_object.ty.set(lock=False, keyable=True)\n    indiv_object.tz.set(lock=False, keyable=True)\n    indiv_object.rx.set(lock=False, keyable=True)\n    indiv_object.ry.set(lock=False, keyable=True)\n    indiv_object.rz.set(lock=False, keyable=True)\n    indiv_object.sx.set(lock=False, keyable=True)\n    indiv_object.sy.set(lock=False, keyable=True)\n    indiv_object.sz.set(lock=False, keyable=True)\n    indiv_object.v.set(lock=False, keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Enter custom FLOAT attribute name on selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Custom Float" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/float_attr.png" 
+        -image1 "Custom_Icons/float_attr.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected = pm.ls(sl=True)\nfirst_selected = selected[0]\n\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Enter custom INTEGER attribute name on selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Custom Integer" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/integer_attr.png" 
+        -image1 "Custom_Icons/integer_attr.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected = pm.ls(sl=True)\nfirst_selected = selected[0]\n\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, keyable=True, at='long')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Enter custom ENUM SEPARATOR attribute name on selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Custom Separator" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/Sep_attr.png" 
+        -image1 "Custom_Icons/Sep_attr.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected = pm.ls(sl=True)\nfirst_selected = selected[0]\n\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, keyable=True, at='enum', en='---------:')\n\n\n\n\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Enter custom BOOLEAN attribute name on selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Custom Boolean" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/bool_attr.png" 
+        -image1 "Custom_Icons/bool_attr.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nselected = pm.ls(sl=True)\nfirst_selected = selected[0]\n\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, keyable=True, at='bool')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Inserts templated finger attributes on a single selected control icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "Finger Attr Template" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/finger_attr.png" 
+        -image1 "Custom_Icons/finger_attr.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(sl=True)\n\nfirst_selected = selected[0]\n\n\nfirst_selected.addAttr('FINGERS', keyable=True, at='enum', en= '-----------:')\nfirst_selected.FINGERS.set(lock=True)\nfirst_selected.addAttr('CURL', keyable=True, at='enum', en= '-----------:')\nfirst_selected.CURL.set(lock=True)\n\nfirst_selected.addAttr('index_curl', keyable=True)\nfirst_selected.addAttr('middle_curl', keyable=True)\nfirst_selected.addAttr('ring_curl', keyable=True)\nfirst_selected.addAttr('pinky_curl', keyable=True)\n\nfirst_selected.addAttr('SPREAD', keyable=True, at='enum', en= '-----------:')\nfirst_selected.SPREAD.set(lock=True)\n\nfirst_selected.addAttr('index_spread', keyable=True)\nfirst_selected.addAttr('middle_spread', keyable=True)\nfirst_selected.addAttr('ring_spread', keyable=True)\nfirst_selected.addAttr('pinky_spread', keyable=True)\n\nfirst_selected.addAttr('THUMB', keyable=True, at='enum', en= '-----------:')\nfirst_selected.THUMB.set(lock=True)\t\n\nfirst_selected.addAttr('thumb_curl', keyable=True)\nfirst_selected.addAttr('thumb_spread', keyable=True)\nfirst_selected.addAttr('thumb_drop', keyable=True)\n\nfirst_selected.addAttr('VISIBILITY', keyable=True, at='enum', en= '-----------:')\nfirst_selected.VISIBILITY.set(lock=True)\t\n\nfirst_selected.addAttr('icons_vis', keyable=True, at='bool')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Divider Only; Not a Button" 
+        -enableBackground 0
+        -align "center" 
+        -label "Divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/Divider_icon.png" 
+        -image1 "Custom_Icons/Divider_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"Divider, Not a Button\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Divider Only; Not a Button" 
+        -enableBackground 0
+        -align "center" 
+        -label "Divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/Divider_icon.png" 
+        -image1 "Custom_Icons/Divider_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"Divider, Not a Button\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Divider Only; Not a Button" 
+        -enableBackground 0
+        -align "center" 
+        -label "Divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/Divider_icon.png" 
+        -image1 "Custom_Icons/Divider_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"Divider, Not a Button\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Divider Only; Not a Button" 
+        -enableBackground 0
+        -align "center" 
+        -label "Divider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Custom_Icons/Divider_icon.png" 
+        -image1 "Custom_Icons/Divider_icon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"Divider, Not a Button\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

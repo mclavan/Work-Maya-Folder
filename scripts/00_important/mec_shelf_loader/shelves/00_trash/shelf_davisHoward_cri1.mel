@@ -1,0 +1,714 @@
+global proc shelf_davisHoward_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 1
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "FreezeTransformations" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 1
+        -align "center" 
+        -label "History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.367 0.367 0.367 0.2 
+        -image "deleteActive.png" 
+        -image1 "deleteActive.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 1
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete History, Freeze Transforms, Center Pivot" 
+        -enableBackground 1
+        -align "center" 
+        -label "NUKE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Nuke" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "colorProfile.png" 
+        -image1 "colorProfile.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory;\nCenterPivot;\nFreezeTransformations;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Colors control red" 
+        -enableBackground 1
+        -align "center" 
+        -label "Red Control" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Red" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected = selected[0]\n\n# first_selected.tx\nfirst_selected.overrideEnabled.set(1)\nred = 13\nfirst_selected.overrideColor.set(13)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Colors control blue" 
+        -enableBackground 1
+        -align "center" 
+        -label "Blue Control" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Blue" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected = selected[0]\n\n# first_selected.tx\nfirst_selected.overrideEnabled.set(1)\nblue = 6\nfirst_selected.overrideColor.set(6)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Colors control yellow" 
+        -enableBackground 1
+        -align "center" 
+        -label "Yellow Control" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Yellow" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected = selected[0]\n\n# first_selected.tx\nfirst_selected.overrideEnabled.set(1)\nyellow = 17\nfirst_selected.overrideColor.set(17)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Duplicate the selected object(s)" 
+        -enableBackground 1
+        -align "center" 
+        -label "Duplicate" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Dupl" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "duplicatePreset(1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1)" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Group the selected object(s)" 
+        -enableBackground 1
+        -align "center" 
+        -label "Group" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Grou" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "group.png" 
+        -image1 "group.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doGroup 0 1 1" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Parent the selected object(s) to the last selected object" 
+        -enableBackground 1
+        -align "center" 
+        -label "Parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Parent" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "parent.png" 
+        -image1 "parent.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "parentPreset(0,1)" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS circle on the grid" 
+        -enableBackground 1
+        -align "center" 
+        -label "Circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Circle" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "circle -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 0 -s 8 -ch 1; objectMoveCommand" 
+        -sourceType "mel" 
+        -doubleClickCommand "CreateNURBSCircleOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 16
+        -height 11
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates Arrow Curve" 
+        -enableBackground 1
+        -align "center" 
+        -label "Arrow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Arrow" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "arrowDown.png" 
+        -image1 "arrowDown.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p 0.280786 0 -34.747279 -p -9.967906 0 -29.973916 -p -4.913757 0 -29.973916 -p -5.05415 0 -0.350983 -p 5.194543 0 0.350983 -p 4.773364 0 -29.833522 -p 10.389085 0 -29.693129 -p 0.561572 0 -34.606886 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates Curve Square" 
+        -enableBackground 1
+        -align "center" 
+        -label "Square" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Square" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p 0.563975 0 5.166879 -p 5.01643 0 4.94463 -p 4.973913 0 -0.159571 -p -0.00561563 0 -0.172779 -p 0.402072 0 5.02608 -k 0 -k 1 -k 2 -k 3 -k 4 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates Cube Curve" 
+        -enableBackground 1
+        -align "center" 
+        -label "Cube" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p -0.5 0.5 0.5 -p 0.5 0.5 0.5 -p 0.5 0.5 -0.5 -p -0.5 0.5 -0.5 -p -0.5 0.5 0.5 -p -0.5 -0.5 0.5 -p 0.5 -0.5 0.5 -p 0.5 0.5 0.5 -p 0.5 -0.5 0.5 -p 0.5 -0.5 -0.5 -p 0.5 0.5 -0.5 -p 0.5 -0.5 -0.5 -p -0.5 -0.5 -0.5 -p -0.5 0.5 -0.5 -p -0.5 -0.5 -0.5 -p -0.5 -0.5 0.5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "First command: locks and hides scale and visibility; Second command: unlocks and unhides scale and visibility" 
+        -enableBackground 1
+        -align "center" 
+        -label "Scale and Visibility" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ScaVis" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "rotate_M.png" 
+        -image1 "rotate_M.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "selected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected.sx.set(lock=True, keyable=False)\nfirst_selected.sy.set(lock=True, keyable=False)\nfirst_selected.sz.set(lock=True, keyable=False)\nfirst_selected.v.set(lock=True, keyable=False)" 
+        -sourceType "python" 
+        -doubleClickCommand "selected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected.sx.set(lock=False, keyable=True)\nfirst_selected.sy.set(lock=False, keyable=True)\nfirst_selected.sz.set(lock=False, keyable=True)\nfirst_selected.v.set(lock=False, keyable=True)" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "First command: Locks and hides translate; Second command: unlocks and unhides command" 
+        -enableBackground 1
+        -align "center" 
+        -label "Translate" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Trans" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "rotate_M.png" 
+        -image1 "rotate_M.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "selected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected.tx.set(lock=True, keyable=False)\nfirst_selected.ty.set(lock=True, keyable=False)\nfirst_selected.tz.set(lock=True, keyable=False)" 
+        -sourceType "python" 
+        -doubleClickCommand "selected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected.tx.set(lock=False, keyable=True)\nfirst_selected.ty.set(lock=False, keyable=True)\nfirst_selected.tz.set(lock=False, keyable=True)" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "First command: Locks and hides; Second command unlocks and unhides" 
+        -enableBackground 1
+        -align "center" 
+        -label "Rotate" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Rotate" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "rotate_M.png" 
+        -image1 "rotate_M.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "selected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected.rx.set(lock=True, keyable=False)\nfirst_selected.ry.set(lock=True, keyable=False)\nfirst_selected.rz.set(lock=True, keyable=False)" 
+        -sourceType "python" 
+        -doubleClickCommand "selected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected.rx.set(lock=False, keyable=True)\nfirst_selected.ry.set(lock=False, keyable=True)\nfirst_selected.rz.set(lock=False, keyable=True)" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select object(s)" 
+        -enableBackground 1
+        -align "center" 
+        -label "Cluster" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cluster" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CreateCluster" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 1
+        -align "center" 
+        -label "Parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ParCon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateParentConstraintArgList 1 { \"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 1
+        -align "center" 
+        -label "Orient" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OriCon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateOrientConstraintArgList 1 { \"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 1
+        -align "center" 
+        -label "Point" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PonCon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "posConstraint.png" 
+        -image1 "posConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreatePointConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the Rotate Plane ikHandle to constrain." 
+        -enableBackground 1
+        -align "center" 
+        -label "Pole Vector" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PolVec" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "poleVectorConstraint -weight 1" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a hierarchy based upon a given system" 
+        -enableBackground 1
+        -align "center" 
+        -label "Heirarchy" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hier" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nrigging_tools.hierarchy()\t\t" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Grouping of rigging tools" 
+        -enableBackground 1
+        -align "center" 
+        -label "Padding" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Pad" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.padding_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Renaming joint(s0 based upon a naming convention" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Renamer" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JonRen" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates local control for joints" 
+        -enableBackground 1
+        -align "center" 
+        -label "Priming Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Prim" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.priming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

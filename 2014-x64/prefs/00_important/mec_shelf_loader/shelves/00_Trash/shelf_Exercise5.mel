@@ -1,0 +1,116 @@
+global proc shelf_Exercise5 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.hierarchy()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.hierarc..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hierarchy" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.hierarchy()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.padding_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.padding..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Padding Tool" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.padding_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.joint_renamer()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.joint_r..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Joint Renamer" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.priming_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.priming..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Priming Tool" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.priming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

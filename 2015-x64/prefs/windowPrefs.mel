@@ -1,0 +1,39 @@
+//Maya Preference 2015 (Release 1)
+//
+//
+windowPref -topLeftCorner 265 364 -widthHeight 313 542 -maximized false outlinerPanel1Window;
+windowPref -topLeftCorner 550 74 -widthHeight 1031 511 -maximized false hyperGraphPanel1Window;
+windowPref -topLeftCorner 199 115 -widthHeight 837 489 -maximized false graphEditor1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized false dopeSheetPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized false clipEditorPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 524 470 -maximized false devicePanel1Window;
+windowPref -topLeftCorner 68 587 -widthHeight 1239 472 -maximized false hyperShadePanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 700 400 -maximized false dynPaintScriptedPanelWindow;
+windowPref -topLeftCorner 250 200 -widthHeight 550 562 -maximized false blindDataEditor1Window;
+windowPref -topLeftCorner 281 314 -widthHeight 450 320 -maximized false NewFeatureHighlightWnd;
+windowPref -topLeftCorner 202 384 -widthHeight 694 595 -maximized false learningMoviesLaunchWnd;
+windowPref -topLeftCorner 9 2031 -widthHeight 1232 805 -maximized false MayaWindow;
+windowPref -topLeftCorner 412 1030 -widthHeight 665 500 -maximized false PreferencesWindow;
+windowPref -topLeftCorner 131 853 -widthHeight 587 696 -maximized false shelfEditor;
+windowPref -topLeftCorner 623 1998 -widthHeight 304 313 -maximized false mec_shelf_loader_gui;
+windowPref -topLeftCorner 392 74 -widthHeight 1276 586 -maximized false scriptEditorPanel1Window;
+windowPref -topLeftCorner 596 837 -widthHeight 248 69 -maximized false jdsWnd;
+windowPref -topLeftCorner 166 402 -widthHeight 482 208 -maximized false OptionBoxWindow;
+windowPref -topLeftCorner 324 846 -widthHeight 550 411 -maximized false pluginManagerWindow;
+windowPref -topLeftCorner 49 55 -widthHeight 952 748 -maximized false expressionEditorWin;
+windowPref -topLeftCorner 643 595 -widthHeight 248 75 -maximized false ikHdsWnd;
+windowPref -topLeftCorner 186 171 -widthHeight 884 625 -maximized false visorPanel1Window;
+windowPref -topLeftCorner 255 344 -widthHeight 340 517 -maximized false setDrivenWnd;
+windowPref -topLeftCorner 145 408 -widthHeight 522 547 -maximized false AddAttrWin;
+windowPref -topLeftCorner 111 344 -widthHeight 384 588 -maximized false RenameAttrWin;
+windowPref -topLeftCorner 110 553 -widthHeight 520 620 -maximized false connectWindow;
+windowPref -topLeftCorner 123 220 -widthHeight 806 659 -maximized false nodeEditorPanel2Window;
+windowPref -topLeftCorner 706 10 -widthHeight 714 730 -maximized false nodeEditorPanel3Window;
+windowPref -topLeftCorner 123 335 -widthHeight 500 400 -maximized false LockingKeyable;
+windowPref -topLeftCorner 493 37 -widthHeight 475 325 -maximized false referenceEditorPanel1Window;
+windowPref -topLeftCorner 373 934 -widthHeight 486 325 -maximized false dynRelEdPanel1Window;
+windowPref -topLeftCorner 357 640 -widthHeight 144 150 -maximized false mainWindow;
+windowPref -topLeftCorner 357 640 -widthHeight 144 150 -maximized false shane_main_window;
+windowPref -topLeftCorner 87 57 -widthHeight 832 493 -maximized false SSEwindow;
+windowPref -topLeftCorner 197 384 -widthHeight 510 600 -maximized false PaintEffectsBrushWindow;
+windowPref -topLeftCorner 287 384 -widthHeight 358 150 -maximized false LayerEditorQuickEditWindow;

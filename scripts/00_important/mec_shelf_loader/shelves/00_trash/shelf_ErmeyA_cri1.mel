@@ -1,0 +1,575 @@
+global proc shelf_ErmeyA_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This will freeze the transforms that are on the selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 1 0 0 0.5 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Puts the pivot in the center of the selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 1 0 0 0.5 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Deletes contruction history on the selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "DeleteHistory" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 1 0 0 0.5 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freezes Transformations, Delete History, and Center Pivots the selected object all in one." 
+        -enableBackground 0
+        -align "center" 
+        -label "Nuke" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Nuke" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 1 0 0 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;\nCenterPivot;\nDeleteHistory;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a Square shape curve\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "Square" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Square" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.557 0 0.557 0.9 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p -6.018917 0 1.021753 -p -3.946304 0 1.011708 -p -3.964546 0 3.022193 -p -5.970381 0 3.007124 -p -6.036268 0 1.025252 -k 0 -k 1 -k 2 -k 3 -k 4 ;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "creates a circle curve" 
+        -enableBackground 0
+        -align "center" 
+        -label "Circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Circle" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.557 0 0.557 0.9 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "circle -ch on -o on -nr 0 1 0 -r 1.178146 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates an Arrow shaped curve" 
+        -enableBackground 0
+        -align "center" 
+        -label "Arrow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Arrow" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.557 0 0.557 0.9 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p -0.965969 0 4.048459 -p 1.009226 0 4.003205 -p 1.045404 0 6.993132 -p 2.032963 0 7.020764 -p -0.012523 0 9.015782 -p -2.007876 0 7.03083 -p -0.975245 0 7.010264 -p -0.990367 0 4.048374 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "cube shaped version of a NurbsCurve." 
+        -enableBackground 0
+        -align "center" 
+        -label "Cube" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.557 0 0.557 0.9 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p -0.5 0.5 0.5 -p 0.5 0.5 0.5 -p 0.5 0.5 -0.5 -p -0.5 0.5 -0.5 -p -0.5 0.5 0.5 -p -0.5 0.5 -0.5 -p -0.5 -0.5 -0.5 -p 0.5 -0.5 -0.5 -p 0.5 0.5 -0.5 -p 0.5 0.5 0.5 -p 0.5 -0.5 0.5 -p 0.5 -0.5 -0.5 -p 0.5 -0.5 0.5 -p -0.5 -0.5 0.5 -p -0.5 0.5 0.5 -p -0.5 -0.5 0.5 -p -0.5 -0.5 -0.5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Does a Parent Constraint on selected objects" 
+        -enableBackground 0
+        -align "center" 
+        -label "ParentConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ParConstraint" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.419 0 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateParentConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "it Orient Constraints the selected objects" 
+        -enableBackground 0
+        -align "center" 
+        -label "OrientConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OriConstraint" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.419 0 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateOrientConstraintArgList 1 { \"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "creates a Point Constraint on the selected objects" 
+        -enableBackground 0
+        -align "center" 
+        -label "PointConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PoiConstraint" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.419 0 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreatePointConstraintArgList 1 { \"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a pole vector on the selected ik handle" 
+        -enableBackground 0
+        -align "center" 
+        -label "PoleVector" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PolVector" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.329 0 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "poleVectorConstraint -weight 1" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates an RP Solver for the joints you selected" 
+        -enableBackground 0
+        -align "center" 
+        -label "RP_Solver" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RPsolver" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.186 0.186 1 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ikHandle -sol ikRPsolver;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a Single Chain Solver IK Handle on the selected objects" 
+        -enableBackground 0
+        -align "center" 
+        -label "SC_Solver" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SCsolver" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 1 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ikHandle;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a Cluster Handle" 
+        -enableBackground 0
+        -align "center" 
+        -label "ClusterHandle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ClusHandle" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 1 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ClusterCurve;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a Control Icon for the selected joints" 
+        -enableBackground 0
+        -align "center" 
+        -label "Primming_tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PriTool" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.843137 0.417984 0 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.priming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Renames the joints for you" 
+        -enableBackground 0
+        -align "center" 
+        -label "JointRenamer" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JoiRenamer" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.803922 0.421658 0.0788158 0.5 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a group from the selected objects" 
+        -enableBackground 0
+        -align "center" 
+        -label "CreateGroup" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Group" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.122 0.122 0.122 0.5 
+        -image "group.png" 
+        -image1 "group.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doGroup 0 1 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "parents the object or objects to last selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Pare" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.122 0.122 0.122 0.5 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "parent;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "helps duplicates the selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Duplicating" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Dupl" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.122 0.122 0.122 0.5 
+        -image "duplicateReference.png" 
+        -image1 "duplicateReference.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "duplicate -rr;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "creates a attribute" 
+        -enableBackground 0
+        -align "center" 
+        -label "AttributeCreator" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "AttCreator" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected Objects:', first_selected\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

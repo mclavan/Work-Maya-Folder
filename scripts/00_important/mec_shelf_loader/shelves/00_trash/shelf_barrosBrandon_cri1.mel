@@ -1,0 +1,747 @@
+global proc shelf_barrosBrandon_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS circle on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "Circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Circle" 
+        -overlayLabelColor 0 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "circle -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 0 -s 8 -ch 1; objectMoveCommand" 
+        -sourceType "mel" 
+        -doubleClickCommand "CreateNURBSCircleOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS cube on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cube" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 0.145825 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p 0.5 1.485113 0.5 -p -0.5 1.485113 0.5 -p -0.5 1.485113 -0.5 -p -0.5 0.485113 -0.5 -p -0.5 0.485113 0.5 -p 0.5 0.485113 0.5 -p 0.5 0.485113 -0.5 -p -0.5 0.485113 -0.5 -p 0.5 0.485113 -0.5 -p 0.5 1.485113 -0.5 -p -0.5 1.485113 -0.5 -p 0.5 1.485113 -0.5 -p 0.5 1.485113 0.5 -p 0.5 0.485113 0.5 -p -0.5 0.485113 0.5 -p -0.5 1.485113 0.5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 ;\nCenterPivot;\nmove -rpr 0 0 0 ;\nFreezeTransformations;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS cone on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cone" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cone" 
+        -overlayLabelColor 0.30839 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cone.png" 
+        -image1 "cone.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p 0 0.5 -1.60255 -p 0.5 -0.5 -2.10255 -p 0.5 -0.5 -1.10255 -p -0.5 -0.5 -1.10255 -p -0.5 -0.5 -2.10255 -p 0.5 -0.5 -2.10255 -p 0.5 -0.5 -1.10255 -p 0 0.5 -1.60255 -p -0.5 -0.5 -1.10255 -p -0.5 -0.5 -2.10255 -p 0 0.5 -1.60255 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 ;\nCenterPivot;\nmove -rpr 0 0 0 ;\nFreezeTransformations;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS cog on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cog" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cog" 
+        -overlayLabelColor 0.187644 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cog.png" 
+        -image1 "cog.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p 0.177015 1.118582 -3.03821 -p 0.177015 0.841103 -2.690262 -p 0.177015 0.62349 -2.863802 -p 0.177015 0.222521 -2.670706 -p 0.177015 0.222521 -2.392368 -p 0.177015 -0.222521 -2.392368 -p 0.177015 -0.222521 -2.670706 -p 0.177015 -0.62349 -2.863802 -p 0.177015 -0.841103 -2.690262 -p 0.177015 -1.118582 -3.038209 -p 0.177015 -0.900969 -3.21175 -p 0.177015 -1 -3.645634 -p 0.177015 -1.271359 -3.707569 -p 0.177015 -1.172328 -4.141453 -p 0.177015 -0.900969 -4.079517 -p 0.177015 -0.62349 -4.427465 -p 0.177015 -0.744256 -4.678238 -p 0.177015 -0.343287 -4.871334 -p 0.177015 -0.222521 -4.620562 -p 0.177015 0.222521 -4.620562 -p 0.177015 0.343287 -4.871334 -p 0.177015 0.744256 -4.678239 -p 0.177015 0.62349 -4.427465 -p 0.177015 0.900969 -4.079517 -p 0.177015 1.172328 -4.141453 -p 0.177015 1.271359 -3.70757 -p 0.177015 1 -3.645634 -p 0.177015 0.900969 -3.21175 -p 0.177015 1.118582 -3.03821 -p -0.177015 1.118582 -3.03821 -p -0.177015 0.841103 -2.690262 -p -0.177015 0.62349 -2.863802 -p -0.177015 0.222521 -2.670706 -p -0.177015 0.222521 -2.392368 -p -0.177015 -0.222521 -2.392368 -p -0.177015 -0.222521 -2.670706 -p -0.177015 -0.62349 -2.863802 -p -0.177015 -0.841103 -2.690262 -p -0.177015 -1.118582 -3.038209 -p -0.177015 -0.900969 -3.21175 -p -0.177015 -1 -3.645634 -p -0.177015 -1.271359 -3.707569 -p -0.177015 -1.172328 -4.141453 -p -0.177015 -0.900969 -4.079517 -p -0.177015 -0.62349 -4.427465 -p -0.177015 -0.744256 -4.678238 -p -0.177015 -0.343287 -4.871334 -p -0.177015 -0.222521 -4.620562 -p -0.177015 0.222521 -4.620562 -p -0.177015 0.343287 -4.871334 -p -0.177015 0.744256 -4.678239 -p -0.177015 0.62349 -4.427465 -p -0.177015 0.900969 -4.079517 -p -0.177015 1.172328 -4.141453 -p -0.177015 1.271359 -3.70757 -p -0.177015 1 -3.645634 -p -0.177015 0.900969 -3.21175 -p -0.177015 1.118582 -3.03821 -p -0.177015 0.900969 -3.21175 -p -0.177015 1 -3.645634 -p -0.177015 1.271359 -3.70757 -p 0.177015 1.271359 -3.70757 -p 0.177015 1.172328 -4.141453 -p -0.177015 1.172328 -4.141453 -p -0.177015 0.900969 -4.079517 -p -0.177015 0.62349 -4.427465 -p -0.177015 0.744256 -4.678239 -p 0.177015 0.744256 -4.678239 -p 0.177015 0.343287 -4.871334 -p -0.177015 0.343287 -4.871334 -p -0.177015 0.222521 -4.620562 -p -0.177015 -0.222521 -4.620562 -p -0.177015 -0.343287 -4.871334 -p 0.177015 -0.343287 -4.871334 -p 0.177015 -0.744256 -4.678238 -p -0.177015 -0.744256 -4.678238 -p -0.177015 -0.62349 -4.427465 -p -0.177015 -0.900969 -4.079517 -p -0.177015 -1.172328 -4.141453 -p 0.177015 -1.172328 -4.141453 -p 0.177015 -1.271359 -3.707569 -p -0.177015 -1.271359 -3.707569 -p -0.177015 -1 -3.645634 -p -0.177015 -0.900969 -3.21175 -p -0.177015 -1.118582 -3.038209 -p 0.177015 -1.118582 -3.038209 -p 0.177015 -0.841103 -2.690262 -p -0.177015 -0.841103 -2.690262 -p -0.177015 -0.62349 -2.863802 -p -0.177015 -0.222521 -2.670706 -p -0.177015 -0.222521 -2.392368 -p 0.177015 -0.222521 -2.392368 -p 0.177015 0.222521 -2.392368 -p -0.177015 0.222521 -2.392368 -p -0.177015 0.222521 -2.670706 -p -0.177015 0.62349 -2.863802 -p -0.177015 0.841103 -2.690262 -p 0.177015 0.841103 -2.690262 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 -k 17 -k 18 -k 19 -k 20 -k 21 -k 22 -k 23 -k 24 -k 25 -k 26 -k 27 -k 28 -k 29 -k 30 -k 31 -k 32 -k 33 -k 34 -k 35 -k 36 -k 37 -k 38 -k 39 -k 40 -k 41 -k 42 -k 43 -k 44 -k 45 -k 46 -k 47 -k 48 -k 49 -k 50 -k 51 -k 52 -k 53 -k 54 -k 55 -k 56 -k 57 -k 58 -k 59 -k 60 -k 61 -k 62 -k 63 -k 64 -k 65 -k 66 -k 67 -k 68 -k 69 -k 70 -k 71 -k 72 -k 73 -k 74 -k 75 -k 76 -k 77 -k 78 -k 79 -k 80 -k 81 -k 82 -k 83 -k 84 -k 85 -k 86 -k 87 -k 88 -k 89 -k 90 -k 91 -k 92 -k 93 -k 94 -k 95 -k 96 -k 97 ;\nCenterPivot;\nmove -rpr 0 0 0 ; \nFreezeTransformations;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a NURBS arrow on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "Arrow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Arrow" 
+        -overlayLabelColor 0 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "arrow.png" 
+        -image1 "arrow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p -0.639731 0 -2 -p -1.279461 0 -2 -p 0 0 -4 -p 1.279461 0 -2 -p 0.639731 0 -2 -p 0.639731 0 1 -p -0.639731 0 1 -p -0.639731 0 -2 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;\nCenterPivot;\nmove -rpr 0 0 0 ;\nFreezeTransformations;\nmakeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a NURBS master control on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "Master" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Master" 
+        -overlayLabelColor 0 1 0.0133574 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "master.png" 
+        -image1 "master.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p 0.951057 0 -0.309017 -p 1.734392 0 -0.306946 -p 1.592122 0 -0.609748 -p 2.437341 0 0 -p 1.592122 0 0.609748 -p 1.742267 0 0.306946 -p 0.951057 0 0.309017 -p 0.809017 0 0.587785 -p 0.587785 0 0.809017 -p 0.309017 0 0.951057 -p 0.306946 0 1.734392 -p 0.609748 0 1.592122 -p 0 0 2.437341 -p -0.609748 0 1.592122 -p -0.306946 0 1.742267 -p -0.309017 0 0.951057 -p -0.587785 0 0.809017 -p -0.809017 0 0.587785 -p -0.951057 0 0.309017 -p -1.734392 0 0.306946 -p -1.592122 0 0.609748 -p -2.437341 0 0 -p -1.592122 0 -0.609748 -p -1.742267 0 -0.306946 -p -0.951057 0 -0.309017 -p -0.809017 0 -0.587785 -p -0.587785 0 -0.809017 -p -0.309017 0 -0.951057 -p -0.306946 0 -1.734392 -p -0.609748 0 -1.592122 -p 0 0 -2.437341 -p 0.609748 0 -1.592122 -p 0.306946 0 -1.742267 -p 0.309017 0 -0.951057 -p 0.587786 0 -0.809017 -p 0.809018 0 -0.587786 -p 0.951057 0 -0.309017 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 -k 17 -k 18 -k 19 -k 20 -k 21 -k 22 -k 23 -k 24 -k 25 -k 26 -k 27 -k 28 -k 29 -k 30 -k 31 -k 32 -k 33 -k 34 -k 35 -k 36 ;\nCenterPivot;\nmove -rpr 0 0 0 ;\nFreezeTransformations;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Divider" 
+        -enableBackground 0
+        -align "center" 
+        -label "------Sep------" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "separator.png" 
+        -image1 "separator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Click to place joint. Click on existing joint to add to skeleton. Click-Drag to position joint." 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinJoint.png" 
+        -image1 "kinJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "JointTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create IK handle on joint chain" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK Handle Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "IKHandleTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Customize the joint scale" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Size" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "jointSize.png" 
+        -image1 "jointSize.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "jdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a cluster for each CV in the selected curve(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cluster Curve" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cluster" 
+        -overlayLabelColor 1 0.646609 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "selectCluster.png" 
+        -image1 "selectCluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ClusterCurve" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Division" 
+        -enableBackground 0
+        -align "center" 
+        -label "------Sep-----" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "separator.png" 
+        -image1 "separator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 1 0.725 0.886842 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "parent_Constraint.png" 
+        -image1 "parent_Constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateParentConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Parent Constraint with offset turned off." 
+        -enableBackground 0
+        -align "center" 
+        -label "PCNO" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 1 0.725 0.886842 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "parentConstraintNoOffset.png" 
+        -image1 "parentConstraintNoOffset.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.parentConstraint(mo=False)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Orient" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 1 0.725 0.886842 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "orient_Constraint.png" 
+        -image1 "orient_Constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateOrientConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the Rotate Plane ikHandle to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Pole Vector" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 1 0.725 0.886842 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "poleVector.png" 
+        -image1 "poleVector.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "poleVectorConstraint -weight 1" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "------Sep------" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "separator.png" 
+        -image1 "separator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates an IK system for a standard bipedal leg system. " 
+        -enableBackground 0
+        -align "center" 
+        -label "LegIK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LegIK" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "legIK.png" 
+        -image1 "legIK.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import barrosBrandon_riggingTools_cri1_1408\nreload(barrosBrandon_riggingTools_cri1_1408)\nbarrosBrandon_riggingTools_cri1_1408.leg_ik()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Unlocks and displays all attributes for a selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Unlock_And_Show" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "unlockAndShow.png" 
+        -image1 "unlockAndShow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import barrosBrandon_riggingTools_cri1_1408\nreload(barrosBrandon_riggingTools_cri1_1408)\nbarrosBrandon_riggingTools_cri1_1408.unlock_and_show_all()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Local constrains circle icons to a joint system" 
+        -enableBackground 0
+        -align "center" 
+        -label "Primer" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "primer.png" 
+        -image1 "primer.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import barrosBrandon_riggingTools_cri1_1408\nreload(barrosBrandon_riggingTools_cri1_1408)\nbarrosBrandon_riggingTools_cri1_1408.priming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Renames a selected arm joint system" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Renamer" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "kinJoint.png" 
+        -image1 "kinJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import barrosBrandon_riggingTools_cri1_1408\nreload(barrosBrandon_riggingTools_cri1_1408)\nbarrosBrandon_riggingTools_cri1_1408.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "----------Sep-------" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "separator.png" 
+        -image1 "separator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Opens the script editor" 
+        -enableBackground 0
+        -align "center" 
+        -label "Script Editor" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SE" 
+        -overlayLabelColor 1 0.801291 0 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "scriptEditor.png" 
+        -image1 "scriptEditor.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ScriptEditor" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete constraints on the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Constraints" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0 0.862068 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "deleteConstraints.png" 
+        -image1 "deleteConstraints.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.delete(constraints=True)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0 0.862068 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "deleteHistory.png" 
+        -image1 "deleteHistory.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.DeleteHistory()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Centers the pivot on an object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0 0.862068 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "centerPivot.png" 
+        -image1 "centerPivot.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.xform(cp=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freezes all transformations on an object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0 0.862068 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "freezeTransforms.png" 
+        -image1 "freezeTransforms.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.makeIdentity(apply = True, t = 1, r = 1, s = 1, n = 0, pn = 1)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Deletes history, freezes transforms, and centers pivots." 
+        -enableBackground 0
+        -align "center" 
+        -label "Nuke" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "nuke.png" 
+        -image1 "nuke.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.makeIdentity(apply = True, t = 1, r = 1, s = 1, n = 0, pn = 1)\npm.delete(all=True, constructionHistory=True)\npm.xform(cp=True)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

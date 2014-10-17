@@ -1,0 +1,15 @@
+'''
+Researching Commands and Flags
+'''
+# Freeze Tranforms
+pm.makeIdentity(apply=True, translate=1, rotate=1, scale=1, normal=0)
+
+# Delete History
+# pm.delete()
+pm.delete()
+
+
+# Center Pivot
+# xform moves everything.
+# translates, rotates, scale, pivot point
+pm.xform(cp=True)

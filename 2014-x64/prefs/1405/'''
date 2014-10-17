@@ -1,0 +1,20 @@
+'''
+rigging_tools.py
+Michael Clavan
+
+Description:
+	Grouping of rigging tools.
+
+How to Run:
+
+import rigging_tools
+reload(rigging_tools)
+
+
+'''
+
+import pymel.core as pm
+
+print 'Rigging Tools Active.'
+
+

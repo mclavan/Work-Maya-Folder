@@ -1,0 +1,8 @@
+global proc shelf_CalawayG_ToolSet_CRI1_1406 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+
+} 

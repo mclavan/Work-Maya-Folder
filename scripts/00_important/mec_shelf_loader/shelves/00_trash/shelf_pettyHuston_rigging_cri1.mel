@@ -1,0 +1,359 @@
+global proc shelf_pettyHuston_rigging_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Takes selected joint chain and pads and primes all the joints in the system" 
+        -enableBackground 0
+        -align "center" 
+        -label "Hierarchy Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hier" 
+        -overlayLabelColor 0.8 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.hierarchy_loop()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Primes all joints in a joint chain" 
+        -enableBackground 0
+        -align "center" 
+        -label "Priming Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Prim" 
+        -overlayLabelColor 0.8 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.priming()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Pads selected joint system" 
+        -enableBackground 0
+        -align "center" 
+        -label "Padding Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Pad" 
+        -overlayLabelColor 0.8 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.padding()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Renames selected joint chain" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Renamer" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Jnt" 
+        -overlayLabelColor 0.8 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Renames selected icons; Select in desired counting order" 
+        -enableBackground 0
+        -align "center" 
+        -label "Icon Renamer" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "icon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.icon_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Colors all icons in the scene when named properly" 
+        -enableBackground 0
+        -align "center" 
+        -label "Color All Icons" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Color All" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.icon_color_all()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Colors selected icons in the scene when named properly" 
+        -enableBackground 0
+        -align "center" 
+        -label "Color Selected Icons" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Color individual" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.icon_color_indiv()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Pads all root joimnts in the scene when named properly" 
+        -enableBackground 0
+        -align "center" 
+        -label "Pad All Roots" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Pad all roots" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.padding_all_roots()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Locks and Hides translates of selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Lock n Hide Translate" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LH_T" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.lock_and_hide_trans()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Locks and Hides rotation of selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Lock n Hide Rotate" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LH_R" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.lock_and_hide_rotate()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Unlocks and Shows visibility attributes on selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Unlock n Show Visibility" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "US_V" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.unlock_and_show_vis()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Unlocks and Shows default attributes on selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Unlock n Show Default Attributes " 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "US_Def" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.unlock_and_show_default()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Unlocks and Shows all attributes on all objects" 
+        -enableBackground 0
+        -align "center" 
+        -label "Unlock n Show All Object Attributes" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "US_All" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pettyHuston_riggingTools_cri1_1408 as hp \nreload(hp)\n\nhp.unlock_and_show_all()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

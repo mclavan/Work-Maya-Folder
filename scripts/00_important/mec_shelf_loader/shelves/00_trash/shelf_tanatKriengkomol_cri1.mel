@@ -1,0 +1,440 @@
+global proc shelf_tanatKriengkomol_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freeze Transforms" 
+        -enableBackground 0
+        -align "center" 
+        -label "freezeTransforms" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "freezeTransforms" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "fleur.png" 
+        -image1 "fleur.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete all History" 
+        -enableBackground 0
+        -align "center" 
+        -label "history" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "history" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "clearCanvas.png" 
+        -image1 "clearCanvas.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "delete -ch;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Center Pivot Point" 
+        -enableBackground 0
+        -align "center" 
+        -label "pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "pivot" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "polyMoveVertex.png" 
+        -image1 "polyMoveVertex.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "xform -cp;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 232
+        -height 249
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create ik" 
+        -enableBackground 0
+        -align "center" 
+        -label "ik" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ik" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "joint.svg" 
+        -image1 "joint.svg" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ikHandle;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 256
+        -height 247
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create ik (RotatePlane)" 
+        -enableBackground 0
+        -align "center" 
+        -label "ikRP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ikRP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "ikRPsolver.svg" 
+        -image1 "ikRPsolver.svg" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ikHandle -sol ikRPsolver -s 0;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Group Objects" 
+        -enableBackground 0
+        -align "center" 
+        -label "group" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "group" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "group.png" 
+        -image1 "group.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "group;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Parent Objects" 
+        -enableBackground 0
+        -align "center" 
+        -label "parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "parent" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "parent.png" 
+        -image1 "parent.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "parent;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Duplicate Objects" 
+        -enableBackground 0
+        -align "center" 
+        -label "dupe" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "dupe" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "copySkinWeight.png" 
+        -image1 "copySkinWeight.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "duplicate -rr;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create Circle" 
+        -enableBackground 0
+        -align "center" 
+        -label "circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "circle" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "circle -c 0 0 0 -nr 0 0 0 -sw 360 -r 1 -d 3 -ut 0 -tol 0 -s 8 -ch 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create Square" 
+        -enableBackground 0
+        -align "center" 
+        -label "square" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "square" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "nurbsSquare -c 0 0 0 -nr 0 1 0 -sl1 1 -sl2 1 -sps 1 -d 3 -ch 1 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create Cube" 
+        -enableBackground 0
+        -align "center" 
+        -label "cube" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "cube" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "nurbsCube -p 0 0 0 -ax 0 1 0 -w 1 -lr 1 -hr 1 -d 3 -u 1 -v 1 -ch 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Parent Constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "consParent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "parConstraint" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "parentConstraint -mo -weight 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Orient Constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "consOrient" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "orConstraint" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "orientConstraint -mo -weight 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Point Constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "pointConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "pointConstraint" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pointlight.png" 
+        -image1 "pointlight.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pointConstraint -offset 0 0 0 -weight 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Pole Vector" 
+        -enableBackground 0
+        -align "center" 
+        -label "poleV" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "poleV" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "poleVectorConstraint -weight 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 36
+        -height 43
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "EXTERMINAAATE" 
+        -enableBackground 0
+        -align "center" 
+        -label "nuke" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "nuke" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/KP/Documents/full sail work/Rigging I Replay/kriengkomolTanat_cr1_1408/shelficons/nuclear-explosion.png" 
+        -image1 "/Users/KP/Documents/full sail work/Rigging I Replay/kriengkomolTanat_cr1_1408/shelficons/nuclear-explosion.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "FreezeTransformations;\nmakeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;\nCenterPivot;\nDeleteAllHistory;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

@@ -1,0 +1,608 @@
+global proc shelf_AdamsDion_cri1_1408 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 11
+        -height 16
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Icons ------>" 
+        -enableBackground 1
+        -align "center" 
+        -label "IconDivider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "arrowRight.png" 
+        -image1 "arrowRight.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a arrow icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "Arrow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Arrow" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "aselect.png" 
+        -image1 "aselect.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p -5 0 5 -p -10 0 5 -p 0 0 -5 -p 10 0 5 -p 5 0 5 -p 5 0 15 -p -5 0 15 -p -5 0 5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a Square icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "Square" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Sqre" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p -5 0 -5 -p 5 0 -5 -p 5 0 5 -p -5 0 5 -p -5 0 -5 -k 0 -k 1 -k 2 -k 3 -k 4 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates circle icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "Circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Circ" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "circle -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 0 -s 8 -ch 1;" 
+        -sourceType "mel" 
+        -doubleClickCommand "circle" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a cube icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cube" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p 0.5 0.5 0.5 -p 0.5 -0.5 0.5 -p 0.5 -0.5 -0.5 -p 0.5 0.5 -0.5 -p 0.5 0.5 0.5 -p -0.5 0.5 0.5 -p -0.5 -0.5 0.5 -p 0.5 -0.5 0.5 -p -0.5 -0.5 0.5 -p -0.5 -0.5 -0.5 -p -0.5 0.5 -0.5 -p -0.5 0.5 0.5 -p -0.5 0.5 -0.5 -p 0.5 0.5 -0.5 -p 0.5 -0.5 -0.5 -p -0.5 -0.5 -0.5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 11
+        -height 16
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Tools------------>" 
+        -enableBackground 1
+        -align "center" 
+        -label "ToolsDivider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "arrowRight.png" 
+        -image1 "arrowRight.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Centers pivot point on an object" 
+        -enableBackground 0
+        -align "center" 
+        -label "CenterPivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create IK handle Single click SC Double click RP" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK handle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IK" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "goToBindPose.png" 
+        -image1 "goToBindPose.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ikHandle -s 0;" 
+        -sourceType "mel" 
+        -doubleClickCommand "ikHandle -sol ikRPsolver -s 0; " 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freeze Transforms" 
+        -enableBackground 0
+        -align "center" 
+        -label "Freeze" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FrzT" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "bubbles.png" 
+        -image1 "bubbles.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "makeIdentity " 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "DeleteHistory" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "DH" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "deleteTimeWarp.png" 
+        -image1 "deleteTimeWarp.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 18
+        -height 18
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Locks and hides translations/rotations" 
+        -enableBackground 0
+        -align "center" 
+        -label "LockandHide" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 1 1 0 1 
+        -image "Lock_ON.png" 
+        -image1 "Lock_ON.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "Translations" ( "import pymel.core as pm\nimport adamsDion_riggingTools_cri1_1408 \nadamsDion_riggingTools_cri1_1408.lock_and_hide_trans()" )
+        -mip 0
+        -mi "Rotations" ( "import pymel.core as pm\nimport adamsDion_riggingTools_cri1_1408 \nadamsDion_riggingTools_cri1_1408.lock_and_hide_rotates()\n" )
+        -mip 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 18
+        -height 18
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "unlocks and Shows hidden translations/rotations" 
+        -enableBackground 0
+        -align "center" 
+        -label "UnlockandShow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Lock_OFF.png" 
+        -image1 "Lock_OFF.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "Translations" ( "import pymel.core as pm\nimport adamsDion_riggingTools_cri1_1408 \nadamsDion_riggingTools_cri1_1408.unlock_and_show_trans()\n" )
+        -mip 0
+        -mi "Rotations" ( "import pymel.core as pm\nimport adamsDion_riggingTools_cri1_1408 \nadamsDion_riggingTools_cri1_1408.unlock_and_show_rotates()" )
+        -mip 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 11
+        -height 16
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Constraints--------->" 
+        -enableBackground 1
+        -align "center" 
+        -label "ConstraintDivider" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "arrowRight.png" 
+        -image1 "arrowRight.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain. Single click no offset Double click for maintain" 
+        -enableBackground 0
+        -align "center" 
+        -label "PointConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PoC" 
+        -overlayLabelColor 1 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "posConstraint.png" 
+        -image1 "posConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreatePointConstraintArgList 1 { \"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -doubleClickCommand "pointConstraint -mo;" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain. Single click no offset Double click for maintain" 
+        -enableBackground 0
+        -align "center" 
+        -label "ParentConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ParC" 
+        -overlayLabelColor 1 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateParentConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -doubleClickCommand "parentConstraint -mo;" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain.Single click no offset Double click for maintain" 
+        -enableBackground 0
+        -align "center" 
+        -label "OrientConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OC" 
+        -overlayLabelColor 1 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateOrientConstraintArgList 1 { \"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -doubleClickCommand "orientConstraint -mo;" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the Rotate Plane ikHandle to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "PoleVectorConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PVC" 
+        -overlayLabelColor 1 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "poleVectorConstraint -weight 1" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 11
+        -height 16
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Tools that need customization in script editor--------------->" 
+        -enableBackground 1
+        -align "center" 
+        -label "Tool (Custom)" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "arrowRight.png" 
+        -image1 "arrowRight.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates grouping and icons for a joint chain (Select root joint)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cluster" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hier" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 0.8 
+        -image "createContainer.png" 
+        -image1 "createContainer.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nimport adamsDion_riggingTools_cri1_1408 \nadamsDion_riggingTools_cri1_1408.hierarchy()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Renames joints " 
+        -enableBackground 0
+        -align "center" 
+        -label "JointRenamer" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Rnam" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "defaultTwoStackedLayout.png" 
+        -image1 "defaultTwoStackedLayout.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nimport adamsDion_riggingTools_cri1_1408 \nadamsDion_riggingTools_cri1_1408.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates pad for joint chain (select root joint)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Padding" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Pad" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "defaultFourQuadLayout.png" 
+        -image1 "defaultFourQuadLayout.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nimport adamsDion_riggingTools_cri1_1408 \nadamsDion_riggingTools_cri1_1408.padding_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Renames joints " 
+        -enableBackground 0
+        -align "center" 
+        -label "Primming" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Rnam" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "defaultTwoStackedLayout.png" 
+        -image1 "defaultTwoStackedLayout.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nimport adamsDion_riggingTools_cri1_1408 \nadamsDion_riggingTools_cri1_1408.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

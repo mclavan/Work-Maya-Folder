@@ -1,0 +1,333 @@
+global proc shelf_CruzAnthony_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "FreezeTransformations" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 10
+        -height 27
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Seperator" 
+        -enableBackground 0
+        -align "center" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "closeBar.png" 
+        -image1 "closeBar.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS circle on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "Circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Circle" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "circle -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 0 -s 8 -ch 1; objectMoveCommand" 
+        -sourceType "mel" 
+        -doubleClickCommand "CreateNURBSCircleOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates NURBS Cube" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cube" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p -0.472597 -0.5 0.0459355 -p -0.472597 -0.5 -0.954064 -p -0.472597 0.5 -0.954064 -p -0.472597 0.5 0.0459355 -p -0.472597 -0.5 0.0459355 -p 0.527403 -0.5 0.0459355 -p 0.527403 0.5 0.0459355 -p -0.472597 0.5 0.0459355 -p -0.472597 0.5 -0.954064 -p 0.527403 0.5 -0.954064 -p 0.527403 -0.5 -0.954064 -p -0.472597 -0.5 -0.954064 -p -0.472597 0.5 -0.954064 -p 0.527403 0.5 -0.954064 -p 0.527403 -0.5 -0.954064 -p 0.527403 -0.5 0.0459355 -p 0.527403 0.5 0.0459355 -p 0.527403 0.5 -0.954064 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 -k 17 ;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a NURBS Arrow" 
+        -enableBackground 0
+        -align "center" 
+        -label "Arrow Icon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Arrow Icon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "moveDown.png" 
+        -image1 "moveDown.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p 0.073857 0 1.885478 -p 2.667025 0 1.885478 -p 2.666664 0 1.326652 -p 3.991115 0 2.385439 -p 2.666664 0 3.458895 -p 2.667025 0 2.900068 -p 0.073857 0 2.900068 -p 0.073857 0 1.885478 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 10
+        -height 27
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Seperator" 
+        -enableBackground 0
+        -align "center" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "closeBar.png" 
+        -image1 "closeBar.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Lock and hide Attributes" 
+        -enableBackground 0
+        -align "center" 
+        -label "lock" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Lock" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 0.2 
+        -image "greasePencilEraserPress.png" 
+        -image1 "greasePencilEraserPress.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected_control = pm.ls(selection=True)\ncontrol_icon = selected_control[0]\n\t\ncontrol_icon.sx.set(lock=True, keyable=False)\ncontrol_icon.sy.set(lock=True, keyable=False)\ncontrol_icon.sz.set(lock=True, keyable=False)\ncontrol_icon.v.set(lock=True, keyable=False)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "Lock Rotates" ( "import pymel.core as pm\nselected_control = pm.ls(selection=True)\ncontrol_icon = selected_control[0]\n\t\ncontrol_icon.rx.set(lock=True, keyable=False)\ncontrol_icon.ry.set(lock=True, keyable=False)\ncontrol_icon.rz.set(lock=True, keyable=False)" )
+        -mip 0
+        -mi "Lock Translates" ( "import pymel.core as pm\nselected_control = pm.ls(selection=True)\ncontrol_icon = selected_control[0]\n\t\ncontrol_icon.tx.set(lock=True, keyable=False)\ncontrol_icon.ty.set(lock=True, keyable=False)\ncontrol_icon.tz.set(lock=True, keyable=False)" )
+        -mip 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Unlock and Hide all Attributes" 
+        -enableBackground 0
+        -align "center" 
+        -label "Unlock" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Unlock" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 0.2 
+        -image "toonAssignPfxBrush.png" 
+        -image1 "toonAssignPfxBrush.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected_control = pm.ls(selection=True)\ncontrol_icon = selected_control[0]\nprint 'selected_control', control_icon\n\ncontrol_icon.sx.set(lock=False, keyable=True)\ncontrol_icon.sy.set(lock=False, keyable=True)\ncontrol_icon.sz.set(lock=False, keyable=True)\ncontrol_icon.tx.set(lock=False, keyable=True)\ncontrol_icon.ty.set(lock=False, keyable=True)\ncontrol_icon.tz.set(lock=False, keyable=True)\ncontrol_icon.rx.set(lock=False, keyable=True)\ncontrol_icon.ry.set(lock=False, keyable=True)\ncontrol_icon.rz.set(lock=False, keyable=True)\ncontrol_icon.v.set(lock=False, keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Add Attribute" 
+        -enableBackground 0
+        -align "center" 
+        -label "addAttr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "addAttr" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 0.2 
+        -image "artAttr.png" 
+        -image1 "artAttr.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "selected = pm.ls(selection=True)\nfirst_selected = selected[0]\n\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "Seperator Attribute" ( "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\n\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, at='enum', en='.........', keyable=True)\nattribute = first_selected.attr(attribute_name)\nattribute.set(lock=True)" )
+        -mip 0
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 10
+        -height 27
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Seperator" 
+        -enableBackground 0
+        -align "center" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "closeBar.png" 
+        -image1 "closeBar.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

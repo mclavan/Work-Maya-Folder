@@ -1,0 +1,417 @@
+global proc shelf_RIG_TOOLS () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "mel_line = 'curve -d 1 -p 0.5 0.5 0.5 -p 0.5 0.5 -0.5 -p -0.5 0.5 -0.5 -p -0.5 0.5 0.5 -p 0.5 0.5 0.5 -p 0.5 -0.5 0.5 -p 0.5 -0.5 -0.5 -p 0.5 0.5 -0.5 -p 0.5 -0.5 -0.5 -p -0.5 -0.5 -0.5 -p -0.5 0.5 -0.5 -p -0.5 -0.5 -0.5 -p -0.5 -0.5 0.5 -p -0.5 0.5 0.5 -p -0.5 -0.5 0.5 -p 0.5 -0.5 0.5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15'\npm.mel.eval(mel_line)" 
+        -enableBackground 0
+        -align "center" 
+        -label "CUBE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CUBE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "mel_line = 'curve -d 1 -p 0.5 0.5 0.5 -p 0.5 0.5 -0.5 -p -0.5 0.5 -0.5 -p -0.5 0.5 0.5 -p 0.5 0.5 0.5 -p 0.5 -0.5 0.5 -p 0.5 -0.5 -0.5 -p 0.5 0.5 -0.5 -p 0.5 -0.5 -0.5 -p -0.5 -0.5 -0.5 -p -0.5 0.5 -0.5 -p -0.5 -0.5 -0.5 -p -0.5 -0.5 0.5 -p -0.5 0.5 0.5 -p -0.5 -0.5 0.5 -p 0.5 -0.5 0.5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15'\npm.mel.eval(mel_line)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "mel_line = 'curve -d 1 -p -1 0 -1 -p 1 0 -1 -p 1 0 1 -p -1 0 1 -p -1 0 -1 -k 0 -k 1 -k 2 -k 3 -k 4'\n\npm.mel.eval(mel_line)" 
+        -enableBackground 0
+        -align "center" 
+        -label "SQRE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SQRE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "mel_line = 'curve -d 1 -p -1 0 -1 -p 1 0 -1 -p 1 0 1 -p -1 0 1 -p -1 0 -1 -k 0 -k 1 -k 2 -k 3 -k 4'\n\npm.mel.eval(mel_line)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.circle()" 
+        -enableBackground 0
+        -align "center" 
+        -label "CRCL" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CRCL" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.circle()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "mel_line = 'curve -d 1 -p 0 0 -5 -p -2 0 -3 -p -1 0 -3 -p -1 0 -1 -p 1 0 -1 -p 1 0 -3 -p 2 0 -3 -p 0 0 -5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7'\n\npm.mel.eval(mel_line)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "ARRW" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ARRW" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "curveCV.png" 
+        -image1 "curveCV.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "mel_line = 'curve -d 1 -p 0 0 -5 -p -2 0 -3 -p -1 0 -3 -p -1 0 -1 -p 1 0 -1 -p 1 0 -3 -p 2 0 -3 -p 0 0 -5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7'\n\npm.mel.eval(mel_line)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.makeIdentity( apply=True, t=1, r=1, s=1, n=0 )\n\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "fTRAN" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "fTRAN" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.makeIdentity( apply=True, t=1, r=1, s=1, n=0 )\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.delete(ch=True)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "DelH" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "DelH" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "deleteActive.png" 
+        -image1 "deleteActive.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.delete(ch=True)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.xform(cp=True)\n\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "cPIV" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "cPIV" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pointlight.png" 
+        -image1 "pointlight.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.xform(cp=True)\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.ikHandle(sol='ikRPsolver')\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "RPik" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RPik" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.ikHandle(sol='ikRPsolver')\npm.ikHandle()\n" 
+        -sourceType "python" 
+        -doubleClickCommand "pm.ikHandle()" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.cluster()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "CLUST" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CLUST" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.9 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.cluster()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.group()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "GRP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "GRP" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "group.png" 
+        -image1 "group.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.group()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.parentConstraint(mo=True)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "PARC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PARC" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.parentConstraint(mo=True)\n" 
+        -sourceType "python" 
+        -doubleClickCommand "pm.parentConstraint()" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.orientConstraint(mo=True);" 
+        -enableBackground 0
+        -align "center" 
+        -label "Ocon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Ocon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.orientConstraint(mo=True);" 
+        -sourceType "python" 
+        -doubleClickCommand "pm.orientConstraint();" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.poleVectorConstraint()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "pVEC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "pVEC" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.poleVectorConstraint()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.pointConstraint(mo=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "POINT" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "POINT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.pointConstraint(mo=True)" 
+        -sourceType "python" 
+        -doubleClickCommand "pm.pointConstraint()" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm \n\nimport tool_box\nreload(tool_box)\n\ntool_box.padding_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "PRIME" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PRIME" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm \n\nimport tool_box\nreload(tool_box)\n\ntool_box.padding_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

@@ -1,0 +1,160 @@
+global proc shelf_Custom () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    $gBuffStr = `toolButton -style iconOnly -doubleClickCommand "toolPropertyWindow" -cl toolCluster `;
+    $gBuffStr1 = `    polySelectEditCtx
+        -image1 "polySplitEdgeRing.png" 
+        -image2 "vacantCell.png" 
+        -image3 "vacantCell.png" 
+        -mode 1
+        -autoComplete 1
+        -divisions 2
+        -useEqualMultiplier 1
+        -fixQuads 1
+        -smoothingAngle 30
+        -splitType 1
+        -insertWithEdgeFlow 0
+        -adjustEdgeFlow 1
+`;
+    toolButton -edit -tool $gBuffStr1 -toolImage1 $gBuffStr1 "polySplitEdgeRing.png" $gBuffStr;
+    toolButton -edit -tool $gBuffStr1 $gBuffStr;
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateParentConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.hierarchy()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import Yey1\nreload(Yey1)\nYey1.hierarchy()" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hierarchy Tool" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.hierarchy()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.joint_renamer()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import Yey1\nreload(Yey1)\nYey1.joint_renamer()" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Joint Renamer Tool" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.joint_renamer()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.padding_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import Yey1\nreload(Yey1)\nYey1.padding_tool()" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Padding Tool" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.padding_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.priming_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import Yey1\nreload(Yey1)\nYey1.priming_tool()" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Priming Tool" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.priming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

@@ -1,0 +1,557 @@
+global proc shelf_eplingHannah_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freeze Transforms" 
+        -enableBackground 0
+        -align "center" 
+        -label "FT" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete History" 
+        -enableBackground 0
+        -align "center" 
+        -label "DH" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "DH" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory;\ndelete -ch;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Center Pivot" 
+        -enableBackground 0
+        -align "center" 
+        -label "CP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot;\nxform -cp;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Controls: Circle, Square, Cube, Arrow" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Control" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0.527 1 1 0.8 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "circle -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 0 -s 8 -ch 1; objectMoveCommand;" 
+        -sourceType "mel" 
+        -doubleClickCommand "ikHandle;" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "------------" ( "print(\"User defined menuItem\");" )
+        -mi "Square" ( "curve -d 1 -p -1 0 -1 -p -1 0 1 -p 1 0 1 -p 1 0 -1 -p -1 0 -1 -k 0 -k 1 -k 2 -k 3 -k 4 ;" )
+        -mi "Cube" ( "curve -d 1 -p -0.5 0.5 -0.5 -p 0.5 0.5 -0.5 -p 0.5 0.5 0.5 -p -0.5 0.5 0.5 -p -0.5 0.5 -0.5 -p -0.5 -0.5 -0.5 -p -0.5 -0.5 0.5 -p -0.5 0.5 0.5 -p 0.5 0.5 0.5 -p 0.5 -0.5 0.5 -p -0.5 -0.5 0.5 -p -0.5 -0.5 -0.5 -p 0.5 -0.5 -0.5 -p 0.5 0.5 -0.5 -p 0.5 0.5 0.5 -p 0.5 -0.5 0.5 -p 0.5 -0.5 -0.5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 ;" )
+        -mi "Arrow" ( "curve -d 1 -p 1 0 -4 -p -1 0 -4 -p -1 0 1 -p -3 0 1 -p 0 0 5 -p 3 0 1 -p 1 0 1 -p 1 0 -4 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;" )
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "ikHandle RP and SC" 
+        -enableBackground 0
+        -align "center" 
+        -label "Controls" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IK" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 1 0.8 
+        -image "menuIconSkeletons.png" 
+        -image1 "menuIconSkeletons.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ikHandle -sol ikRPsolver;" 
+        -sourceType "mel" 
+        -doubleClickCommand "ikHandle;" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Cluster Curve" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cluster" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cluster" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 1 0.7 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ClusterCurve;\nclusterCurve;\n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Parent Constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "PaC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PaC" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 1 0 0 0.8 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateParentConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };\nparentConstraint -mo -weight 1;\n" 
+        -sourceType "mel" 
+        -doubleClickCommand "doCreateParentConstraintArgList 1 { \"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };\nparentConstraint -weight 1;" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Orient Constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "OrC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OrC" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 1 0 0 0.8 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateOrientConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };\norientConstraint -mo -weight 1;" 
+        -sourceType "mel" 
+        -doubleClickCommand "doCreateOrientConstraintArgList 1 { \"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };\norientConstraint -offset 0 0 0 -weight 1;" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Point Constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "PoC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PoC" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 1 0 0 0.8 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreatePointConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };\npointConstraint -mo -weight 1;" 
+        -sourceType "mel" 
+        -doubleClickCommand "doCreatePointConstraintArgList 1 { \"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };\npointConstraint -offset 0 0 0 -weight 1;" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Pole Vector" 
+        -enableBackground 0
+        -align "center" 
+        -label "PVec" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PVec" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 1 0 0 0.8 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "poleVectorConstraint -weight 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Float Attribute" 
+        -enableBackground 0
+        -align "center" 
+        -label "FlAttr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FlAttr" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 1 1 0 1 
+        -image "menuIconAttributeFilter.png" 
+        -image1 "menuIconAttributeFilter.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection = True)\nprint 'Current Selected:', selected\n\nfirst_selected = selected[0]\nfirst_selected.addAttr('attribute', keyable = True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Separator Attribute" 
+        -enableBackground 0
+        -align "center" 
+        -label "SpAttr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SpAttr" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 1 1 0 1 
+        -image "menuIconAttributeFilter.png" 
+        -image1 "menuIconAttributeFilter.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection = True)\nprint 'Current Selected:', selected\n\nfirst_selected = selected[0]\nfirst_selected.addAttr('SEPARATOR', at= 'enum', en='------------:', keyable = True)\nfirst_selected.SEPARATOR.set(lock = True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Group Attribute" 
+        -enableBackground 0
+        -align "center" 
+        -label "GrpAttr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "GrpAttr" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 1 1 0 1 
+        -image "menuIconAttributeFilter.png" 
+        -image1 "menuIconAttributeFilter.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection = True)\nprint 'Current Selected:', selected\n\nfirst_selected = selected[0]\nfirst_selected.addAttr('FINGERS', at= 'enum', en='------------:', keyable = True)\nfirst_selected.FINGERS.set(lock = True)\nfirst_selected.addAttr('CURL', at= 'enum', en='------------:', keyable = True)\nfirst_selected.CURL.set(lock = True)\nfirst_selected.addAttr('index_curl', keyable = True)\nfirst_selected.addAttr('middle_curl', keyable = True)\nfirst_selected.addAttr('pinky_curl', keyable = True)\n\nfirst_selected.addAttr('SPREAD', at= 'enum', en='------------:', keyable = True)\nfirst_selected.SPREAD.set(lock = True)\nfirst_selected.addAttr('index_spread', keyable = True)\nfirst_selected.addAttr('middle_spread', keyable = True)\nfirst_selected.addAttr('pinky_spread', keyable = True)\n\nfirst_selected.addAttr('THUMB', at= 'enum', en='------------:', keyable = True)\nfirst_selected.THUMB.set(lock = True)\nfirst_selected.addAttr('thumb_curl', keyable = True)\nfirst_selected.addAttr('thumb_drop', keyable = True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Hierarchy" 
+        -enableBackground 0
+        -align "center" 
+        -label "Hierarchy" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hierarchy" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 0.7 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nprint 'Hierarchy Generated'\n\n# The user will select the root joint and the tool \n#\twill apply the systems\n\nroot_joint = 'lt_middle_01_bind'\nsecond_joint = 'lt_middle_02_bind'\nthird_joint = 'lt_middle_03_bind'\n\n'''\t\nPad the root joint.\n'''\n\n# Create an empty group.\npad = pm.group(empty=True, name='lt_middle_00_pad')\nprint 'Root Pad Created:', pad\n\n# Move group to root joint\n# Point constrain group to root joint\n#\tOffset is off (Snapping)\ntemp = pm.parentConstraint(root_joint, pad)\n\n# Delete constraints\npm.delete(temp)\n\n# Freeze transforms on group.\npm.makeIdentity(pad, apply=True, t=1, r=1, s=1, n=0)\n\n# Parent root joint to group. \npm.parent(root_joint, pad)\n\n\n'''\n# Create a local oriented control for each joint\n'''\n# lt_middle_01_bind, lt_middle_02_bind, lt_middle_03_bind\n\n# Create control (circle)\ncontrol_icon_1 = pm.circle(name='lf_middle_01_icon', normal=[1,0,0])[0]\n\n# Create group (NOT EMPTY)\n# This will automaticly parent the control under the group\ncontrol1_pad = pm.group(name='lt_middle_01_local')\nprint 'Control Pad Created:', control1_pad\n\n# Move group to the target joint\n# Use a parent constraint. Driver is the joint\n# \tWhere Driven is the group\n# \tOffset is off (Snapping)\ntemp = pm.parentConstraint(root_joint, control1_pad)\n\n# Delete the constraint\npm.delete(temp)\n\n# Delete History on control\npm.delete(control_icon_1, ch=True)\n\n# Orient Constraint. Driver: control. Driven: joint\npm.orientConstraint(control_icon_1, root_joint)\n\n\n\n#Do this same process for second_joint\ncontrol_icon_2 = pm.circle(name='lf_middle_02_icon', normal=[1,0,0])[0]\n\ncontrol2_pad = pm.group(name='lt_middle_02_local')\nprint 'Control Pad Created:', control2_pad\n\ntemp = pm.parentConstraint(second_joint, control2_pad)\npm.delete(temp)\n\npm.delete(control_icon_2, ch=True)\n\npm.orientConstraint(control_icon_2, second_joint)\n\n\n\n# Do this same process for third_joint\ncontrol_icon_3 = pm.circle(name='lf_middle_03_icon', normal=[1,0,0])[0]\n\ncontrol3_pad = pm.group(name='lt_middle_03_local')\nprint 'Control Pad Created:', control3_pad\n\ntemp = pm.parentConstraint(third_joint, control3_pad)\npm.delete(temp)\n\npm.delete(control_icon_3, ch=True)\n\npm.orientConstraint(control_icon_3, third_joint)\n\n\n\n# Parent the controls together\npm.parent(control2_pad, control_icon_1)\npm.parent(control3_pad, control_icon_2)\n\n#Create a holding group to house the pads and controls\nmiddle_grp = pm.group(empty=True, name='lt_middle_grp')\n\n# Parent the pads and the controls under the main group\n# \tMake sure that they are not parented together\npm.parent(pad, control1_pad, middle_grp)\n\nprint 'Hierarchy Successfully Created'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Padding" 
+        -enableBackground 0
+        -align "center" 
+        -label "Padding" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Padding" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 0.7 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nprint 'Padding Generated'\n\n# Select all joints in the joint chain\nselected = pm.ls(selection = True)\t\nroot_joint = selected[0]\n\n# Create group (epmty)\npad = pm.group(empty = True)\n\n# Move group to the target joint\n# Use a parent constraint with Offset turned of\n#\tDriver is the joint\n# \tDriven is the group(pad)\ntemp = pm.parentConstraint(root_joint, pad)\n\n# Delete the constraint\npm.delete(temp)\n\n# Delete History and Freeze Trnasforms on pad\npm.delete(pad, ch=True)\npm.makeIdentity(pad, apply=True, t=1, r=1, s=1, n=0)\n\n# Parent the joint and group. Driver: joint. Driven: pad\npm.parent(root_joint, pad)\n\n# Rename the new pad\npad_name = root_joint.replace('01_bind', '00_pad')\npad.rename(pad_name)\n\nprint 'Padding Successfully Complete'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Joint Rename" 
+        -enableBackground 0
+        -align "center" 
+        -label "JRename" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JRename" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 0.7 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nprint \"Joint Chain Rename Generated\"\n\n# The user will select the root joint and the tool will \n#\trename the chain in the system\n\n # Get all joints in a selected joint chain\njoint_chain = pm.ls(selection = True, dag = True)\nprint 'Items Selected:', joint_chain\n\n# Build new name - ori_name_count_suffix\n# 'lt'\n# 'arm'\n# '01'\n# 'bind'\nori = raw_input()\nname = raw_input()\ncount = 1\nsuffix = 'bind'\n\n# Select the root joint and add a For-In loop to all joints in the chain\nfor current_joint in joint_chain:\n\n\tnew_name = '{0}_{1}_0{2}_{3}'.format(ori, name, count, suffix)\n\tprint 'Joint Name:', new_name\n\tcurrent_joint.rename(new_name)\n\n\tcount = count + 1\n\n# Rename the end joint by changing suffix to waste\nnew_name = '{0}_{1}_0{2}_{3}'.format(ori, name, count-1, 'waste')\nprint 'Joint Name:', new_name\ncurrent_joint.rename(new_name)\n\nprint 'Joint Chain Successfully Renamed'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Priming" 
+        -enableBackground 0
+        -align "center" 
+        -label "Priming" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Priming" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 0.7 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nprint 'Priming Generated'\n\n# The user will select the joint and a control will be snapped \n#\tto the system\n\nselected = pm.ls(selection = True)\n\nfor target_joint in selected:\n\tcontrol_name = target_joint.replace('_bind', '_icon')\n\tlocal_pad_name = target_joint.replace('_bind', '_local')\n\n\t# Create a control and a group for the local pad\n\tcontrol_icon = pm.circle(normal = [1, 0, 0], radius = 1.5,\n\t\tname = control_name)[0]\n\n\tlocal_pad = pm.group(name = local_pad_name)\n\n\t# Parent Constraint to move the pad to the target joint\n\t#\tDriver is joint\n\t#\tDriven is pad\n\ttemp = pm.parentConstraint(target_joint, local_pad)\n\n\t# Delete the constraint\n\tpm.delete(temp)\n\n\t# Delete History on pad\n\tpm.delete(local_pad, ch=True)\n\n\t#Orient Constraint. Driver: control. Driven: joint\n\tpm.orientConstraint(control_icon, target_joint)\n\nprint 'Priming Successfully Completed'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Lock and Hide Attributes" 
+        -enableBackground 0
+        -align "center" 
+        -label "LockHide" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LockHide" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 0.7 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nprint 'Lock and Hide Generated'\n\n# The user will select the object desired and the tool will hide\n# \tattributes in the channel box, as well as lock them \n\t\n# Grab selected\nselected = pm.ls(selection = True)\nprint 'Current Selected:', selected\n\nfor current_item in selected:\n\tcurrent_item.tx.set(lock = True, keyable = False)\n\tcurrent_item.ty.set(lock = True, keyable = False)\n\tcurrent_item.tz.set(lock = True, keyable = False)\n\t\t    \n\tcurrent_item.rx.set(lock = True, keyable = False)\n\tcurrent_item.ry.set(lock = True, keyable = False)\n\tcurrent_item.rz.set(lock = True, keyable = False)\n\n\tcurrent_item.sx.set(lock = True, keyable = False)\n\tcurrent_item.sy.set(lock = True, keyable = False)\n\tcurrent_item.sz.set(lock = True, keyable = False)\n\t\t    \n\tcurrent_item.v.set(lock = False, keyable = True)\n\nprint 'Lock and Hide Successfully Completed'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Unlock and Unhide Attributes" 
+        -enableBackground 0
+        -align "center" 
+        -label "ResetAttr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ResetAttr" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 0.7 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nprint 'Reset Generated'\n\n# The user will selecet the object desired and the tool will reset\n# \tall attributes to default lock and hide settings \n\n# Grab selected \nselected = pm.ls(selection = True)\nprint 'Current Selected:', selected\n\nfor current_item in selected:\n\tcurrent_item.tx.set(lock = False, keyable = True)\n\tcurrent_item.ty.set(lock = False, keyable = True)\n\tcurrent_item.tz.set(lock = False, keyable = True)\n\t\t    \n\tcurrent_item.rx.set(lock = False, keyable = True)\n\tcurrent_item.ry.set(lock = False, keyable = True)\n\tcurrent_item.rz.set(lock = False, keyable = True)\n\t\t    \n\tcurrent_item.sx.set(lock = False, keyable = True)\n\tcurrent_item.sy.set(lock = False, keyable = True)\n\tcurrent_item.sz.set(lock = False, keyable = True)\n\t\t    \n\tcurrent_item.v.set(lock = False, keyable = True)\n\nprint 'Reset Successfully Completed'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Add Attribute" 
+        -enableBackground 0
+        -align "center" 
+        -label "AddAttr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "AddAttr" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 0.7 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nprint 'Attribute Generated'\n\n# The user will select the object desired an an attribute will be created\n# \tin the Channel Box\n\n# Select Object\nselected = pm.ls(selection = True)\nprint 'Current Selected:', selected\n\nfirst_selected = selected[0]\n\nfirst_selected.addAttr(raw_input(), keyable = True)\n\nprint 'Attribute Successfully Created'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

@@ -1,0 +1,550 @@
+global proc shelf_Noske_Marc_CRI1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "FreezeTransformations" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Click to place joint. Click on existing joint to add to skeleton. Click-Drag to position joint." 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JointTool" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "kinJoint.png" 
+        -image1 "kinJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "JointTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create IK handle on joint chain" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK Handle Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IKHandle" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "IKHandleTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create IK spline handle on joint chain" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK Spline Handle Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IKSpline" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "kinSplineHandle.png" 
+        -image1 "kinSplineHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "IKSplineHandleTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Customize the joint scale" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Size..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Joint Size" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "jdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cluster" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cluster" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CreateCluster" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\npm.circle(c=[0, 0, 0], nr=[0, 1, 0], sw=360, r=1, d=3, s=16, ch=1)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Circle" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.circle(c=[0, 0, 0], nr=[0, 1, 0], sw=360, r=1, d=3, s=16, ch=1)" 
+        -sourceType "python" 
+        -doubleClickCommand "pm.curve(d=1, p[[-1.2, 0, -1.2], [1.2, 0, -1.2], [1.2, 0, 1.2], [-1.2, 0, 1.2], [-1.2, 0, -1.2]], k=[0, 1, 2, 3, 4,])" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\npm.curve(d=1, p=[[-3.929348, 3.929348, 3.929348], [3.929348, 3.929348, 3.929348], [3.929348, -3.929348, 3.929348], [-3.929348, -3.929348, 3.929348], [-3.929348, 3.929348, 3.929348], [-3.929348, 3.929348, -3.929348], [-3.929348, -3.929348, -3.929348], [-3.929348, -3.929348, 3.929348], [-3.929348, -3.929348, -3.929348], [-3.929348, -3.929348, 3.929348], [-3.929348, 3.929348, 3.929348], [-3.929348, 3.929348, -3.929348], [-3.929348, -3.929348, -3.929348], [3.929348, -3.929348, -3.929348], [3.929348, 3.929348, -3.929348], [-3.929348, 3.929348, -3.929348], [3.929348, 3.929348, -3.929348], [3.929348, 3.929348, 3.929348], [3.929348, -3.929348, 3.929348], [3.929348, -3.929348, -3.929348], [3.929348, 3.929348, -3.929348], [3.929348, 3.929348, 3.929348], [-3.929348, 3.929348, 3.929348], [-3.929348, -3.929348, 3.929348], [3.929348, -3.929348, 3.929348], [3.929348, 3.929348, 3.929348]], k=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25])" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cube" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.curve(d=1, p=[[-3.929348, 3.929348, 3.929348], [3.929348, 3.929348, 3.929348], [3.929348, -3.929348, 3.929348], [-3.929348, -3.929348, 3.929348], [-3.929348, 3.929348, 3.929348], [-3.929348, 3.929348, -3.929348], [-3.929348, -3.929348, -3.929348], [-3.929348, -3.929348, 3.929348], [-3.929348, -3.929348, -3.929348], [-3.929348, -3.929348, 3.929348], [-3.929348, 3.929348, 3.929348], [-3.929348, 3.929348, -3.929348], [-3.929348, -3.929348, -3.929348], [3.929348, -3.929348, -3.929348], [3.929348, 3.929348, -3.929348], [-3.929348, 3.929348, -3.929348], [3.929348, 3.929348, -3.929348], [3.929348, 3.929348, 3.929348], [3.929348, -3.929348, 3.929348], [3.929348, -3.929348, -3.929348], [3.929348, 3.929348, -3.929348], [3.929348, 3.929348, 3.929348], [-3.929348, 3.929348, 3.929348], [-3.929348, -3.929348, 3.929348], [3.929348, -3.929348, 3.929348], [3.929348, 3.929348, 3.929348]], k=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25])" 
+        -sourceType "python" 
+        -doubleClickCommand "pm.curve(d=1, p[[0, 0, -1.8], [-1.8, 0, -3] [-0.6, 0, -3], [0, 0, -6], [0.6, 0, -3], [1.8, 0, -3], [0, 0, -1.8]], k=[0, 1, 2, 3, 4, 5, 6])" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Orient" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Orient" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateOrientConstraintArgList 1 { \"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Point" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Point" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "posConstraint.png" 
+        -image1 "posConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreatePointConstraintArgList 1 { \"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the Rotate Plane ikHandle to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Pole Vector" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Pole" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "poleVectorConstraint -weight 1" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Parent" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateParentConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -doubleClickCommand "import pymel.core as pm\npm.parentConstraint(mo=True)" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\nfirst_selected.addAttr('indexCurl', keyable=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "AttName" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "AttName" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nfirst_selected.addAttr('indexCurl', keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\nfirst_selected.addAttr('Fingers', keyable=False)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "KeyAtt" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "KeyAtt" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nfirst_selected.addAttr('Fingers', keyable=False)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.hierarchy()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_rigg..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "HRY" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.hierarchy()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.padding_tool()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_rigg..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PadTool" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.padding_tool()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.joint_renamer()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_rigg..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JRename" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.joint_renamer()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.priming_tool()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_rigg..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.priming_tool()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

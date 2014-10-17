@@ -1,0 +1,288 @@
+global proc shelf_Sneed_Jared_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freeze, History, Pivot" 
+        -enableBackground 1
+        -align "center" 
+        -label "NUKE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NUKE" 
+        -overlayLabelColor 0.865772 0.865772 0.865772 
+        -overlayLabelBackColor 0.336056 0.336056 0.952 0.7 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;\ndelete -ch;\nxform -cp;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "IK Handles" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK FK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IK FK" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.3 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "Rotate Plane IK" ( "ikHandle -sol ikRPsolver;" )
+        -mi "Single Chain IK" ( "ikHandle -sj;" )
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Cluster Deformer" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cluster" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CLUS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "cluster -rel;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Differnt Control Curves" 
+        -enableBackground 1
+        -align "center" 
+        -label "Control Curves" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CRVS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.4 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "Circle" ( "circle -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 0 -s 8 -ch 1;" )
+        -mi "Square" ( "curve -d 1 -p 1 0 -1 -p 1 0 1 -p -1 0 1 -p -1 0 -1 -p 1 0 -1 -k 0 -k 1 -k 2 -k 3 -k 4;" )
+        -mi "Cube" ( "curve -d 1 -p -0.5 0.5 0.5 -p 0.5 0.5 0.5 -p 0.5 0.5 -0.5 -p -0.5 0.5 -0.5 -p -0.5 0.5 0.5 -p -0.5 -0.5 0.5 -p -0.5 -0.5 -0.5 -p -0.5 0.5 -0.5 -p -0.5 -0.5 -0.5 -p 0.5 -0.5 -0.5 -p 0.5 0.5 -0.5 -p 0.5 -0.5 -0.5 -p 0.5 -0.5 0.5 -p 0.5 0.5 0.5 -p 0.5 -0.5 0.5 -p -0.5 -0.5 0.5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15;" )
+        -mi "Arrow" ( "curve -d 1 -p 4 0 0 -p 2 0 -2 -p 2 0 -1 -p 0 0 -1 -p 0 0 1 -p 2 0 1 -p 2 0 2 -p 4 0 0 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7;" )
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Parent Constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent Constraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PAR" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.491 0 0 1 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "Offset On" ( "parentConstraint -mo -weight 1;" )
+        -mi "Offset Off" ( "parentConstraint -weight 1;" )
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Orient Constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "Orient Constraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ORI" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.491 0 0 1 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "Offset On" ( "orientConstraint -mo -weight 1;" )
+        -mi "Offset Off" ( "orientConstraint -offset 0 0 0 -weight 1;" )
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Point Constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "Point Constraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PNT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.491 0 0 1 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "Offset On" ( "pointConstraint -mo -weight 1;" )
+        -mi "Offset Off" ( "pointConstraint -offset 0 0 0 -weight 1;" )
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Pole Vector" 
+        -enableBackground 0
+        -align "center" 
+        -label "Pole Vector" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "POL" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.491 0 0 1 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "poleVectorConstraint -weight 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "User Script" 
+        -enableBackground 0
+        -align "center" 
+        -label "Finger Attributes" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FING" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'Current Selection', selected\n\nfirst_selected = selected[0]\nfirst_selected.addAttr('FINGERS',\n    at='enum', en='---------------:', keyable=True)\nfirst_selceted.FINGERS.set(lock=True)\nfirst_selected.addAttr('index_curl', keyable=True)\nfirst_selected.addAttr('middle_curl', keyable=True)\nfirst_selected.addAttr('pinky_curl', keyable=True)\nfirst_selected = selected[0]\nfirst_selected.addAttr('SPREAD',\n    at='enum', en='---------------:', keyable=True)\nfirst_selceted.FINGERS.set(lock=True)\nfirst_selected.addAttr('index_spread', keyable=True)\nfirst_selected.addAttr('middle_spread', keyable=True)\nfirst_selected.addAttr('pinky_spread', keyable=True)\nfirst_selected.addAttr('THUMB',\n    at='enum', en='---------------:', keyable=True)\nfirst_selceted.FINGERS.set(lock=True)\nfirst_selected.addAttr('thumb_curl', keyable=True)\nfirst_selected.addAttr('thumb_bend', keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Click to place joint. Click on existing joint to add to skeleton. Click-Drag to position joint." 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinJoint.png" 
+        -image1 "kinJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "JointTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

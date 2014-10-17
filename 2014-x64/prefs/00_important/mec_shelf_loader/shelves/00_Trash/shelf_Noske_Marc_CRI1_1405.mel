@@ -1,0 +1,116 @@
+global proc shelf_Noske_Marc_CRI1_1405 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.padding_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Padding Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.padding_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.joint_renamer()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Renamer" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JR" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.joint_renamer()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.priming.tool()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "Priming Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PrmT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.priming.tool()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.hierarchy()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "Hierarchy" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "HRY" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import noske_marc_riggingtools_cri1_1405\nreload (noske_marc_riggingtools_cri1_1405)\nnoske_marc_riggingtools_cri1_1405.hierarchy()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

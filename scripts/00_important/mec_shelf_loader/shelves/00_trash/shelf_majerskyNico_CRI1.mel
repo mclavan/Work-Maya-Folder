@@ -1,0 +1,727 @@
+global proc shelf_majerskyNico_CRI1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 19
+        -height 19
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "freezeTransforms" 
+        -enableBackground 0
+        -align "center" 
+        -label "FT" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "channelBoxUseManips.png" 
+        -image1 "channelBoxUseManips.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "deleteHistory" 
+        -enableBackground 0
+        -align "center" 
+        -label "DH" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "DH" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "deleteActive.png" 
+        -image1 "deleteActive.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "delete -ch;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "centerPivot" 
+        -enableBackground 0
+        -align "center" 
+        -label "CP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "collapseContainer.png" 
+        -image1 "collapseContainer.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "xform -cp;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "NUKE" 
+        -enableBackground 0
+        -align "center" 
+        -label "NUKE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NUKE" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "fire.png" 
+        -image1 "fire.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;\ndelete -ch;\nxform -cp;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "-----" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "setEdRemoveCmd.png" 
+        -image1 "setEdRemoveCmd.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "singleChainIK" 
+        -enableBackground 0
+        -align "center" 
+        -label "SC IK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SCIK" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ikHandle -n 'lf_clav' -sj 'lf_clav_01' -ee 'lf_clav_02';" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "rotatePlaneIK" 
+        -enableBackground 0
+        -align "center" 
+        -label "RP IK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RPIK" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ikHandle -sol ikRPsolver -n 'rt_arm' -sj 'rt_arm_01' -ee 'rt_arm_03';" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "cluster" 
+        -enableBackground 0
+        -align "center" 
+        -label "clus" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "clus" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "cluster -n cluster1 -bf true -af false -sp true;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "-----" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "setEdRemoveCmd.png" 
+        -image1 "setEdRemoveCmd.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "grouping" 
+        -enableBackground 0
+        -align "center" 
+        -label "group" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "grp" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "group.png" 
+        -image1 "group.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "group -n grp1 -em;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "parent" 
+        -enableBackground 0
+        -align "center" 
+        -label "parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "prnt" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "parent.png" 
+        -image1 "parent.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "parent;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "duplicate" 
+        -enableBackground 0
+        -align "center" 
+        -label "duplicate" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "dupe" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "duplicateCurve.png" 
+        -image1 "duplicateCurve.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "duplicate;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "-----" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "setEdRemoveCmd.png" 
+        -image1 "setEdRemoveCmd.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "circleICON" 
+        -enableBackground 0
+        -align "center" 
+        -label "circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "crcl" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "circle -o on -nr 0 1 0 -r 1" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "squareICON" 
+        -enableBackground 0
+        -align "center" 
+        -label "square" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "sqre" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -n square1 -d 1 -p -1 0 1 -p -1 0 -1 -p 1 0 -1 -p 1 0 1 -p -1 0 1 -k 0 -k 1 -k 2 -k 3 -k 4 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "cubeICON" 
+        -enableBackground 0
+        -align "center" 
+        -label "cube" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "cube" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -n cube1 -d 1 -p 0.5 0.5 0.5 -p 0.5 0.5 -0.5 -p 0.5 -0.5 -0.5 -p 0.5 -0.5 0.5 -p 0.5 0.5 0.5 -p -0.5 0.5 0.5 -p -0.5 -0.5 0.5 -p 0.5 -0.5 0.5 -p -0.5 -0.5 0.5 -p -0.5 -0.5 -0.5 -p -0.5 0.5 -0.5 -p -0.5 0.5 0.5 -p -0.5 0.5 -0.5 -p 0.5 0.5 -0.5 -p 0.5 -0.5 -0.5 -p -0.5 -0.5 -0.5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "arrowICON" 
+        -enableBackground 0
+        -align "center" 
+        -label "arrow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "arow" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "aselect.png" 
+        -image1 "aselect.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -n arrow1 -d 1 -p 0 0 -3 -p 2 0 -1 -p 1 0 -1 -p 1 0 1 -p -1 0 1 -p -1 0 -1 -p -2 0 -1 -p 0 0 -3 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "-----" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "setEdRemoveCmd.png" 
+        -image1 "setEdRemoveCmd.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "parentConstraint MO on" 
+        -enableBackground 0
+        -align "center" 
+        -label "parentConstraintMOon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "pCon" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "parentConstraint -mo -weight 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "parentConstraint MO off" 
+        -enableBackground 0
+        -align "center" 
+        -label "parentConstraintMOoff" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "pCof" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "parentConstraint -weight 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "orientConstraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "orientConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ortC" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "orientConstraint -offset 0 0 0 -weight 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pointConstraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "pointConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "pntC" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pointConstraint -offset 0 0 0 -weight 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "poleVectorConstraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "poleVectorConstraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "pVrC" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "poleVectorConstraint -weight 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "-----" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "setEdRemoveCmd.png" 
+        -image1 "setEdRemoveCmd.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "add Float Attribute" 
+        -enableBackground 0
+        -align "center" 
+        -label "floatAttr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FAtr" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "attribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "add Separator Attr" 
+        -enableBackground 0
+        -align "center" 
+        -label "separatorAttr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "sAtr" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "attribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, keyable=True, at='enum', en='----------:')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "add All Finger Attr" 
+        -enableBackground 0
+        -align "center" 
+        -label "allFingerAttr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "AAFA" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "first_selected.addAttr('FINGERS', keyable=True, at='enum', en=\"----------:\")\nfirst_selected.FINGERS.set(lock=True)\n\nfirst_selected.addAttr('CURL', keyable=True, at='enum', en=\"----------:\")\nfirst_selected.CURL.set(lock=True)\nfirst_selected.addAttr('index_curl', keyable=True)\nfirst_selected.addAttr('middle_curl', keyable=True)\nfirst_selected.addAttr('ring_curl', keyable=True)\nfirst_selected.addAttr('pinky_curl', keyable=True)\n\nfirst_selected.addAttr('SPREAD', keyable=True, at='enum', en=\"----------:\")\nfirst_selected.SPREAD.set(lock=True)\nfirst_selected.addAttr('index_spread', keyable=True)\nfirst_selected.addAttr('middle_spread', keyable=True)\nfirst_selected.addAttr('ring_spread', keyable=True)\nfirst_selected.addAttr('pinky_spread', keyable=True)\n\nfirst_selected.addAttr('THUMB', keyable=True, at='enum', en=\"----------:\")\nfirst_selected.THUMB.set(lock=True)\nfirst_selected.addAttr('thumb_curl', keyable=True)\nfirst_selected.addAttr('thumb_drop', keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

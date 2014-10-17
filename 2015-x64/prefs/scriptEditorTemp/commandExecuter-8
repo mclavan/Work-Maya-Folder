@@ -1,0 +1,10 @@
+'''
+Affected Objects
+'''
+# Selected
+pm.makeIdentity(apply=True, t=1, r=1, s=1, normal=0)
+
+# Focused
+pm.makeIdentity('icon', apply=True, t=1, r=1, s=1, normal=0)
+
+

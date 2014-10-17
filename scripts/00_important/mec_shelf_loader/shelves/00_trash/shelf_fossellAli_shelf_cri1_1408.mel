@@ -1,0 +1,548 @@
+global proc shelf_fossellAli_shelf_cri1_1408 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;" 
+        -enableBackground 0
+        -align "center" 
+        -label "FT" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "makeIdentity -apply true -t 1 -r 1 -s 1 -n 0 -pn 1;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.delete(ch=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "DH" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "DH" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.delete(ch=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.xform(cp=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "CP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.xform(cp=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.mel.IKHandleTool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "IKSingle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IKSingle" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.mel.IKHandleTool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.mel.CreateCluster()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cluster" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cluster" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.mel.CreateCluster()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.group(empty=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "nullG" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "nullG" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.group(empty=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.circle(c=[0, 0, 0], nr=[0, 1, 0], sw=360, d=3, s=8)" 
+        -enableBackground 0
+        -align "center" 
+        -label "NCircle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NCircle" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.circle(c=[0, 0, 0], nr=[0, 1, 0], sw=360, d=3, s=8)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.circle(c=[0, 0, 0], nr=[0, 1, 0], sw=360, d=1, s=4)" 
+        -enableBackground 0
+        -align "center" 
+        -label "NSqua" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NSqua" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.circle(c=[0, 0, 0], nr=[0, 1, 0], sw=360, d=1, s=4)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "curve -d 1 -p 1 0 1 -p -1 0 1 -p -1 0 -2 -p -2 0 -2 -p 0 0 -4 -p 2 0 -2 -p 1 0 -2 -p 1 0 1 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;" 
+        -enableBackground 0
+        -align "center" 
+        -label "Arrow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Arrow" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p 1 0 1 -p -1 0 1 -p -1 0 -2 -p -2 0 -2 -p 0 0 -4 -p 2 0 -2 -p 1 0 -2 -p 1 0 1 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "curve -d 1 -p 2.092617 -7.13867e-10 1.331443 -p 2.092617 3.075829 1.331443 -p 2.092617 3.075829 -1.867205 -p 2.092617 -7.13867e-10 -1.867205 -p 2.092617 -7.13867e-10 1.331443 -p -1.816699 -7.13867e-10 1.331443 -p -1.816699 3.075829 1.331443 -p 2.092617 3.075829 1.331443 -p -1.816699 3.075829 1.331443 -p -1.816699 3.075829 -1.867205 -p -1.816699 -7.13867e-10 -1.867205 -p -1.816699 -7.13867e-10 1.331443 -p -1.816699 -7.13867e-10 -1.867205 -p 2.092617 -7.13867e-10 -1.867205 -p 2.092617 3.075829 -1.867205 -p -1.816699 3.075829 -1.867205 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 ;" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cube" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "curve -d 1 -p 2.092617 -7.13867e-10 1.331443 -p 2.092617 3.075829 1.331443 -p 2.092617 3.075829 -1.867205 -p 2.092617 -7.13867e-10 -1.867205 -p 2.092617 -7.13867e-10 1.331443 -p -1.816699 -7.13867e-10 1.331443 -p -1.816699 3.075829 1.331443 -p 2.092617 3.075829 1.331443 -p -1.816699 3.075829 1.331443 -p -1.816699 3.075829 -1.867205 -p -1.816699 -7.13867e-10 -1.867205 -p -1.816699 -7.13867e-10 1.331443 -p -1.816699 -7.13867e-10 -1.867205 -p 2.092617 -7.13867e-10 -1.867205 -p 2.092617 3.075829 -1.867205 -p -1.816699 3.075829 -1.867205 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 ;" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected:', first_selected\n\nfirst_selected.overrideEnabled.set(1)\nfirst_selected.overrideColor.set(6)" 
+        -enableBackground 0
+        -align "center" 
+        -label "BLUE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "BLUE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected:', first_selected\n\nfirst_selected.overrideEnabled.set(1)\nfirst_selected.overrideColor.set(6)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected:', first_selected\n\nfirst_selected.overrideEnabled.set(1)\nfirst_selected.overrideColor.set(17)" 
+        -enableBackground 0
+        -align "center" 
+        -label "YELLO" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "YELLO" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected:', first_selected\n\nfirst_selected.overrideEnabled.set(1)\nfirst_selected.overrideColor.set(17)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected:', first_selected\n\nfirst_selected.overrideEnabled.set(1)\nfirst_selected.overrideColor.set(13)" 
+        -enableBackground 0
+        -align "center" 
+        -label "RED" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RED" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected:', first_selected\n\nfirst_selected.overrideEnabled.set(1)\nfirst_selected.overrideColor.set(13)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.parentConstraint()" 
+        -enableBackground 0
+        -align "center" 
+        -label "PCon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PCon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.parentConstraint()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.orientConstraint()" 
+        -enableBackground 0
+        -align "center" 
+        -label "OCon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OCon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.orientConstraint()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.pointConstraint()" 
+        -enableBackground 0
+        -align "center" 
+        -label "POCon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "POCon" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.pointConstraint()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected Object:', first_selected\n\nfirst_selected.sx.set(lock=True, keyable=False)\nfirst_selected.sy.set(lock=True, keyable=False)\nfirst_selected.sz.set(lock=True, keyable=False)\nfirst_selected.v.set(lock=True, keyable=False)" 
+        -enableBackground 0
+        -align "center" 
+        -label "LK&HI" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LK&HI" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected Object:', first_selected\n\nfirst_selected.sx.set(lock=True, keyable=False)\nfirst_selected.sy.set(lock=True, keyable=False)\nfirst_selected.sz.set(lock=True, keyable=False)\nfirst_selected.v.set(lock=True, keyable=False)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected Object:', first_selected\n\nfirst_selected.sx.set(lock=False, keyable=True)\nfirst_selected.sy.set(lock=False, keyable=True)\nfirst_selected.sz.set(lock=False, keyable=True)\nfirst_selected.v.set(lock=False, keyable=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "ULK&H" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ULK&H" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected Object:', first_selected\n\nfirst_selected.sx.set(lock=False, keyable=True)\nfirst_selected.sy.set(lock=False, keyable=True)\nfirst_selected.sz.set(lock=False, keyable=True)\nfirst_selected.v.set(lock=False, keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected Object:', first_selected\n\nfirst_selected.addAttr(raw_input, keyable=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "FLOAT" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FLOAT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected Object:', first_selected\n\nfirst_selected.addAttr(raw_input, keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected Object:', first_selected\n\nfirst_selected.addAttr(raw_input, at='enum', en='-------------------:', keyable=True, lock=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "SEPR" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SEPR" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'First Selected Object:', first_selected\n\nfirst_selected.addAttr(raw_input, at='enum', en='-------------------:', keyable=True, lock=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

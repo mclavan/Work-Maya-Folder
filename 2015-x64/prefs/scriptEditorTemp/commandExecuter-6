@@ -1,0 +1,20 @@
+'''
+Maya Commands
+'''
+
+import pymel.core as pm
+
+# pm.commandName()
+pm.circle()
+
+# Command Flags
+# pm.commandName(flag=value)
+pm.circle(radius=2)
+
+# pm.commandName(flag=value, flag=value)
+pm.circle(radius=3, sections=16, sweep=270)
+
+# pm.commandName(flag=[value, value, value])
+pm.circle(radius=4, normal=[1, 0, 0])
+
+

@@ -1,0 +1,1028 @@
+global proc shelf_shelf_CurryFrank_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Sets layout to my personal saved layout" 
+        -enableBackground 0
+        -align "center" 
+        -label "Main_Layout" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "XRayActiveComponentsDown.png" 
+        -image1 "XRayActiveComponentsDown.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.mel.eval ('setNamedPanelLayout \"Main_Layout\"')\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Single:Delete Hist, Freeze Trans. Double: Add Center Point" 
+        -enableBackground 0
+        -align "center" 
+        -label "Nuke" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Nuke" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "deleteTextRefObj.png" 
+        -image1 "deleteTextRefObj.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.makeIdentity (apply=True, t=1, r=1, s=1, n=1)\npm.delete(ch=True)" 
+        -sourceType "python" 
+        -doubleClickCommand "pm.makeIdentity (apply=True, t=1, r=1, s=1, n=1)\npm.delete(ch=True)\npm.xform(cp=True)" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Extrude the selected vertices" 
+        -enableBackground 0
+        -align "center" 
+        -label "Extrude" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "polyExtrudeFacet.png" 
+        -image1 "polyExtrudeFacet.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "performPolyExtrude 0" 
+        -sourceType "mel" 
+        -doubleClickCommand "PolyExtrudeOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Interactively select and merge vertices" 
+        -enableBackground 0
+        -align "center" 
+        -label "Merge Vertex Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "polyMergeVertex.png" 
+        -image1 "polyMergeVertex.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "MergeVertexTool" 
+        -sourceType "mel" 
+        -doubleClickCommand "MergeVertexToolOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Extract the currently selected faces from their shell and shows a manipulator to adjust their offset" 
+        -enableBackground 0
+        -align "center" 
+        -label "Extract" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "polyChipOff.png" 
+        -image1 "polyChipOff.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "performPolyChipOff 0 0" 
+        -sourceType "mel" 
+        -doubleClickCommand "ExtractFaceOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Combine the selected polygon objects into one single object to allow operations such as merges or face trims" 
+        -enableBackground 0
+        -align "center" 
+        -label "Combine" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "polyUnite.png" 
+        -image1 "polyUnite.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "polyPerformAction polyUnite o 0" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Click to place joint. Click on existing joint to add to skeleton. Click-Drag to position joint." 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinJoint.png" 
+        -image1 "kinJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "JointTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Seperator" 
+        -enableBackground 0
+        -align "center" 
+        -label "Seperator" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.231 0.231 0.231 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "/Users/frankrcurry/Library/Preferences/Autodesk/maya/2015-x64/prefs/icons/Seperator.png" 
+        -image1 "/Users/frankrcurry/Library/Preferences/Autodesk/maya/2015-x64/prefs/icons/Seperator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Enter Maya Embedded Language (MEL) commands" 
+        -enableBackground 0
+        -align "center" 
+        -label "Script Editor" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconWindow.png" 
+        -image1 "menuIconWindow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ScriptEditor" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Display relationships among nodes in your scene graphically" 
+        -enableBackground 0
+        -align "center" 
+        -label "Node Editor" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconWindow.png" 
+        -image1 "menuIconWindow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "NodeEditorWindow" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Edit animation curves" 
+        -enableBackground 0
+        -align "center" 
+        -label "Graph Editor" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "GE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconWindow.png" 
+        -image1 "menuIconWindow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "GraphEditor" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Edit the attributes of the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Attribute Spread Sheet" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SpSh" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconWindow.png" 
+        -image1 "menuIconWindow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "SpreadSheetEditor" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Customize the joint scale" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Size..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "jdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Seperator" 
+        -enableBackground 0
+        -align "center" 
+        -label "Seperator" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/frankrcurry/Library/Preferences/Autodesk/maya/2015-x64/prefs/icons/Seperator.png" 
+        -image1 "/Users/frankrcurry/Library/Preferences/Autodesk/maya/2015-x64/prefs/icons/Seperator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Rename a selected joint chain" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint ReNaming" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "jNam" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "kinConnect.png" 
+        -image1 "kinConnect.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import CurryFrank_riggingtools_cri1_1408\nreload(CurryFrank_riggingtools_cri1_1408)\nCurryFrank_riggingtools_cri1_1408.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates ik handles on a joint chain" 
+        -enableBackground 0
+        -align "center" 
+        -label "Priming Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hndl" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "knife.png" 
+        -image1 "knife.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import CurryFrank_riggingtools_cri1_1408\nreload(CurryFrank_riggingtools_cri1_1408)\nCurryFrank_riggingtools_cri1_1408.priming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "For pad tool, the user will select the root joint." 
+        -enableBackground 0
+        -align "center" 
+        -label "Pad Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "jPada" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "knife.png" 
+        -image1 "knife.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import CurryFrank_riggingtools_cri1_1408\nreload(CurryFrank_riggingtools_cri1_1408)\nCurryFrank_riggingtools_cri1_1408.pad_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "Seperator" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/frankrcurry/Library/Preferences/Autodesk/maya/2015-x64/prefs/icons/Seperator.png" 
+        -image1 "/Users/frankrcurry/Library/Preferences/Autodesk/maya/2015-x64/prefs/icons/Seperator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Changes selected icons color to blue" 
+        -enableBackground 0
+        -align "center" 
+        -label "Blue Icons" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Blue" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 0 1 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import CurryFrank_riggingtools_cri1_1408\nreload(CurryFrank_riggingtools_cri1_1408)\nCurryFrank_riggingtools_cri1_1408.colorBlue_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "changes icons color to red" 
+        -enableBackground 0
+        -align "center" 
+        -label "Red Icons" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Red" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 1 0 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import CurryFrank_riggingtools_cri1_1408\nreload(CurryFrank_riggingtools_cri1_1408)\nCurryFrank_riggingtools_cri1_1408.colorRed_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "changes icon color to yellow" 
+        -enableBackground 0
+        -align "center" 
+        -label "Yellow Icons" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Yell" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 1 1 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import CurryFrank_riggingtools_cri1_1408\nreload(CurryFrank_riggingtools_cri1_1408)\nCurryFrank_riggingtools_cri1_1408.colorYellow_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Seperator" 
+        -enableBackground 0
+        -align "center" 
+        -label "Seperator" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/frankrcurry/Library/Preferences/Autodesk/maya/2015-x64/prefs/icons/Seperator.png" 
+        -image1 "/Users/frankrcurry/Library/Preferences/Autodesk/maya/2015-x64/prefs/icons/Seperator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Lock and hide Translates" 
+        -enableBackground 0
+        -align "center" 
+        -label "Lock & Hide Trans" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "L&HT" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "attachWithoutMoving.png" 
+        -image1 "attachWithoutMoving.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import CurryFrank_riggingtools_cri1_1408\nreload(CurryFrank_riggingtools_cri1_1408)\nCurryFrank_riggingtools_cri1_1408.lock_and_hide_trans()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Lock and hide rotation" 
+        -enableBackground 0
+        -align "center" 
+        -label "Lock & Hide Rotate" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "L&HR" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "attachWithoutMoving.png" 
+        -image1 "attachWithoutMoving.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import CurryFrank_riggingtools_cri1_1408\nreload(CurryFrank_riggingtools_cri1_1408)\nCurryFrank_riggingtools_cri1_1408.lock_and_hide_rotate()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "unlock and show all" 
+        -enableBackground 0
+        -align "center" 
+        -label "Unlock & Show" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "UN&S" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "attachWithoutMoving.png" 
+        -image1 "attachWithoutMoving.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import CurryFrank_riggingtools_cri1_1408\nreload(CurryFrank_riggingtools_cri1_1408)\nCurryFrank_riggingtools_cri1_1408.unlock_and_show_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates finger attributes" 
+        -enableBackground 0
+        -align "center" 
+        -label "Finger Attributes" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FngA" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "attachWithoutMoving.png" 
+        -image1 "attachWithoutMoving.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import CurryFrank_riggingtools_cri1_1408\nreload(CurryFrank_riggingtools_cri1_1408)\nCurryFrank_riggingtools_cri1_1408.attributes_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a seperator Attribute" 
+        -enableBackground 0
+        -align "center" 
+        -label "Seperator Attribute" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SepA" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "attachWithoutMoving.png" 
+        -image1 "attachWithoutMoving.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import CurryFrank_riggingtools_cri1_1408\nreload(CurryFrank_riggingtools_cri1_1408)\nCurryFrank_riggingtools_cri1_1408.seperator_attribute()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Seperator" 
+        -enableBackground 0
+        -align "center" 
+        -label "Seperator" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/frankrcurry/Library/Preferences/Autodesk/maya/2015-x64/prefs/icons/Seperator.png" 
+        -image1 "/Users/frankrcurry/Library/Preferences/Autodesk/maya/2015-x64/prefs/icons/Seperator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Parent Constraint. Double click to mo" 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent Constraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PCon" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.parentConstraint(w=1)" 
+        -sourceType "python" 
+        -doubleClickCommand "pm.parentConstraint(mo=True, w=1)\n" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Orient Constraint. Double click to mo" 
+        -enableBackground 0
+        -align "center" 
+        -label "Orient Constraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OCon" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.orientConstraint(w=1)" 
+        -sourceType "python" 
+        -doubleClickCommand "pm.orientConstraint(mo=True, w=1)" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Point Constraint. Double click to mo" 
+        -enableBackground 0
+        -align "center" 
+        -label "Point Constraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "TCon" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "orientJoint.png" 
+        -image1 "orientJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.pointConstraint(w=1)" 
+        -sourceType "python" 
+        -doubleClickCommand "pm.pointConstraint(mo=True, w=1)" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a pole vector constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "Pole Vector" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Pole" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.poleVectorConstraint(w=1)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Seperator" 
+        -enableBackground 0
+        -align "center" 
+        -label "User Script" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/frankrcurry/Library/Preferences/Autodesk/maya/2015-x64/prefs/icons/Seperator.png" 
+        -image1 "/Users/frankrcurry/Library/Preferences/Autodesk/maya/2015-x64/prefs/icons/Seperator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a circle icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "Circle Icon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Circ" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.circle(normal=[0, 1, 0])" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a square icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "Square Icon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Squ" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.circle(degree=1, sections=4)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a COG icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "COG Icon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "COG" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.mel.eval('curve -d 1 -p -1 0 -1 -p -1 0 -3 -p -2 0 -3 -p 0 0 -5 -p 2 0 -3 -p 1 0 -3 -p 1 0 -1 -p 3 0 -1 -p 3 0 -2 -p 5 0 0 -p 3 0 2 -p 3 0 1 -p 1 0 1 -p 1 0 3 -p 2 0 3 -p 0 0 5 -p -2 0 3 -p -1 0 3 -p -1 0 1 -p -3 0 1 -p -3 0 2 -p -5 0 0 -p -3 0 -2 -p -3 0 -1 -p -1 0 -1 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 -k 17 -k 18 -k 19 -k 20 -k 21 -k 22 -k 23 -k 24') ;\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a Cube icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cube Icon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.mel.eval ('curve -d 1 -p 0.5 0.5 -0.5 -p 0.5 0.5 0.5 -p -0.5 0.5 0.5 -p -0.5 0.5 -0.5 -p 0.5 0.5 -0.5 -p 0.5 -0.5 -0.5 -p 0.5 -0.5 0.5 -p 0.5 0.5 0.5 -p -0.5 0.5 0.5 -p -0.5 -0.5 0.5 -p 0.5 -0.5 0.5 -p 0.5 -0.5 -0.5 -p -0.5 -0.5 -0.5 -p -0.5 -0.5 0.5 -p -0.5 0.5 0.5 -p -0.5 0.5 -0.5 -p -0.5 -0.5 -0.5 -p 0.5 -0.5 -0.5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 -k 17') ;\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates an arrow icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "Arrow Icon" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Arow" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.mel.eval ('curve -d 1 -p 0 0 -5 -p 2 0 -2 -p 1 0 -2 -p 1 0 3 -p -1 0 3 -p -1 0 -2 -p -2 0 -2 -p 0 0 -5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7');\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

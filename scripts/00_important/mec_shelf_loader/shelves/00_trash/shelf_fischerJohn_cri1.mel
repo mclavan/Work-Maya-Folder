@@ -1,0 +1,491 @@
+global proc shelf_fischerJohn_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Customize the joint scale" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Size..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "jdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Click to place joint. Click on existing joint to add to skeleton. Click-Drag to position joint." 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinJoint.png" 
+        -image1 "kinJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "JointTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "FreezeTransformations" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a curve on the grid or live surface specifying control vertices" 
+        -enableBackground 0
+        -align "center" 
+        -label "CV Curve Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "curveCV.png" 
+        -image1 "curveCV.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CVCurveTool" 
+        -sourceType "mel" 
+        -doubleClickCommand "CVCurveToolOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS circle on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "Circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "setToolTo \"CreateNurbsCircleCtx\"" 
+        -sourceType "mel" 
+        -doubleClickCommand "CreateNURBSCircleOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateParentConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "IK handle tool options" 
+        -enableBackground 0
+        -align "center" 
+        -label "handleDialogItem" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "IKHandleToolOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload (rigging_tools)\nrigging_tools.snapping_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload (rigging_tools)\nrigging_tools.snappi..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SNAP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import fischerJohn_riggingTools_cri1_1409\nreload (fischerJohn_riggingTools_cri1_1409)\nfischerJohn_riggingTools_cri1_1409.snapping_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import lecture9\nreload (lecture9)\nlecture9.unlock_and_show()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import lecture9\nreload (lecture9)\nlecture9.unlock_and_show()" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SHOW" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import lecture9\nreload (lecture9)\nlecture9.unlock_and_show()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "# Creating Attributes\nimport pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected = selected[0]\n\n\n# addAttr\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, keyable=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "# Creating Attributes\nimport pymel.core as pm\n\nselected = pm.ls(..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ATTR" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "# Creating Attributes\nimport pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected = selected[0]\n\n\n# addAttr\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "# Creating Attributes\nimport pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected = selected[0]\n\n\n# addAttr\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, at='enum', en=\"------------------:\", keyable=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "# Creating Attributes\nimport pymel.core as pm\n\nselected = pm.ls(..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SEP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "# Creating Attributes\nimport pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'Currently Selected:', selected\n\nfirst_selected = selected[0]\n\n\n# addAttr\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, at='enum', en=\"------------------:\", keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "# Renaming a joint chain\nimport pymel.core as pm\n\n#Select the root joint, and I will get its children.\njoint_chain = pm.ls(selection=True, dag=True)\n\n#do not worry about the waste suffix.\n# ori_name_count_suffix\n# lt_arm_01_bind\nori = raw_input()\nname = raw_input()\ncount = 1\nsuffix = 'bind'\n\nfor current in joint_chain:\n    new_name = '{0}_{1}_{2:02d}_{3}'.format(ori, name, count, suffix)\n    print 'Current Joint: {0} - New Name: {1}'.format(current, new_name)\n    \n    # Rename command\n    # variable.rename(new_name)\n    current.rename(new_name)\n    \n    count = count + 1\n    \nnew_name = '{0}_{1}_{2:02d}_{3}'.format(ori, name, count-1, 'waste')\nprint 'Current Joint: {0} - New Name: {1}'.format(current, new_name)\ncurrent.rename(new_name)" 
+        -enableBackground 0
+        -align "center" 
+        -label "# Renaming a joint chain\nimport pymel.core as pm\n\n#Select the ro..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JNam" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "# Renaming a joint chain\nimport pymel.core as pm\n\n#Select the root joint, and I will get its children.\njoint_chain = pm.ls(selection=True, dag=True)\n\n#do not worry about the waste suffix.\n# ori_name_count_suffix\n# lt_arm_01_bind\nori = raw_input()\nname = raw_input()\ncount = 1\nsuffix = 'bind'\n\nfor current in joint_chain:\n    new_name = '{0}_{1}_{2:02d}_{3}'.format(ori, name, count, suffix)\n    print 'Current Joint: {0} - New Name: {1}'.format(current, new_name)\n    \n    # Rename command\n    # variable.rename(new_name)\n    current.rename(new_name)\n    \n    count = count + 1\n    \nnew_name = '{0}_{1}_{2:02d}_{3}'.format(ori, name, count-1, 'waste')\nprint 'Current Joint: {0} - New Name: {1}'.format(current, new_name)\ncurrent.rename(new_name)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.hierarchy()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.hierarc..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hier" 
+        -overlayLabelColor 0.932886 0.932886 0.932886 
+        -overlayLabelBackColor 0.0872483 0.0872483 0.0872483 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload(rigging_tools)\nrigging_tools.hierarchy()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.padding_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.padding..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PadT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import fischerJohn_riggingTools_cri1_1409\nreload(fischerJohn_riggingTools_cri1_1409)\nfischerJohn_riggingTools_cri1_1409.padding_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.priming_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.priming..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Prim" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import fischerJohn_riggingTools_cri1_1409\nreload(fischerJohn_riggingTools_cri1_1409)\nfischerJohn_riggingTools_cri1_1409.priming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "# Freeze Transforms\n# What is the command name?\n# How does it work?\n# What is the commands flags?\nimport pymel.core as pm\n\n# Create a circle, move it, and test this code!\npm.makeIdentity(apply=True, t=1, r=1, s=1, n=0)\n# flages\n    # t / translate\n\t# r / rotate\n\t# s / scale\n    # n / normal\n\t# apply / a\n\n# Delete History\t\n\n# Deleting objects in Maya constructionHistory = ch\n# pm.delete() deletes 3D objects\n# pm.deleteUI() Delete interface objects\n# pm.deleteAttr() Deletes attributes.\n# pm.delete()\n# flags\n# constructionHistory (ch)\n# staticChannels (sc)\n#channels (c)\npm.delete(ch=True)\n\nprint 'Tranforms frozen, Histroy Deleted, and pivot centered.'\n\n# Center Pivot\n# pm.xform()  What flag centers pivot? centerPivots = cp\npm.xform(cp=True)\n# centerPivots (cp) boolean" 
+        -enableBackground 0
+        -align "center" 
+        -label "# Freeze Transforms\n# What is the command name?\n# How does it wo..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NUKE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "# Freeze Transforms\n# What is the command name?\n# How does it work?\n# What is the commands flags?\nimport pymel.core as pm\n\n# Create a circle, move it, and test this code!\npm.makeIdentity(apply=True, t=1, r=1, s=1, n=0)\n# flages\n    # t / translate\n\t# r / rotate\n\t# s / scale\n    # n / normal\n\t# apply / a\n\n# Delete History\t\n\n# Deleting objects in Maya constructionHistory = ch\n# pm.delete() deletes 3D objects\n# pm.deleteUI() Delete interface objects\n# pm.deleteAttr() Deletes attributes.\n# pm.delete()\n# flags\n# constructionHistory (ch)\n# staticChannels (sc)\n#channels (c)\npm.delete(ch=True)\n\nprint 'Tranforms frozen, Histroy Deleted, and pivot centered.'\n\n# Center Pivot\n# pm.xform()  What flag centers pivot? centerPivots = cp\npm.xform(cp=True)\n# centerPivots (cp) boolean" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

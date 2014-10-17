@@ -1,0 +1,23 @@
+shadingNode -asShader lambert;
+// Result: lambert2 // 
+sets -renderable true -noSurfaceShader true -empty -name lambert2SG;
+// Result: lambert2SG // 
+connectAttr -f lambert2.outColor lambert2SG.surfaceShader;
+// Result: Connected lambert2.outColor to lambert2SG.surfaceShader. // 
+select -r pSphere1 ;
+sets -e -forceElement lambert2SG;
+// Result: lambert2SG // 
+
+
+hyperShade -assign lambert2 ;
+sets -e -forceElement lambert2SG pCone1;
+// Result: lambert2SG // 
+
+
+import pymel.core as pm
+pm.hyperShade(assign='lambert2', objects='pCone1')
+
+selected = pm.ls(selection=True)
+selected[1].addMember('pCone1')
+
+pm.sets

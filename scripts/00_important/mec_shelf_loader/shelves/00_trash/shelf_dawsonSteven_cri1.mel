@@ -1,0 +1,550 @@
+global proc shelf_dawsonSteven_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Rigging Layout" 
+        -enableBackground 0
+        -align "center" 
+        -label "Rigging Layout" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Rig" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "setNamedPanelLayout \"Rigging Layout\";" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select all joints" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joints" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Join" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "SelectAllJoints" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Edit the attributes of the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Attribute Spread Sheet" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SpSh" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconWindow.png" 
+        -image1 "menuIconWindow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "SpreadSheetEditor" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Display relationships among nodes in your scene graphically" 
+        -enableBackground 0
+        -align "center" 
+        -label "Node Editor" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconWindow.png" 
+        -image1 "menuIconWindow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "NodeEditorWindow" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Customize the joint scale" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Size..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "jdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Click to place joint. Click on existing joint to add to skeleton. Click-Drag to position joint." 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "kinJoint.png" 
+        -image1 "kinJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "JointTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "CV curve tool options" 
+        -enableBackground 0
+        -align "center" 
+        -label "menuItem330" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "curveCV.png" 
+        -image1 "curveCV.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CVCurveToolOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS circle on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "Circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "circle -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 0.000328084 -s 8 -ch 1; objectMoveCommand" 
+        -sourceType "mel" 
+        -doubleClickCommand "CreateNURBSCircleOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the Rotate Plane ikHandle to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Pole Vector" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PVec" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "poleVectorConstraint -weight 1" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete History, Freeze Trans, Center Pivot" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.nuke()\n" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NUKE" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hierarchy_CRI_1409)\ndawsonSteven_hierarchy_CRI_1409.nuke()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "Delete History" ( "import pymel.core as pm\npm.delete(ch=True)\nprint 'History Deleted'" )
+        -mip 0
+        -mi "Center Pivot" ( "import pymel.core as pm\npm.xform(cp=True)\nprint 'Pivot Centered'" )
+        -mip 1
+        -mi "Freeze Trans" ( "import pymel.core as pm\npm.makeIdentity(apply=True, translate=1, rotate=1, scale=1, normal=0)\nprint 'Transforms Frozen'" )
+        -mip 2
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.unlock_and_show()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.unlock_..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SHOW" 
+        -overlayLabelColor 0 1 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hierarchy_CRI_1409)\ndawsonSteven_hierarchy_CRI_1409.unlock_and_show()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Cube Icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.cube()" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0 0.0238095 0.0238095 
+        -overlayLabelBackColor 0 1 1 0.2 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hierarchy_CRI_1409)\ndawsonSteven_hierarchy_CRI_1409.cube()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Square Icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.square(..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 1 0.2 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hierarchy_CRI_1409)\ndawsonSteven_hierarchy_CRI_1409.square()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 19
+        -height 19
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Arrow Icon" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.arrow()" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0 0.0238095 0.0238095 
+        -overlayLabelBackColor 0 1 1 0.2 
+        -image "channelBoxHyperbolicOff.png" 
+        -image1 "channelBoxHyperbolicOff.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hierarchy_CRI_1409)\ndawsonSteven_hierarchy_CRI_1409.arrow()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.snapping_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.snappin..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SNAP" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hierarchy_CRI_1409)\ndawsonSteven_hierarchy_CRI_1409.snapping_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.joint_renamer()" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.joint_r..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NAME" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hierarchy_CRI_1409)\ndawsonSteven_hierarchy_CRI_1409.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Padding Tool" 
+        -enableBackground 0
+        -align "center" 
+        -label "import rigging_tools\nreload(rigging_tools)\nrigging_tools.padding..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PAD" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hierarchy_CRI_1409)\ndawsonSteven_hierarchy_CRI_1409.padding_tool()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Color Icons Blue" 
+        -enableBackground 0
+        -align "center" 
+        -label "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hiera..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "BLUE" 
+        -overlayLabelColor 0 0 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hierarchy_CRI_1409)\ndawsonSteven_hierarchy_CRI_1409.color_blue()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Colors Icons Red" 
+        -enableBackground 0
+        -align "center" 
+        -label "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hiera..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RED" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hierarchy_CRI_1409)\ndawsonSteven_hierarchy_CRI_1409.color_red()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Colors Icons Yellow" 
+        -enableBackground 0
+        -align "center" 
+        -label "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hiera..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "YELL" 
+        -overlayLabelColor 1 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import dawsonSteven_hierarchy_CRI_1409\nreload(dawsonSteven_hierarchy_CRI_1409)\ndawsonSteven_hierarchy_CRI_1409.color_yellow()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

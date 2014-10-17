@@ -1,0 +1,3 @@
+import maya_uic
+reload(maya_uic)
+maya_uic.gui()

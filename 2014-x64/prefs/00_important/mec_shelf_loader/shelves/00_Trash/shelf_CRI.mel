@@ -1,0 +1,627 @@
+global proc shelf_CRI () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.makeIdentity( apply=True, t=1, r=1, s=1, n=0 )" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\npm.ikHandle()" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IK" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.ikHandle()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\npm.ikHandle(sol='ikRPsolver')" 
+        -enableBackground 0
+        -align "center" 
+        -label "IKRP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IKRP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinInsert.png" 
+        -image1 "kinInsert.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.ikHandle(sol='ikRPsolver')" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\npm.cluster()" 
+        -enableBackground 0
+        -align "center" 
+        -label "CLST" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CLST" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.cluster()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\npm.circle()" 
+        -enableBackground 0
+        -align "center" 
+        -label "CIRC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CIRC" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.circle()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\npm.curve( d=1 ,p=[(-1 ,0 ,-1) , (1 ,0 ,-1) , (1,0 ,1), (-1, 0 ,1),( -1, 0 ,-1)], k=[ 0,1,2,3,4])" 
+        -enableBackground 0
+        -align "center" 
+        -label "SQR" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SQR" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.curve( d=1 ,p=[(-1 ,0 ,-1) , (1 ,0 ,-1) , (1,0 ,1), (-1, 0 ,1),( -1, 0 ,-1)], k=[ 0,1,2,3,4])" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\npm.curve(d=1 , p = [(-0.5,0.5,0.5), (0.5 ,0.5 ,0.5) , (0.5 ,0.5 ,-0.5) , (-0.5,0.5,-0.5), (-0.5,0.5,0.5) ,(-0.5,-0.5,0.5) , (-0.5,-0.5,-0.5), (-0.5,0.5,-0.5) , (0.5,0.5,-0.5) , (0.5,-0.5,-0.5) , (-0.5,-0.5,-0.5) , (0.5,-0.5,-0.5) ,(0.5,-0.5,0.5), (0.5,0.5,0.5) ,(0.5,-0.5,0.5),(-0.5,-0.5,0.5)], k=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])" 
+        -enableBackground 0
+        -align "center" 
+        -label "CUBE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CUBE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.curve(d=1 , p = [(-0.5,0.5,0.5), (0.5 ,0.5 ,0.5) , (0.5 ,0.5 ,-0.5) , (-0.5,0.5,-0.5), (-0.5,0.5,0.5) ,(-0.5,-0.5,0.5) , (-0.5,-0.5,-0.5), (-0.5,0.5,-0.5) , (0.5,0.5,-0.5) , (0.5,-0.5,-0.5) , (-0.5,-0.5,-0.5) , (0.5,-0.5,-0.5) ,(0.5,-0.5,0.5), (0.5,0.5,0.5) ,(0.5,-0.5,0.5),(-0.5,-0.5,0.5)], k=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15])" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\npm.curve(d=1, p=[(-2,0,0),(0,0,-2),(0,0,-1),(3,0,-1),(3,0,1),(0,0,1),(0,0,2),(-2,0,0)], k=[0,1,2,3,4,5,6,7])" 
+        -enableBackground 0
+        -align "center" 
+        -label "ARRW" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ARRW" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "nurbsShellIntersect.png" 
+        -image1 "nurbsShellIntersect.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.curve(d=1, p=[(-2,0,0),(0,0,-2),(0,0,-1),(3,0,-1),(3,0,1),(0,0,1),(0,0,2),(-2,0,0)], k=[0,1,2,3,4,5,6,7])" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\npm.parentConstraint()" 
+        -enableBackground 1
+        -align "center" 
+        -label "PaCo" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PaCo" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.parentConstraint()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\npm.orientConstraint()" 
+        -enableBackground 1
+        -align "center" 
+        -label "OrCo" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OrCo" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.orientConstraint()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\npm.pointConstraint()" 
+        -enableBackground 1
+        -align "center" 
+        -label "PoCo" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PoCo" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.pointConstraint()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\npm.poleVectorConstraint()" 
+        -enableBackground 0
+        -align "center" 
+        -label "PoVe" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PoVe" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.poleVectorConstraint()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation " " 
+        -enableBackground 0
+        -align "center" 
+        -label " " 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel " " 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.joint_rename()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint_Rename" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Joint_Rename" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "jiggleDeformer.png" 
+        -image1 "jiggleDeformer.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Lones_Steffan_RiggingTools as rigging_tools\nreload(rigging_tools)\nrigging_tools.joint_rename()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.priming_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Priming_tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Priming_tool" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "ambientlight.png" 
+        -image1 "ambientlight.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Lones_Steffan_RiggingTools as rigging_tools\nreload(rigging_tools)\nrigging_tools.priming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.padding_tool()" 
+        -enableBackground 0
+        -align "center" 
+        -label "padding_tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "padding_tool" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "group.png" 
+        -image1 "group.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Lones_Steffan_RiggingTools as rigging_tools\nreload(rigging_tools)\nrigging_tools.padding_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.hierarchy()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Hierarchy" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hierarchy" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Lones_Steffan_RiggingTools as rigging_tools\nreload(rigging_tools)\nrigging_tools.hierarchy()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation " " 
+        -enableBackground 0
+        -align "center" 
+        -label " " 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel " " 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.iconColor()" 
+        -enableBackground 1
+        -align "center" 
+        -label "Icon_Color" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Icon_Color" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Lones_Steffan_RiggingTools as rigging_tools\nreload(rigging_tools)\nrigging_tools.iconColor()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.UI()" 
+        -enableBackground 1
+        -align "center" 
+        -label "Attribute_Shower" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Attribute_Shower" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Lones_Steffan_RiggingTools as rigging_tools\nreload(rigging_tools)\nrigging_tools.UI()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import rigging_tools\nreload(rigging_tools)\nrigging_tools.renameTool()" 
+        -enableBackground 1
+        -align "center" 
+        -label "rename_tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "rename_tool" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Lones_Steffan_RiggingTools as rigging_tools\nreload(rigging_tools)\nrigging_tools.renameTool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

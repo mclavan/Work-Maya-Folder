@@ -1,0 +1,540 @@
+global proc shelf_eysterForest_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "select -cl  ;\nselect -r ct_cog_icon ;\nsetKeyframe \"ct_cog_icon.tx\";\nsetKeyframe \"ct_cog_icon.ty\";\nsetKeyframe \"ct_cog_icon.tz\";\nsetKeyframe \"ct_cog_icon.rx\";\nsetKeyframe \"ct_cog_icon.ry\";\nsetKeyframe \"ct_cog_icon.rz\";\n// Result: 1 // \nselect -r ct_hip_01_icon ;\nsetKeyframe \"ct_hip_01_icon.tx\";\nsetKeyframe \"ct_hip_01_icon.ty\";\nsetKeyframe \"ct_hip_01_icon.tz\";\nsetKeyframe \"ct_hip_01_icon.rx\";\nsetKeyframe \"ct_hip_01_icon.ry\";\nsetKeyframe \"ct_hip_01_icon.rz\";\n// Result: 1 // \nselect -r ct_back_01_icon ;\nsetKeyframe \"ct_back_01_icon.tx\";\nsetKeyframe \"ct_back_01_icon.ty\";\nsetKeyframe \"ct_back_01_icon.tz\";\nsetKeyframe \"ct_back_01_icon.rx\";\nsetKeyframe \"ct_back_01_icon.ry\";\nsetKeyframe \"ct_back_01_icon.rz\";\n// Result: 1 // \nselect -r ct_indyBack_01_icon ;\nsetKeyframe \"ct_indyBack_01_icon.tx\";\nsetKeyframe \"ct_indyBack_01_icon.ty\";\nsetKeyframe \"ct_indyBack_01_icon.tz\";\n// Result: 1 // \nselect -r ct_back_02_icon ;\nsetKeyframe \"ct_back_02_icon.tx\";\nsetKeyframe \"ct_back_02_icon.ty\";\nsetKeyframe \"ct_back_02_icon.tz\";\nsetKeyframe \"ct_back_02_icon.rx\";\nsetKeyframe \"ct_back_02_icon.ry\";\nsetKeyframe \"ct_back_02_icon.rz\";\n// Result: 1 // \nselect -r ct_indyBack_02_icon ;\nsetKeyframe \"ct_indyBack_02_icon.tx\";\nsetKeyframe \"ct_indyBack_02_icon.ty\";\nsetKeyframe \"ct_indyBack_02_icon.tz\";\n// Result: 1 // \nselect -r ct_back_03_icon ;\nsetKeyframe \"ct_back_03_icon.tx\";\nsetKeyframe \"ct_back_03_icon.ty\";\nsetKeyframe \"ct_back_03_icon.tz\";\nsetKeyframe \"ct_back_03_icon.rx\";\nsetKeyframe \"ct_back_03_icon.ry\";\nsetKeyframe \"ct_back_03_icon.rz\";\n// Result: 1 // \nselect -r ct_indyBack_03_icon ;\nsetKeyframe \"ct_indyBack_03_icon.tx\";\nsetKeyframe \"ct_indyBack_03_icon.ty\";\nsetKeyframe \"ct_indyBack_03_icon.tz\";\n// Result: 1 // \nselect -r ct_back_04_icon ;\nsetKeyframe \"ct_back_04_icon.tx\";\nsetKeyframe \"ct_back_04_icon.ty\";\nsetKeyframe \"ct_back_04_icon.tz\";\nsetKeyframe \"ct_back_04_icon.rx\";\nsetKeyframe \"ct_back_04_icon.ry\";\nsetKeyframe \"ct_back_04_icon.rz\";\n// Result: 1 // \nselect -r ct_indyBack_04_icon ;\nsetKeyframe \"ct_indyBack_04_icon.tx\";\nsetKeyframe \"ct_indyBack_04_icon.ty\";\nsetKeyframe \"ct_indyBack_04_icon.tz\";\n// Result: 1 // \nselect -r ct_back_05_icon ;\nsetKeyframe \"ct_back_05_icon.tx\";\nsetKeyframe \"ct_back_05_icon.ty\";\nsetKeyframe \"ct_back_05_icon.tz\";\nsetKeyframe \"ct_back_05_icon.rx\";\nsetKeyframe \"ct_back_05_icon.ry\";\nsetKeyframe \"ct_back_05_icon.rz\";\n// Result: 1 // \nselect -r ct_indyBack_05_icon ;\nsetKeyframe \"ct_indyBack_05_icon.tx\";\nsetKeyframe \"ct_indyBack_05_icon.ty\";\nsetKeyframe \"ct_indyBack_05_icon.tz\";\n// Result: 1 // \nselect -r ct_back_06_icon ;\nsetKeyframe \"ct_back_06_icon.tx\";\nsetKeyframe \"ct_back_06_icon.ty\";\nsetKeyframe \"ct_back_06_icon.tz\";\nsetKeyframe \"ct_back_06_icon.rx\";\nsetKeyframe \"ct_back_06_icon.ry\";\nsetKeyframe \"ct_back_06_icon.rz\";\n// Result: 1 // \nselect -r ct_indyBack_06_icon ;\nsetKeyframe \"ct_indyBack_06_icon.tx\";\nsetKeyframe \"ct_indyBack_06_icon.ty\";\nsetKeyframe \"ct_indyBack_06_icon.tz\";\n// Result: 1 // \nselect -r ct_neck_01_icon ;\nsetKeyframe \"ct_neck_01_icon.rx\";\nsetKeyframe \"ct_neck_01_icon.ry\";\nsetKeyframe \"ct_neck_01_icon.rz\";\n// Result: 1 // \nselect -r ct_head_01_icon ;\nsetKeyframe \"ct_head_01_icon.rx\";\nsetKeyframe \"ct_head_01_icon.ry\";\nsetKeyframe \"ct_head_01_icon.rz\";\n// Result: 1 // \nselect -r lt_armFK_01_icon ;\nsetKeyframe \"lt_armFK_01_icon.rx\";\nsetKeyframe \"lt_armFK_01_icon.ry\";\nsetKeyframe \"lt_armFK_01_icon.rz\";\n// Result: 1 // \nselect -r lt_clav_icon ;\nsetKeyframe \"lt_clav_icon.tx\";\nsetKeyframe \"lt_clav_icon.ty\";\nsetKeyframe \"lt_clav_icon.tz\";\nsetKeyframe \"lt_clav_icon.rx\";\nsetKeyframe \"lt_clav_icon.ry\";\nsetKeyframe \"lt_clav_icon.rz\";\n// Result: 1 // \nselect -r lt_armFK_02_icon ;\nsetKeyframe \"lt_armFK_02_icon.rx\";\nsetKeyframe \"lt_armFK_02_icon.ry\";\nsetKeyframe \"lt_armFK_02_icon.rz\";\n// Result: 1 // \nselect -r lt_armFK_02_icon lt_elbowPV_icon ;\nselect -r lt_elbowPV_icon ;\nsetKeyframe \"lt_elbowPV_icon.tx\";\nsetKeyframe \"lt_elbowPV_icon.ty\";\nsetKeyframe \"lt_elbowPV_icon.tz\";\n// Result: 1 // \nselect -r lt_arm_icon ;\nsetKeyframe \"lt_arm_icon.tx\";\nsetKeyframe \"lt_arm_icon.ty\";\nsetKeyframe \"lt_arm_icon.tz\";\n// Result: 1 // \nselect -r lt_hand_01_icon ;\nsetKeyframe \"lt_hand_01_icon.rx\";\nsetKeyframe \"lt_hand_01_icon.ry\";\nsetKeyframe \"lt_hand_01_icon.rz\";\nsetKeyframe \"lt_hand_01_icon.IKFK\";\nsetKeyframe \"lt_hand_01_icon.FINGERS\";\nsetKeyframe \"lt_hand_01_icon.CURLS\";\nsetKeyframe \"lt_hand_01_icon.index_curl\";\nsetKeyframe \"lt_hand_01_icon.middle_curl\";\nsetKeyframe \"lt_hand_01_icon.pinky_curl\";\nsetKeyframe \"lt_hand_01_icon.SPREAD\";\nsetKeyframe \"lt_hand_01_icon.index_spread\";\nsetKeyframe \"lt_hand_01_icon.middle_spread\";\nsetKeyframe \"lt_hand_01_icon.pinky_spread\";\nsetKeyframe \"lt_hand_01_icon.THUMB\";\nsetKeyframe \"lt_hand_01_icon.thumb_curl\";\nsetKeyframe \"lt_hand_01_icon.thumb_drop\";\n// Result: 1 // \nselect -r rt_armFK_01_icon ;\nsetKeyframe \"rt_armFK_01_icon.rx\";\nsetKeyframe \"rt_armFK_01_icon.ry\";\nsetKeyframe \"rt_armFK_01_icon.rz\";\n// Result: 1 // \nselect -r rt_clav_icon ;\nsetKeyframe \"rt_clav_icon.tx\";\nsetKeyframe \"rt_clav_icon.ty\";\nsetKeyframe \"rt_clav_icon.tz\";\nsetKeyframe \"rt_clav_icon.rx\";\nsetKeyframe \"rt_clav_icon.ry\";\nsetKeyframe \"rt_clav_icon.rz\";\n// Result: 1 // \nselect -r rt_elbowPV_icon ;\nsetKeyframe \"rt_elbowPV_icon.tx\";\nsetKeyframe \"rt_elbowPV_icon.ty\";\nsetKeyframe \"rt_elbowPV_icon.tz\";\n// Result: 1 // \nselect -r rt_armFK_02_icon ;\nsetKeyframe \"rt_armFK_02_icon.rx\";\nsetKeyframe \"rt_armFK_02_icon.ry\";\nsetKeyframe \"rt_armFK_02_icon.rz\";\n// Result: 1 // \nselect -r rt_arm_icon ;\nsetKeyframe \"rt_arm_icon.tx\";\nsetKeyframe \"rt_arm_icon.ty\";\nsetKeyframe \"rt_arm_icon.tz\";\n// Result: 1 // \nselect -r rt_hand_01_icon ;\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.rx\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.ry\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.rz\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.IKFK\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.FINGERS\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.CURLS\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.index_curl\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.middle_curl\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.pinky_curl\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.SPREAD\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.index_spread\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.middle_spread\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.pinky_spread\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.THUMB\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.thumb_curl\";\nsetAttr -lock true -keyable false -channelBox false \"rt_hand_01_icon.thumb_drop\";\n// Undo: channelBoxCommand -lockUnkeyable // \nsetKeyframe \"rt_hand_01_icon.rx\";\nsetKeyframe \"rt_hand_01_icon.ry\";\nsetKeyframe \"rt_hand_01_icon.rz\";\nsetKeyframe \"rt_hand_01_icon.IKFK\";\nsetKeyframe \"rt_hand_01_icon.FINGERS\";\nsetKeyframe \"rt_hand_01_icon.CURLS\";\nsetKeyframe \"rt_hand_01_icon.index_curl\";\nsetKeyframe \"rt_hand_01_icon.middle_curl\";\nsetKeyframe \"rt_hand_01_icon.pinky_curl\";\nsetKeyframe \"rt_hand_01_icon.SPREAD\";\nsetKeyframe \"rt_hand_01_icon.index_spread\";\nsetKeyframe \"rt_hand_01_icon.middle_spread\";\nsetKeyframe \"rt_hand_01_icon.pinky_spread\";\nsetKeyframe \"rt_hand_01_icon.THUMB\";\nsetKeyframe \"rt_hand_01_icon.thumb_curl\";\nsetKeyframe \"rt_hand_01_icon.thumb_drop\";\n// Result: 1 // \nselect -r lt_kneePV_icon ;\nsetKeyframe \"lt_kneePV_icon.tx\";\nsetKeyframe \"lt_kneePV_icon.ty\";\nsetKeyframe \"lt_kneePV_icon.tz\";\n// Result: 1 // \nselect -r rt_kneePV_icon ;\nsetKeyframe \"rt_kneePV_icon.tx\";\nsetKeyframe \"rt_kneePV_icon.ty\";\nsetKeyframe \"rt_kneePV_icon.tz\";\n// Result: 1 // \nselect -r lt_leg_icon ;\nsetKeyframe \"lt_leg_icon.tx\";\nsetKeyframe \"lt_leg_icon.ty\";\nsetKeyframe \"lt_leg_icon.tz\";\nsetKeyframe \"lt_leg_icon.rx\";\nsetKeyframe \"lt_leg_icon.ry\";\nsetKeyframe \"lt_leg_icon.rz\";\n// Result: 1 // \nselect -r lt_heel_icon ;\nsetKeyframe \"lt_heel_icon.rx\";\nsetKeyframe \"lt_heel_icon.ry\";\nsetKeyframe \"lt_heel_icon.rz\";\n// Result: 1 // \nselect -r lt_outerBank_icon ;\nsetKeyframe \"lt_outerBank_icon.rx\";\nsetKeyframe \"lt_outerBank_icon.ry\";\nsetKeyframe \"lt_outerBank_icon.rz\";\n// Result: 1 // \nselect -r lt_ball_icon ;\nsetKeyframe \"lt_ball_icon.rx\";\nsetKeyframe \"lt_ball_icon.ry\";\nsetKeyframe \"lt_ball_icon.rz\";\n// Result: 1 // \nselect -r lt_innerBank_icon ;\nsetKeyframe \"lt_innerBank_icon.rx\";\nsetKeyframe \"lt_innerBank_icon.ry\";\nsetKeyframe \"lt_innerBank_icon.rz\";\n// Result: 1 // \nselect -r lt_toe_icon ;\nsetKeyframe \"lt_toe_icon.rx\";\nsetKeyframe \"lt_toe_icon.ry\";\nsetKeyframe \"lt_toe_icon.rz\";\n// Result: 1 // \nselect -r rt_leg_icon ;\nsetKeyframe \"rt_leg_icon.tx\";\nsetKeyframe \"rt_leg_icon.ty\";\nsetKeyframe \"rt_leg_icon.tz\";\nsetKeyframe \"rt_leg_icon.rx\";\nsetKeyframe \"rt_leg_icon.ry\";\nsetKeyframe \"rt_leg_icon.rz\";\n// Result: 1 // \nselect -r rt_outerBank_icon ;\nsetKeyframe \"rt_outerBank_icon.rx\";\nsetKeyframe \"rt_outerBank_icon.ry\";\nsetKeyframe \"rt_outerBank_icon.rz\";\n// Result: 1 // \nselect -r rt_toe_icon ;\nsetKeyframe \"rt_toe_icon.rx\";\nsetKeyframe \"rt_toe_icon.ry\";\nsetKeyframe \"rt_toe_icon.rz\";\n// Result: 1 // \nselect -r rt_innerBank_icon ;\nsetKeyframe \"rt_innerBank_icon.rx\";\nsetKeyframe \"rt_innerBank_icon.ry\";\nsetKeyframe \"rt_innerBank_icon.rz\";\n// Result: 1 // \nselect -r rt_ball_icon ;\nsetKeyframe \"rt_ball_icon.rx\";\nsetKeyframe \"rt_ball_icon.ry\";\nsetKeyframe \"rt_ball_icon.rz\";\n// Result: 1 // \nselect -r rt_heel_icon ;\nsetKeyframe \"rt_heel_icon.rx\";\nsetKeyframe \"rt_heel_icon.ry\";\nsetKeyframe \"rt_heel_icon.rz\";\n// Result: 1 // \nselect -r rt_leg_icon ;\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "KBun" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "KBun" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "select -cl  ;\nselect -r ct_cog_icon ;\nsetKeyframe \"ct_cog_icon.tx\";\nsetKeyframe \"ct_cog_icon.ty\";\nsetKeyframe \"ct_cog_icon.tz\";\nsetKeyframe \"ct_cog_icon.rx\";\nsetKeyframe \"ct_cog_icon.ry\";\nsetKeyframe \"ct_cog_icon.rz\";\n// Result: 1 // \nselect -r ct_hip_01_icon ;\nsetKeyframe \"ct_hip_01_icon.tx\";\nsetKeyframe \"ct_hip_01_icon.ty\";\nsetKeyframe \"ct_hip_01_icon.tz\";\nsetKeyframe \"ct_hip_01_icon.rx\";\nsetKeyframe \"ct_hip_01_icon.ry\";\nsetKeyframe \"ct_hip_01_icon.rz\";\n// Result: 1 // \nselect -r ct_back_01_icon ;\nsetKeyframe \"ct_back_01_icon.tx\";\nsetKeyframe \"ct_back_01_icon.ty\";\nsetKeyframe \"ct_back_01_icon.tz\";\nsetKeyframe \"ct_back_01_icon.rx\";\nsetKeyframe \"ct_back_01_icon.ry\";\nsetKeyframe \"ct_back_01_icon.rz\";\n// Result: 1 // \nselect -r ct_indyBack_01_icon ;\nsetKeyframe \"ct_indyBack_01_icon.tx\";\nsetKeyframe \"ct_indyBack_01_icon.ty\";\nsetKeyframe \"ct_indyBack_01_icon.tz\";\n// Result: 1 // \nselect -r ct_back_02_icon ;\nsetKeyframe \"ct_back_02_icon.tx\";\nsetKeyframe \"ct_back_02_icon.ty\";\nsetKeyframe \"ct_back_02_icon.tz\";\nsetKeyframe \"ct_back_02_icon.rx\";\nsetKeyframe \"ct_back_02_icon.ry\";\nsetKeyframe \"ct_back_02_icon.rz\";\n// Result: 1 // \nselect -r ct_indyBack_02_icon ;\nsetKeyframe \"ct_indyBack_02_icon.tx\";\nsetKeyframe \"ct_indyBack_02_icon.ty\";\nsetKeyframe \"ct_indyBack_02_icon.tz\";\n// Result: 1 // \nselect -r ct_back_03_icon ;\nsetKeyframe \"ct_back_03_icon.tx\";\nsetKeyframe \"ct_back_03_icon.ty\";\nsetKeyframe \"ct_back_03_icon.tz\";\nsetKeyframe \"ct_back_03_icon.rx\";\nsetKeyframe \"ct_back_03_icon.ry\";\nsetKeyframe \"ct_back_03_icon.rz\";\n// Result: 1 // \nselect -r ct_indyBack_03_icon ;\nsetKeyframe \"ct_indyBack_03_icon.tx\";\nsetKeyframe \"ct_indyBack_03_icon.ty\";\nsetKeyframe \"ct_indyBack_03_icon.tz\";\n// Result: 1 // \nselect -r ct_back_04_icon ;\nsetKeyframe \"ct_back_04_icon.tx\";\nsetKeyframe \"ct_back_04_icon.ty\";\nsetKeyframe \"ct_back_04_icon.tz\";\nsetKeyframe \"ct_back_04_icon.rx\";\nsetKeyframe \"ct_back_04_icon.ry\";\nsetKeyframe \"ct_back_04_icon.rz\";\n// Result: 1 // \nselect -r ct_indyBack_04_icon ;\nsetKeyframe \"ct_indyBack_04_icon.tx\";\nsetKeyframe \"ct_indyBack_04_icon.ty\";\nsetKeyframe \"ct_indyBack_04_icon.tz\";\n// Result: 1 // \nselect -r ct_back_05_icon ;\nsetKeyframe \"ct_back_05_icon.tx\";\nsetKeyframe \"ct_back_05_icon.ty\";\nsetKeyframe \"ct_back_05_icon.tz\";\nsetKeyframe \"ct_back_05_icon.rx\";\nsetKeyframe \"ct_back_05_icon.ry\";\nsetKeyframe \"ct_back_05_icon.rz\";\n// Result: 1 // \nselect -r ct_indyBack_05_icon ;\nsetKeyframe \"ct_indyBack_05_icon.tx\";\nsetKeyframe \"ct_indyBack_05_icon.ty\";\nsetKeyframe \"ct_indyBack_05_icon.tz\";\n// Result: 1 // \nselect -r ct_back_06_icon ;\nsetKeyframe \"ct_back_06_icon.tx\";\nsetKeyframe \"ct_back_06_icon.ty\";\nsetKeyframe \"ct_back_06_icon.tz\";\nsetKeyframe \"ct_back_06_icon.rx\";\nsetKeyframe \"ct_back_06_icon.ry\";\nsetKeyframe \"ct_back_06_icon.rz\";\n// Result: 1 // \nselect -r ct_indyBack_06_icon ;\nsetKeyframe \"ct_indyBack_06_icon.tx\";\nsetKeyframe \"ct_indyBack_06_icon.ty\";\nsetKeyframe \"ct_indyBack_06_icon.tz\";\n// Result: 1 // \nselect -r ct_neck_01_icon ;\nsetKeyframe \"ct_neck_01_icon.rx\";\nsetKeyframe \"ct_neck_01_icon.ry\";\nsetKeyframe \"ct_neck_01_icon.rz\";\n// Result: 1 // \nselect -r ct_head_01_icon ;\nsetKeyframe \"ct_head_01_icon.rx\";\nsetKeyframe \"ct_head_01_icon.ry\";\nsetKeyframe \"ct_head_01_icon.rz\";\n// Result: 1 // \nselect -r lt_armFK_01_icon ;\nsetKeyframe \"lt_armFK_01_icon.rx\";\nsetKeyframe \"lt_armFK_01_icon.ry\";\nsetKeyframe \"lt_armFK_01_icon.rz\";\n// Result: 1 // \nselect -r lt_clav_icon ;\nsetKeyframe \"lt_clav_icon.tx\";\nsetKeyframe \"lt_clav_icon.ty\";\nsetKeyframe \"lt_clav_icon.tz\";\nsetKeyframe \"lt_clav_icon.rx\";\nsetKeyframe \"lt_clav_icon.ry\";\nsetKeyframe \"lt_clav_icon.rz\";\n// Result: 1 // \nselect -r lt_armFK_02_icon ;\nsetKeyframe \"lt_armFK_02_icon.rx\";\nsetKeyframe \"lt_armFK_02_icon.ry\";\nsetKeyframe \"lt_armFK_02_icon.rz\";\n// Result: 1 // \nselect -r lt_armFK_02_icon lt_elbowPV_icon ;\nselect -r lt_elbowPV_icon ;\nsetKeyframe \"lt_elbowPV_icon.tx\";\nsetKeyframe \"lt_elbowPV_icon.ty\";\nsetKeyframe \"lt_elbowPV_icon.tz\";\n// Result: 1 // \nselect -r lt_arm_icon ;\nsetKeyframe \"lt_arm_icon.tx\";\nsetKeyframe \"lt_arm_icon.ty\";\nsetKeyframe \"lt_arm_icon.tz\";\n// Result: 1 // \nselect -r lt_hand_01_icon ;\nsetKeyframe \"lt_hand_01_icon.rx\";\nsetKeyframe \"lt_hand_01_icon.ry\";\nsetKeyframe \"lt_hand_01_icon.rz\";\nsetKeyframe \"lt_hand_01_icon.IKFK\";\nsetKeyframe \"lt_hand_01_icon.FINGERS\";\nsetKeyframe \"lt_hand_01_icon.CURLS\";\nsetKeyframe \"lt_hand_01_icon.index_curl\";\nsetKeyframe \"lt_hand_01_icon.middle_curl\";\nsetKeyframe \"lt_hand_01_icon.pinky_curl\";\nsetKeyframe \"lt_hand_01_icon.SPREAD\";\nsetKeyframe \"lt_hand_01_icon.index_spread\";\nsetKeyframe \"lt_hand_01_icon.middle_spread\";\nsetKeyframe \"lt_hand_01_icon.pinky_spread\";\nsetKeyframe \"lt_hand_01_icon.THUMB\";\nsetKeyframe \"lt_hand_01_icon.thumb_curl\";\nsetKeyframe \"lt_hand_01_icon.thumb_drop\";\n// Result: 1 // \nselect -r rt_armFK_01_icon ;\nsetKeyframe \"rt_armFK_01_icon.rx\";\nsetKeyframe \"rt_armFK_01_icon.ry\";\nsetKeyframe \"rt_armFK_01_icon.rz\";\n// Result: 1 // \nselect -r rt_clav_icon ;\nsetKeyframe \"rt_clav_icon.tx\";\nsetKeyframe \"rt_clav_icon.ty\";\nsetKeyframe \"rt_clav_icon.tz\";\nsetKeyframe \"rt_clav_icon.rx\";\nsetKeyframe \"rt_clav_icon.ry\";\nsetKeyframe \"rt_clav_icon.rz\";\n// Result: 1 // \nselect -r rt_elbowPV_icon ;\nsetKeyframe \"rt_elbowPV_icon.tx\";\nsetKeyframe \"rt_elbowPV_icon.ty\";\nsetKeyframe \"rt_elbowPV_icon.tz\";\n// Result: 1 // \nselect -r rt_armFK_02_icon ;\nsetKeyframe \"rt_armFK_02_icon.rx\";\nsetKeyframe \"rt_armFK_02_icon.ry\";\nsetKeyframe \"rt_armFK_02_icon.rz\";\n// Result: 1 // \nselect -r rt_arm_icon ;\nsetKeyframe \"rt_arm_icon.tx\";\nsetKeyframe \"rt_arm_icon.ty\";\nsetKeyframe \"rt_arm_icon.tz\";\n// Result: 1 // \nselect -r rt_hand_01_icon ;\nsetKeyframe \"rt_hand_01_icon.rx\";\nsetKeyframe \"rt_hand_01_icon.ry\";\nsetKeyframe \"rt_hand_01_icon.rz\";\nsetKeyframe \"rt_hand_01_icon.IKFK\";\nsetKeyframe \"rt_hand_01_icon.FINGERS\";\nsetKeyframe \"rt_hand_01_icon.CURLS\";\nsetKeyframe \"rt_hand_01_icon.index_curl\";\nsetKeyframe \"rt_hand_01_icon.middle_curl\";\nsetKeyframe \"rt_hand_01_icon.pinky_curl\";\nsetKeyframe \"rt_hand_01_icon.SPREAD\";\nsetKeyframe \"rt_hand_01_icon.index_spread\";\nsetKeyframe \"rt_hand_01_icon.middle_spread\";\nsetKeyframe \"rt_hand_01_icon.pinky_spread\";\nsetKeyframe \"rt_hand_01_icon.THUMB\";\nsetKeyframe \"rt_hand_01_icon.thumb_curl\";\nsetKeyframe \"rt_hand_01_icon.thumb_drop\";\n// Result: 1 // \nselect -r lt_kneePV_icon ;\nsetKeyframe \"lt_kneePV_icon.tx\";\nsetKeyframe \"lt_kneePV_icon.ty\";\nsetKeyframe \"lt_kneePV_icon.tz\";\n// Result: 1 // \nselect -r rt_kneePV_icon ;\nsetKeyframe \"rt_kneePV_icon.tx\";\nsetKeyframe \"rt_kneePV_icon.ty\";\nsetKeyframe \"rt_kneePV_icon.tz\";\n// Result: 1 // \nselect -r lt_leg_icon ;\nsetKeyframe \"lt_leg_icon.tx\";\nsetKeyframe \"lt_leg_icon.ty\";\nsetKeyframe \"lt_leg_icon.tz\";\nsetKeyframe \"lt_leg_icon.rx\";\nsetKeyframe \"lt_leg_icon.ry\";\nsetKeyframe \"lt_leg_icon.rz\";\n// Result: 1 // \nselect -r lt_heel_icon ;\nsetKeyframe \"lt_heel_icon.rx\";\nsetKeyframe \"lt_heel_icon.ry\";\nsetKeyframe \"lt_heel_icon.rz\";\n// Result: 1 // \nselect -r lt_outerBank_icon ;\nsetKeyframe \"lt_outerBank_icon.rx\";\nsetKeyframe \"lt_outerBank_icon.ry\";\nsetKeyframe \"lt_outerBank_icon.rz\";\n// Result: 1 // \nselect -r lt_ball_icon ;\nsetKeyframe \"lt_ball_icon.rx\";\nsetKeyframe \"lt_ball_icon.ry\";\nsetKeyframe \"lt_ball_icon.rz\";\n// Result: 1 // \nselect -r lt_innerBank_icon ;\nsetKeyframe \"lt_innerBank_icon.rx\";\nsetKeyframe \"lt_innerBank_icon.ry\";\nsetKeyframe \"lt_innerBank_icon.rz\";\n// Result: 1 // \nselect -r lt_toe_icon ;\nsetKeyframe \"lt_toe_icon.rx\";\nsetKeyframe \"lt_toe_icon.ry\";\nsetKeyframe \"lt_toe_icon.rz\";\n// Result: 1 // \nselect -r rt_leg_icon ;\nsetKeyframe \"rt_leg_icon.tx\";\nsetKeyframe \"rt_leg_icon.ty\";\nsetKeyframe \"rt_leg_icon.tz\";\nsetKeyframe \"rt_leg_icon.rx\";\nsetKeyframe \"rt_leg_icon.ry\";\nsetKeyframe \"rt_leg_icon.rz\";\n// Result: 1 // \nselect -r rt_outerBank_icon ;\nsetKeyframe \"rt_outerBank_icon.rx\";\nsetKeyframe \"rt_outerBank_icon.ry\";\nsetKeyframe \"rt_outerBank_icon.rz\";\n// Result: 1 // \nselect -r rt_toe_icon ;\nsetKeyframe \"rt_toe_icon.rx\";\nsetKeyframe \"rt_toe_icon.ry\";\nsetKeyframe \"rt_toe_icon.rz\";\n// Result: 1 // \nselect -r rt_innerBank_icon ;\nsetKeyframe \"rt_innerBank_icon.rx\";\nsetKeyframe \"rt_innerBank_icon.ry\";\nsetKeyframe \"rt_innerBank_icon.rz\";\n// Result: 1 // \nselect -r rt_ball_icon ;\nsetKeyframe \"rt_ball_icon.rx\";\nsetKeyframe \"rt_ball_icon.ry\";\nsetKeyframe \"rt_ball_icon.rz\";\n// Result: 1 // \nselect -r rt_heel_icon ;\nsetKeyframe \"rt_heel_icon.rx\";\nsetKeyframe \"rt_heel_icon.ry\";\nsetKeyframe \"rt_heel_icon.rz\";\n// Result: 1 // \n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "List the objects in the scene" 
+        -enableBackground 0
+        -align "center" 
+        -label "Outliner" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Outl" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconWindow.png" 
+        -image1 "menuIconWindow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "OutlinerWindow" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "FreezeTransformations" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Customize the joint scale" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Size..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "jdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Customize the IK handle scale" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK Handle Size..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IHS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ikHdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Click to place joint. Click on existing joint to add to skeleton. Click-Drag to position joint." 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinJoint.png" 
+        -image1 "kinJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "JointTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "doCreateParentConstraintArgList 1 { \"1\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"1\",\"\",\"1\" };" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS circle on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "Circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "circle -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 1.15862e-08 -s 8 -ch 1; objectMoveCommand" 
+        -sourceType "mel" 
+        -doubleClickCommand "CreateNURBSCircleOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a curve on the grid or live surface specifying control vertices" 
+        -enableBackground 0
+        -align "center" 
+        -label "CV Curve Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "curveCV.png" 
+        -image1 "curveCV.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CVCurveTool" 
+        -sourceType "mel" 
+        -doubleClickCommand "CVCurveToolOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create IK handle on joint chain" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK Handle Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "IKHandleTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Locks and Hides First selected" 
+        -enableBackground 0
+        -align "center" 
+        -label "LHE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Lock_ON.png" 
+        -image1 "Lock_ON.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import eysterForest_riggingTools_cri1_1402\nreload(eysterForest_riggingTools_cri1_1402)\neysterForest_riggingTools_cri1_1402.lock_and_hide()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import eysterForest_riggingTools_cri1_1402\nreload(eysterForest_riggingTools_cri1_1402)\neysterForest_riggingTools_cri1_1402.unlock_and_show()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "USF" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "Lock_OFF.png" 
+        -image1 "Lock_OFF.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import eysterForest_riggingTools_cri1_1402\nreload(eysterForest_riggingTools_cri1_1402)\neysterForest_riggingTools_cri1_1402.unlock_and_show()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Blue Control" 
+        -enableBackground 1
+        -align "center" 
+        -label " BLUE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.132 0.132 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import eysterForest_riggingTools_cri1_1402\nreload(eysterForest_riggingTools_cri1_1402)\neysterForest_riggingTools_cri1_1402.color_control_blue()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Yellow Control" 
+        -enableBackground 1
+        -align "center" 
+        -label "Y" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 1 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import eysterForest_riggingTools_cri1_1402\nreload(eysterForest_riggingTools_cri1_1402)\neysterForest_riggingTools_cri1_1402.color_control_yellow()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Red Control" 
+        -enableBackground 1
+        -align "center" 
+        -label "R" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import eysterForest_riggingTools_cri1_1402\nreload(eysterForest_riggingTools_cri1_1402)\neysterForest_riggingTools_cri1_1402.color_control_red()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a Cube" 
+        -enableBackground 0
+        -align "center" 
+        -label "CUBE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CUBE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import eysterForest_riggingTools_cri1_1402\nreload(eysterForest_riggingTools_cri1_1402)\neysterForest_riggingTools_cri1_1402.create_cube()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates an Arrow" 
+        -enableBackground 0
+        -align "center" 
+        -label "->" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "->" 
+        -overlayLabelColor 1 1 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "curveCV.png" 
+        -image1 "curveCV.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import eysterForest_riggingTools_cri1_1402\nreload(eysterForest_riggingTools_cri1_1402)\neysterForest_riggingTools_cri1_1402.create_arrow()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates a Square" 
+        -enableBackground 0
+        -align "center" 
+        -label "SQUARE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SQUARE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import eysterForest_riggingTools_cri1_1402\nreload(eysterForest_riggingTools_cri1_1402)\neysterForest_riggingTools_cri1_1402.create_square()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

@@ -1,0 +1,867 @@
+global proc shelf_BoddenChristina_cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Customize the joint scale" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Size..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "jdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Parent constraint options" 
+        -enableBackground 0
+        -align "center" 
+        -label "parentConstraintOptionItem" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PAR" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ParentConstraintOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Customize the IK handle scale" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK Handle Size..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IHS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconDisplay.png" 
+        -image1 "menuIconDisplay.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "ikHdsWin" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "IK handle tool options" 
+        -enableBackground 0
+        -align "center" 
+        -label "handleDialogItem" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "IKHandleToolOptions" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Display relationships among nodes in your scene graphically" 
+        -enableBackground 0
+        -align "center" 
+        -label "Node Editor" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconWindow.png" 
+        -image1 "menuIconWindow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "NodeEditorWindow" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "select -cl  ;\nselect -r ct_head_01_icon ;\nsetKeyframe \"ct_head_01_icon.rx\";\nsetKeyframe \"ct_head_01_icon.ry\";\nsetKeyframe \"ct_head_01_icon.rz\";\n// Result: 1 // \nselect -r rt_clav_icon ;\nsetKeyframe \"rt_clav_icon.tx\";\nsetKeyframe \"rt_clav_icon.ty\";\nsetKeyframe \"rt_clav_icon.tz\";\nsetKeyframe \"rt_clav_icon.rx\";\nsetKeyframe \"rt_clav_icon.ry\";\nsetKeyframe \"rt_clav_icon.rz\";\n// Result: 1 // \nselect -r rt_armFK_01_icon ;\nsetKeyframe \"rt_armFK_01_icon.rx\";\nsetKeyframe \"rt_armFK_01_icon.ry\";\nsetKeyframe \"rt_armFK_01_icon.rz\";\n// Result: 1 // \nselect -r rt_armFK_02_icon ;\nsetKeyframe \"rt_armFK_02_icon.rx\";\nsetKeyframe \"rt_armFK_02_icon.ry\";\nsetKeyframe \"rt_armFK_02_icon.rz\";\n// Result: 1 // \nselect -r rt_arm_ik_icon ;\nsetKeyframe \"rt_arm_ik_icon.tx\";\nsetKeyframe \"rt_arm_ik_icon.ty\";\nsetKeyframe \"rt_arm_ik_icon.tz\";\n// Result: 1 // \nselect -r rt_hand_icon ;\nsetKeyframe \"rt_hand_icon.rx\";\nsetKeyframe \"rt_hand_icon.ry\";\nsetKeyframe \"rt_hand_icon.rz\";\nsetKeyframe \"rt_hand_icon.index_curl\";\nsetKeyframe \"rt_hand_icon.middle_curl\";\nsetKeyframe \"rt_hand_icon.pinky_curl\";\nsetKeyframe \"rt_hand_icon.index_spread\";\nsetKeyframe \"rt_hand_icon.middle_spread\";\nsetKeyframe \"rt_hand_icon.pinky_spread\";\nsetKeyframe \"rt_hand_icon.thumb_curl\";\nsetKeyframe \"rt_hand_icon.thumb_drop\";\n// Result: 1 // \nselect -r rt_elbow_icon ;\nsetKeyframe \"rt_elbow_icon.tx\";\nsetKeyframe \"rt_elbow_icon.ty\";\nsetKeyframe \"rt_elbow_icon.tz\";\n// Result: 1 // \nselect -r lt_armFK_01_local|lt_armFK_01_icon ;\nsetKeyframe \"lt_armFK_01_local|lt_armFK_01_icon.rx\";\nsetKeyframe \"lt_armFK_01_local|lt_armFK_01_icon.ry\";\nsetKeyframe \"lt_armFK_01_local|lt_armFK_01_icon.rz\";\n// Result: 1 // \nselect -r lt_clav_icon ;\nsetKeyframe \"lt_clav_icon.tx\";\nsetKeyframe \"lt_clav_icon.ty\";\nsetKeyframe \"lt_clav_icon.tz\";\nsetKeyframe \"lt_clav_icon.rx\";\nsetKeyframe \"lt_clav_icon.ry\";\nsetKeyframe \"lt_clav_icon.rz\";\n// Result: 1 // \nselect -r lt_armFK_02_local|lt_armFK_01_icon ;\nsetKeyframe \"lt_armFK_02_local|lt_armFK_01_icon.rx\";\nsetKeyframe \"lt_armFK_02_local|lt_armFK_01_icon.ry\";\nsetKeyframe \"lt_armFK_02_local|lt_armFK_01_icon.rz\";\n// Result: 1 // \nselect -r lt_arm_ik_icon ;\nsetKeyframe \"lt_arm_ik_icon.tx\";\nsetKeyframe \"lt_arm_ik_icon.ty\";\nsetKeyframe \"lt_arm_ik_icon.tz\";\n// Result: 1 // \nselect -r lt_hand_icon ;\nsetKeyframe \"lt_hand_icon.rx\";\nsetKeyframe \"lt_hand_icon.ry\";\nsetKeyframe \"lt_hand_icon.rz\";\nsetKeyframe \"lt_hand_icon.index_curl\";\nsetKeyframe \"lt_hand_icon.middle_curl\";\nsetKeyframe \"lt_hand_icon.pinky_curl\";\nsetKeyframe \"lt_hand_icon.index_spread\";\nsetKeyframe \"lt_hand_icon.middle_spread\";\nsetKeyframe \"lt_hand_icon.pinky_spread\";\nsetKeyframe \"lt_hand_icon.thumb_curl\";\nsetKeyframe \"lt_hand_icon.thumb_drop\";\n// Result: 1 // \nselect -r lt_elbow_icon ;\nsetKeyframe \"lt_elbow_icon.tx\";\nsetKeyframe \"lt_elbow_icon.ty\";\nsetKeyframe \"lt_elbow_icon.tz\";\n// Result: 1 // \nselect -r ct_neck_01_icon ;\nsetKeyframe \"ct_neck_01_icon.rx\";\nsetKeyframe \"ct_neck_01_icon.ry\";\nsetKeyframe \"ct_neck_01_icon.rz\";\n// Result: 1 // \nselect -r back_adv06_icon ;\nsetKeyframe \"back_adv06_icon.tx\";\nsetKeyframe \"back_adv06_icon.ty\";\nsetKeyframe \"back_adv06_icon.tz\";\n// Result: 1 // \nselect -r ct_back_06_icon ;\nsetKeyframe \"ct_back_06_icon.rx\";\nsetKeyframe \"ct_back_06_icon.ry\";\nsetKeyframe \"ct_back_06_icon.rz\";\n// Result: 1 // \nselect -r back_adv05_icon ;\nsetKeyframe \"back_adv05_icon.tx\";\nsetKeyframe \"back_adv05_icon.ty\";\nsetKeyframe \"back_adv05_icon.tz\";\n// Result: 1 // \nselect -r ct_back_05_icon ;\nsetKeyframe \"ct_back_05_icon.rx\";\nsetKeyframe \"ct_back_05_icon.ry\";\nsetKeyframe \"ct_back_05_icon.rz\";\n// Result: 1 // \nselect -r back_adv04_icon ;\nsetKeyframe \"back_adv04_icon.tx\";\nsetKeyframe \"back_adv04_icon.ty\";\nsetKeyframe \"back_adv04_icon.tz\";\n// Result: 1 // \nselect -r ct_back_04_icon ;\nsetKeyframe \"ct_back_04_icon.rx\";\nsetKeyframe \"ct_back_04_icon.ry\";\nsetKeyframe \"ct_back_04_icon.rz\";\n// Result: 1 // \nselect -r back_adv03_icon ;\nsetKeyframe \"back_adv03_icon.tx\";\nsetKeyframe \"back_adv03_icon.ty\";\nsetKeyframe \"back_adv03_icon.tz\";\n// Result: 1 // \nselect -r ct_back_03_icon ;\nsetKeyframe \"ct_back_03_icon.rx\";\nsetKeyframe \"ct_back_03_icon.ry\";\nsetKeyframe \"ct_back_03_icon.rz\";\n// Result: 1 // \nselect -r back_adv02_icon ;\nsetKeyframe \"back_adv02_icon.tx\";\nsetKeyframe \"back_adv02_icon.ty\";\nsetKeyframe \"back_adv02_icon.tz\";\n// Result: 1 // \nselect -r ct_back_02_icon ;\nsetKeyframe \"ct_back_02_icon.rx\";\nsetKeyframe \"ct_back_02_icon.ry\";\nsetKeyframe \"ct_back_02_icon.rz\";\n// Result: 1 // \nselect -r back_adv01_icon ;\nsetKeyframe \"back_adv01_icon.tx\";\nsetKeyframe \"back_adv01_icon.ty\";\nsetKeyframe \"back_adv01_icon.tz\";\n// Result: 1 // \nselect -r ct_back_01_icon ;\nsetKeyframe \"ct_back_01_icon.rx\";\nsetKeyframe \"ct_back_01_icon.ry\";\nsetKeyframe \"ct_back_01_icon.rz\";\n// Result: 1 // \nselect -r ct_hip_01_icon ;\nsetKeyframe \"ct_hip_01_icon.tx\";\nsetKeyframe \"ct_hip_01_icon.ty\";\nsetKeyframe \"ct_hip_01_icon.tz\";\nsetKeyframe \"ct_hip_01_icon.rx\";\nsetKeyframe \"ct_hip_01_icon.ry\";\nsetKeyframe \"ct_hip_01_icon.rz\";\n// Result: 1 // \nselect -r ct_cog_icon ;\nsetKeyframe \"ct_cog_icon.tx\";\nsetKeyframe \"ct_cog_icon.ty\";\nsetKeyframe \"ct_cog_icon.tz\";\nsetKeyframe \"ct_cog_icon.rx\";\nsetKeyframe \"ct_cog_icon.ry\";\nsetKeyframe \"ct_cog_icon.rz\";\n// Result: 1 // \nselect -r lt_knee_icon ;\nsetKeyframe \"lt_knee_icon.tx\";\nsetKeyframe \"lt_knee_icon.ty\";\nsetKeyframe \"lt_knee_icon.tz\";\n// Result: 1 // \nselect -r rt_knee_icon ;\nsetKeyframe \"rt_knee_icon.tx\";\nsetKeyframe \"rt_knee_icon.ty\";\nsetKeyframe \"rt_knee_icon.tz\";\n// Result: 1 // \nselect -r lt_foot_icon ;\nsetKeyframe \"lt_foot_icon.tx\";\nsetKeyframe \"lt_foot_icon.ty\";\nsetKeyframe \"lt_foot_icon.tz\";\nsetKeyframe \"lt_foot_icon.rx\";\nsetKeyframe \"lt_foot_icon.ry\";\nsetKeyframe \"lt_foot_icon.rz\";\n// Result: 1 // \nselect -r lt_ball_icon ;\nsetKeyframe \"lt_ball_icon.rx\";\nsetKeyframe \"lt_ball_icon.ry\";\nsetKeyframe \"lt_ball_icon.rz\";\n// Result: 1 // \nselect -r lt_toe_icon ;\nsetKeyframe \"lt_toe_icon.rx\";\nsetKeyframe \"lt_toe_icon.ry\";\nsetKeyframe \"lt_toe_icon.rz\";\n// Result: 1 // \nselect -r lt_outerbank_icon ;\nsetKeyframe \"lt_outerbank_icon.rx\";\nsetKeyframe \"lt_outerbank_icon.ry\";\nsetKeyframe \"lt_outerbank_icon.rz\";\n// Result: 1 // \nselect -r lt_innerbank_icon ;\nsetKeyframe \"lt_innerbank_icon.rx\";\nsetKeyframe \"lt_innerbank_icon.ry\";\nsetKeyframe \"lt_innerbank_icon.rz\";\n// Result: 1 // \nselect -r lt_heel_icon ;\nsetKeyframe \"lt_heel_icon.rx\";\nsetKeyframe \"lt_heel_icon.ry\";\nsetKeyframe \"lt_heel_icon.rz\";\n// Result: 1 // \nselect -r rt_foot_icon ;\nsetKeyframe \"rt_foot_icon.tx\";\nsetKeyframe \"rt_foot_icon.ty\";\nsetKeyframe \"rt_foot_icon.tz\";\nsetKeyframe \"rt_foot_icon.rx\";\nsetKeyframe \"rt_foot_icon.ry\";\nsetKeyframe \"rt_foot_icon.rz\";\n// Result: 1 // \nselect -r rt_innerbank_icon ;\nsetKeyframe \"rt_innerbank_icon.rx\";\nsetKeyframe \"rt_innerbank_icon.ry\";\nsetKeyframe \"rt_innerbank_icon.rz\";\n// Result: 1 // \nselect -r rt_outerbank_icon ;\nsetKeyframe \"rt_outerbank_icon.rx\";\nsetKeyframe \"rt_outerbank_icon.ry\";\nsetKeyframe \"rt_outerbank_icon.rz\";\n// Result: 1 // \nselect -r rt_ball_icon ;\nsetKeyframe \"rt_ball_icon.rx\";\nsetKeyframe \"rt_ball_icon.ry\";\nsetKeyframe \"rt_ball_icon.rz\";\n// Result: 1 // \nselect -r rt_toe_icon ;\nsetKeyframe \"rt_toe_icon.rx\";\nsetKeyframe \"rt_toe_icon.ry\";\nsetKeyframe \"rt_toe_icon.rz\";\n// Result: 1 // \nselect -r rt_heel_icon ;\nsetKeyframe \"rt_heel_icon.rx\";\nsetKeyframe \"rt_heel_icon.ry\";\nsetKeyframe \"rt_heel_icon.rz\";\n// Result: 1 // \n" 
+        -enableBackground 0
+        -align "center" 
+        -label "KBun" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "KBun" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "select -cl  ;\nselect -r ct_head_01_icon ;\nsetKeyframe \"ct_head_01_icon.rx\";\nsetKeyframe \"ct_head_01_icon.ry\";\nsetKeyframe \"ct_head_01_icon.rz\";\n// Result: 1 // \nselect -r rt_clav_icon ;\nsetKeyframe \"rt_clav_icon.tx\";\nsetKeyframe \"rt_clav_icon.ty\";\nsetKeyframe \"rt_clav_icon.tz\";\nsetKeyframe \"rt_clav_icon.rx\";\nsetKeyframe \"rt_clav_icon.ry\";\nsetKeyframe \"rt_clav_icon.rz\";\n// Result: 1 // \nselect -r rt_armFK_01_icon ;\nsetKeyframe \"rt_armFK_01_icon.rx\";\nsetKeyframe \"rt_armFK_01_icon.ry\";\nsetKeyframe \"rt_armFK_01_icon.rz\";\n// Result: 1 // \nselect -r rt_armFK_02_icon ;\nsetKeyframe \"rt_armFK_02_icon.rx\";\nsetKeyframe \"rt_armFK_02_icon.ry\";\nsetKeyframe \"rt_armFK_02_icon.rz\";\n// Result: 1 // \nselect -r rt_arm_ik_icon ;\nsetKeyframe \"rt_arm_ik_icon.tx\";\nsetKeyframe \"rt_arm_ik_icon.ty\";\nsetKeyframe \"rt_arm_ik_icon.tz\";\n// Result: 1 // \nselect -r rt_hand_icon ;\nsetKeyframe \"rt_hand_icon.rx\";\nsetKeyframe \"rt_hand_icon.ry\";\nsetKeyframe \"rt_hand_icon.rz\";\nsetKeyframe \"rt_hand_icon.index_curl\";\nsetKeyframe \"rt_hand_icon.middle_curl\";\nsetKeyframe \"rt_hand_icon.pinky_curl\";\nsetKeyframe \"rt_hand_icon.index_spread\";\nsetKeyframe \"rt_hand_icon.middle_spread\";\nsetKeyframe \"rt_hand_icon.pinky_spread\";\nsetKeyframe \"rt_hand_icon.thumb_curl\";\nsetKeyframe \"rt_hand_icon.thumb_drop\";\n// Result: 1 // \nselect -r rt_elbow_icon ;\nsetKeyframe \"rt_elbow_icon.tx\";\nsetKeyframe \"rt_elbow_icon.ty\";\nsetKeyframe \"rt_elbow_icon.tz\";\n// Result: 1 // \nselect -r lt_armFK_01_local|lt_armFK_01_icon ;\nsetKeyframe \"lt_armFK_01_local|lt_armFK_01_icon.rx\";\nsetKeyframe \"lt_armFK_01_local|lt_armFK_01_icon.ry\";\nsetKeyframe \"lt_armFK_01_local|lt_armFK_01_icon.rz\";\n// Result: 1 // \nselect -r lt_clav_icon ;\nsetKeyframe \"lt_clav_icon.tx\";\nsetKeyframe \"lt_clav_icon.ty\";\nsetKeyframe \"lt_clav_icon.tz\";\nsetKeyframe \"lt_clav_icon.rx\";\nsetKeyframe \"lt_clav_icon.ry\";\nsetKeyframe \"lt_clav_icon.rz\";\n// Result: 1 // \nselect -r lt_armFK_02_local|lt_armFK_01_icon ;\nsetKeyframe \"lt_armFK_02_local|lt_armFK_01_icon.rx\";\nsetKeyframe \"lt_armFK_02_local|lt_armFK_01_icon.ry\";\nsetKeyframe \"lt_armFK_02_local|lt_armFK_01_icon.rz\";\n// Result: 1 // \nselect -r lt_arm_ik_icon ;\nsetKeyframe \"lt_arm_ik_icon.tx\";\nsetKeyframe \"lt_arm_ik_icon.ty\";\nsetKeyframe \"lt_arm_ik_icon.tz\";\n// Result: 1 // \nselect -r lt_hand_icon ;\nsetKeyframe \"lt_hand_icon.rx\";\nsetKeyframe \"lt_hand_icon.ry\";\nsetKeyframe \"lt_hand_icon.rz\";\nsetKeyframe \"lt_hand_icon.index_curl\";\nsetKeyframe \"lt_hand_icon.middle_curl\";\nsetKeyframe \"lt_hand_icon.pinky_curl\";\nsetKeyframe \"lt_hand_icon.index_spread\";\nsetKeyframe \"lt_hand_icon.middle_spread\";\nsetKeyframe \"lt_hand_icon.pinky_spread\";\nsetKeyframe \"lt_hand_icon.thumb_curl\";\nsetKeyframe \"lt_hand_icon.thumb_drop\";\n// Result: 1 // \nselect -r lt_elbow_icon ;\nsetKeyframe \"lt_elbow_icon.tx\";\nsetKeyframe \"lt_elbow_icon.ty\";\nsetKeyframe \"lt_elbow_icon.tz\";\n// Result: 1 // \nselect -r ct_neck_01_icon ;\nsetKeyframe \"ct_neck_01_icon.rx\";\nsetKeyframe \"ct_neck_01_icon.ry\";\nsetKeyframe \"ct_neck_01_icon.rz\";\n// Result: 1 // \nselect -r back_adv06_icon ;\nsetKeyframe \"back_adv06_icon.tx\";\nsetKeyframe \"back_adv06_icon.ty\";\nsetKeyframe \"back_adv06_icon.tz\";\n// Result: 1 // \nselect -r ct_back_06_icon ;\nsetKeyframe \"ct_back_06_icon.rx\";\nsetKeyframe \"ct_back_06_icon.ry\";\nsetKeyframe \"ct_back_06_icon.rz\";\n// Result: 1 // \nselect -r back_adv05_icon ;\nsetKeyframe \"back_adv05_icon.tx\";\nsetKeyframe \"back_adv05_icon.ty\";\nsetKeyframe \"back_adv05_icon.tz\";\n// Result: 1 // \nselect -r ct_back_05_icon ;\nsetKeyframe \"ct_back_05_icon.rx\";\nsetKeyframe \"ct_back_05_icon.ry\";\nsetKeyframe \"ct_back_05_icon.rz\";\n// Result: 1 // \nselect -r back_adv04_icon ;\nsetKeyframe \"back_adv04_icon.tx\";\nsetKeyframe \"back_adv04_icon.ty\";\nsetKeyframe \"back_adv04_icon.tz\";\n// Result: 1 // \nselect -r ct_back_04_icon ;\nsetKeyframe \"ct_back_04_icon.rx\";\nsetKeyframe \"ct_back_04_icon.ry\";\nsetKeyframe \"ct_back_04_icon.rz\";\n// Result: 1 // \nselect -r back_adv03_icon ;\nsetKeyframe \"back_adv03_icon.tx\";\nsetKeyframe \"back_adv03_icon.ty\";\nsetKeyframe \"back_adv03_icon.tz\";\n// Result: 1 // \nselect -r ct_back_03_icon ;\nsetKeyframe \"ct_back_03_icon.rx\";\nsetKeyframe \"ct_back_03_icon.ry\";\nsetKeyframe \"ct_back_03_icon.rz\";\n// Result: 1 // \nselect -r back_adv02_icon ;\nsetKeyframe \"back_adv02_icon.tx\";\nsetKeyframe \"back_adv02_icon.ty\";\nsetKeyframe \"back_adv02_icon.tz\";\n// Result: 1 // \nselect -r ct_back_02_icon ;\nsetKeyframe \"ct_back_02_icon.rx\";\nsetKeyframe \"ct_back_02_icon.ry\";\nsetKeyframe \"ct_back_02_icon.rz\";\n// Result: 1 // \nselect -r back_adv01_icon ;\nsetKeyframe \"back_adv01_icon.tx\";\nsetKeyframe \"back_adv01_icon.ty\";\nsetKeyframe \"back_adv01_icon.tz\";\n// Result: 1 // \nselect -r ct_back_01_icon ;\nsetKeyframe \"ct_back_01_icon.rx\";\nsetKeyframe \"ct_back_01_icon.ry\";\nsetKeyframe \"ct_back_01_icon.rz\";\n// Result: 1 // \nselect -r ct_hip_01_icon ;\nsetKeyframe \"ct_hip_01_icon.tx\";\nsetKeyframe \"ct_hip_01_icon.ty\";\nsetKeyframe \"ct_hip_01_icon.tz\";\nsetKeyframe \"ct_hip_01_icon.rx\";\nsetKeyframe \"ct_hip_01_icon.ry\";\nsetKeyframe \"ct_hip_01_icon.rz\";\n// Result: 1 // \nselect -r ct_cog_icon ;\nsetKeyframe \"ct_cog_icon.tx\";\nsetKeyframe \"ct_cog_icon.ty\";\nsetKeyframe \"ct_cog_icon.tz\";\nsetKeyframe \"ct_cog_icon.rx\";\nsetKeyframe \"ct_cog_icon.ry\";\nsetKeyframe \"ct_cog_icon.rz\";\n// Result: 1 // \nselect -r lt_knee_icon ;\nsetKeyframe \"lt_knee_icon.tx\";\nsetKeyframe \"lt_knee_icon.ty\";\nsetKeyframe \"lt_knee_icon.tz\";\n// Result: 1 // \nselect -r rt_knee_icon ;\nsetKeyframe \"rt_knee_icon.tx\";\nsetKeyframe \"rt_knee_icon.ty\";\nsetKeyframe \"rt_knee_icon.tz\";\n// Result: 1 // \nselect -r lt_foot_icon ;\nsetKeyframe \"lt_foot_icon.tx\";\nsetKeyframe \"lt_foot_icon.ty\";\nsetKeyframe \"lt_foot_icon.tz\";\nsetKeyframe \"lt_foot_icon.rx\";\nsetKeyframe \"lt_foot_icon.ry\";\nsetKeyframe \"lt_foot_icon.rz\";\n// Result: 1 // \nselect -r lt_ball_icon ;\nsetKeyframe \"lt_ball_icon.rx\";\nsetKeyframe \"lt_ball_icon.ry\";\nsetKeyframe \"lt_ball_icon.rz\";\n// Result: 1 // \nselect -r lt_toe_icon ;\nsetKeyframe \"lt_toe_icon.rx\";\nsetKeyframe \"lt_toe_icon.ry\";\nsetKeyframe \"lt_toe_icon.rz\";\n// Result: 1 // \nselect -r lt_outerbank_icon ;\nsetKeyframe \"lt_outerbank_icon.rx\";\nsetKeyframe \"lt_outerbank_icon.ry\";\nsetKeyframe \"lt_outerbank_icon.rz\";\n// Result: 1 // \nselect -r lt_innerbank_icon ;\nsetKeyframe \"lt_innerbank_icon.rx\";\nsetKeyframe \"lt_innerbank_icon.ry\";\nsetKeyframe \"lt_innerbank_icon.rz\";\n// Result: 1 // \nselect -r lt_heel_icon ;\nsetKeyframe \"lt_heel_icon.rx\";\nsetKeyframe \"lt_heel_icon.ry\";\nsetKeyframe \"lt_heel_icon.rz\";\n// Result: 1 // \nselect -r rt_foot_icon ;\nsetKeyframe \"rt_foot_icon.tx\";\nsetKeyframe \"rt_foot_icon.ty\";\nsetKeyframe \"rt_foot_icon.tz\";\nsetKeyframe \"rt_foot_icon.rx\";\nsetKeyframe \"rt_foot_icon.ry\";\nsetKeyframe \"rt_foot_icon.rz\";\n// Result: 1 // \nselect -r rt_innerbank_icon ;\nsetKeyframe \"rt_innerbank_icon.rx\";\nsetKeyframe \"rt_innerbank_icon.ry\";\nsetKeyframe \"rt_innerbank_icon.rz\";\n// Result: 1 // \nselect -r rt_outerbank_icon ;\nsetKeyframe \"rt_outerbank_icon.rx\";\nsetKeyframe \"rt_outerbank_icon.ry\";\nsetKeyframe \"rt_outerbank_icon.rz\";\n// Result: 1 // \nselect -r rt_ball_icon ;\nsetKeyframe \"rt_ball_icon.rx\";\nsetKeyframe \"rt_ball_icon.ry\";\nsetKeyframe \"rt_ball_icon.rz\";\n// Result: 1 // \nselect -r rt_toe_icon ;\nsetKeyframe \"rt_toe_icon.rx\";\nsetKeyframe \"rt_toe_icon.ry\";\nsetKeyframe \"rt_toe_icon.rz\";\n// Result: 1 // \nselect -r rt_heel_icon ;\nsetKeyframe \"rt_heel_icon.rx\";\nsetKeyframe \"rt_heel_icon.ry\";\nsetKeyframe \"rt_heel_icon.rz\";\n// Result: 1 // \n" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Edit the attributes of the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Attribute Spread Sheet" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SpSh" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconWindow.png" 
+        -image1 "menuIconWindow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "SpreadSheetEditor" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Control Colors ->" 
+        -enableBackground 0
+        -align "center" 
+        -label "User Script" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/christinabodden/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/Seperator.png" 
+        -image1 "/Users/christinabodden/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/Seperator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Changes control icon colour to blue." 
+        -enableBackground 0
+        -align "center" 
+        -label "BLUE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "BLUE" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 1 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import lecture9\nreload (lecture9)\nlecture9.color_controls_blue()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Changes control icon to red." 
+        -enableBackground 0
+        -align "center" 
+        -label "RED" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RED" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 1 0 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import lecture9\nreload (lecture9)\nlecture9.color_controls_red()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Changes control icon colour to yellow." 
+        -enableBackground 0
+        -align "center" 
+        -label "YELLOW" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "YELLOW" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 1 1 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import lecture9\nreload (lecture9)\nlecture9.color_controls_yellow()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Attributes ->" 
+        -enableBackground 0
+        -align "center" 
+        -label "User Script" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/christinabodden/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/Seperator.png" 
+        -image1 "/Users/christinabodden/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/Seperator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates new attribute (FLOATS)" 
+        -enableBackground 0
+        -align "center" 
+        -label "ATTR" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ATTR" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import lecture9\nreload (lecture9)\nlecture9.creating_attributes()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a new attribute seperator (ENUM) (-----)" 
+        -enableBackground 0
+        -align "center" 
+        -label "attSEP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "attSEP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import lecture9\nreload (lecture9)\nlecture9.creating_attribute_seperators()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Locks and Hides Attributes (T,R,S,V)" 
+        -enableBackground 0
+        -align "center" 
+        -label "LOCK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LOCK" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BoddenChristina_riggingTools_cri1_1409\nreload (BoddenChristina_riggingTools_cri1_1409)\nBoddenChristina_riggingTools_cri1_1409.lock_and_hide()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Shows and Unlocks Attributes (T,R,S,V)" 
+        -enableBackground 0
+        -align "center" 
+        -label "SHOW" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SHOW" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import lecture9\nreload (lecture9)\nlecture9.unlock_and_show()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create Controls ->" 
+        -enableBackground 0
+        -align "center" 
+        -label "User Script" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/christinabodden/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/Seperator.png" 
+        -image1 "/Users/christinabodden/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/Seperator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS circle on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "Circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CIRCLE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "circle -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 1.07639e-05 -s 8 -ch 1; objectMoveCommand" 
+        -sourceType "mel" 
+        -doubleClickCommand "CreateNURBSCircleOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS square on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "SQUARE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SQUARE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload (rigging_tools)\nrigging_tools.creating_squares()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS cube on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "CUBE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CUBE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload (rigging_tools)\nrigging_tools.creating_cubes()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a NURBS arrow on the grid" 
+        -enableBackground 0
+        -align "center" 
+        -label "ARROW" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ARROW" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload (rigging_tools)\nrigging_tools.creating_arrows()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create a curve on the grid or live surface specifying control vertices" 
+        -enableBackground 0
+        -align "center" 
+        -label "CV Curve Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CURVE" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "curveCV.png" 
+        -image1 "curveCV.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CVCurveTool" 
+        -sourceType "mel" 
+        -doubleClickCommand "CVCurveToolOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 27
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Joint Tools ->" 
+        -enableBackground 0
+        -align "center" 
+        -label "User Script" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/christinabodden/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/Seperator.png" 
+        -image1 "/Users/christinabodden/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/Seperator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "To rename joints and controls" 
+        -enableBackground 0
+        -align "center" 
+        -label "RENAME" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RENAME" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload (rigging_tools)\nrigging_tools.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Driver selected first, Driven selected second" 
+        -enableBackground 0
+        -align "center" 
+        -label "SNAP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SNAP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import rigging_tools\nreload (rigging_tools)\nrigging_tools.snapping_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Click to place joint. Click on existing joint to add to skeleton. Click-Drag to position joint." 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "kinJoint.png" 
+        -image1 "kinJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "JointTool" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import BoddenChristina_riggingTools_cri1_1409\nreload (BoddenChristina_riggingTools_cri1_1409)\nBoddenChristina_riggingTools_cri1_1409.cv_selection()" 
+        -enableBackground 0
+        -align "center" 
+        -label "cvSEL" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "cvSEL" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BoddenChristina_riggingTools_cri1_1409\nreload (BoddenChristina_riggingTools_cri1_1409)\nBoddenChristina_riggingTools_cri1_1409.cv_selection()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import BoddenChristina_riggingTools_cri1_1409\nreload (BoddenChristina_riggingTools_cri1_1409)\nBoddenChristina_riggingTools_cri1_1409.hierarchy()" 
+        -enableBackground 0
+        -align "center" 
+        -label "HCHY" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "HCHY" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import BoddenChristina_riggingTools_cri1_1409\nreload (BoddenChristina_riggingTools_cri1_1409)\nBoddenChristina_riggingTools_cri1_1409.hierarchy()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Nine Nasty Things ->" 
+        -enableBackground 0
+        -align "center" 
+        -label "User Script" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/christinabodden/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/Seperator.png" 
+        -image1 "/Users/christinabodden/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/Seperator.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "FreezeTransformations" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "DeleteHistory" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "CenterPivot" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

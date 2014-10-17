@@ -1,0 +1,224 @@
+global proc shelf_brakeMichelle_cri () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.hierarchy()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Hierarchy" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hierarchy" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.hierarchy()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.joint_rename()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Rename" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Joint Rename" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.joint_rename()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.padding()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Padding" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Padding" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.padding()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.priming()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Priming" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Priming" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.priming()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.lock_hide_tsv()" 
+        -enableBackground 0
+        -align "center" 
+        -label "TSV Lock Hide" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "TSV Lock Hide" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.lock_hide_tsv()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.lock_hide_rsv()" 
+        -enableBackground 0
+        -align "center" 
+        -label "RSV Lock Hide" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RSV Lock Hide" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.lock_hide_rsv()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.unlock_show_trsv()" 
+        -enableBackground 0
+        -align "center" 
+        -label "TRSV Unlock Show" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "TRSV Unlock Show" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.unlock_show_trsv()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.create_attribute()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Attribute Create" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Attribute Create" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import brakeMichelle_riggingTools_cri1_1405\nreload(brakeMichelle_riggingTools_cri1_1405)\nbrakeMichelle_riggingTools_cri1_1405.create_attribute()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

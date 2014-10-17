@@ -1,0 +1,37 @@
+# Variables - Variables store data.
+# integer, float, string
+
+# = is an assignement operator.
+name = 'Giglamesh'
+strength = 22
+intel = 4
+wisdom = 2
+char = 8
+dex = 10
+hit_point = 65
+
+print 'Character Name:', name
+print 'Mighty', name, 'has a strength of', strength
+
+print intel, wisdom, char, dex, hit_point
+
+print 'Current Stats - Intel: {0}  Wisdom: {1}'.format(intel, wisdom)
+print '              - Charisma: {0}  Dex: {1}'.format(char, dex)
+print '              - Hit Point: {0}'.format(hit_point)
+
+boss_character = 'Smaug'
+
+#     'Boss snacks giglamesh'
+print '{0} snacks {1}.'.format(boss_character, name)
+hit_point = hit_point - 5
+
+print 'Current Stats - Intel: {0}  Wisdom: {1}'.format(intel, wisdom)
+print '              - Charisma: {0}  Dex: {1}'.format(char, dex)
+print '              - Hit Point: {0}'.format(hit_point)
+
+print 'Snacking results in a intel increase 5+'
+intel = intel + 5
+
+print 'Current Stats - Intel: {0}  Wisdom: {1}'.format(intel, wisdom)
+print '              - Charisma: {0}  Dex: {1}'.format(char, dex)
+print '              - Hit Point: {0}'.format(hit_point)

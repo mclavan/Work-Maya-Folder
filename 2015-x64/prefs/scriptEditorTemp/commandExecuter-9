@@ -1,0 +1,20 @@
+'''
+Snapping
+
+pointConstraint
+parentConstraint
+orientConstraint
+
+'''
+
+# By default maintainOffset is turned off!
+# Meaning by default constraints are in snapping mode.
+# Selection
+pm.parentConstraint()
+
+# Focus
+pm.parentConstraint('joint1', 'icon1')
+pm.parentConstraint('joint2', 'icon2')
+
+
+

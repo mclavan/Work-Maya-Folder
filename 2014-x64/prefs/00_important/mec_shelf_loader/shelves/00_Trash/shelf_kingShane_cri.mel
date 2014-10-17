@@ -1,0 +1,764 @@
+global proc shelf_kingShane_cri () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Allows you to rename joints quickly" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Rename Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "jReN" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 0 0.5 
+        -image "annotation.png" 
+        -image1 "annotation.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import RiggingTools as rt\nreload(rt)\nrt.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Allows you to rename selected controls quickly" 
+        -enableBackground 0
+        -align "center" 
+        -label "Control Renamer Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "cReN" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 1 1 0.4 
+        -image "annotation.png" 
+        -image1 "annotation.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import RiggingTools as rt\nreload(rt)\nrt.control_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Opens a Window for Renaming your Selection" 
+        -enableBackground 0
+        -align "center" 
+        -label "Renamer UI" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ReN" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0.901961 0.804711 0 0.5 
+        -image "annotation.png" 
+        -image1 "annotation.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import RiggingTools as rt\nreload(rt)\nrt.renamerTool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation " Creates local controls and parents them to associated joint." 
+        -enableBackground 1
+        -align "center" 
+        -label "Local Pad Controls" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LPC" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 1 0 0 0.7 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import RiggingTools as rt\nreload(rt)\nrt.priming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Opens a window for changing Control Icons Color Based on Orientation." 
+        -enableBackground 0
+        -align "center" 
+        -label "Easy Color Controls" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ECC" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.490196 0.0768935 0.0768935 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import RiggingTools as rt\nreload(rt)\n\nrt.ECC()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Resets Control Icons Attributes to Zero" 
+        -enableBackground 0
+        -align "center" 
+        -label "Default Control Icons" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "0" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import RiggingTools as rt\nreload(rt)\n\nrt.defaultControlIcons()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Opens a window for Hiding, Showing, and Locking Attributes." 
+        -enableBackground 1
+        -align "center" 
+        -label "Hide Show And Lock UI" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "HSL" 
+        -overlayLabelColor 0.94 0.94 0.94 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "lock.png" 
+        -image1 "lock.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import RiggingTools as rt\nreload(rt)\nrt.HSL()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Click to Hide and Show polygons in your perspective Panel." 
+        -enableBackground 0
+        -align "center" 
+        -label "Hide Show Poly" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "HSP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "polyMesh.png" 
+        -image1 "polyMesh.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import RiggingTools as rt\nreload(rt)\nrt.hideShowPoly()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 21
+        -height 21
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates an IK system and a FK system from Root Drive system" 
+        -enableBackground 0
+        -align "center" 
+        -label "IkFk System Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IkFk" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "activeDeselectedAnimLayer.png" 
+        -image1 "activeDeselectedAnimLayer.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import RiggingTools as rt\nreload(rt)\nrt.ikfkSystem_Tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 21
+        -height 21
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates all IkSolvers for Leg System. Select Root joint" 
+        -enableBackground 0
+        -align "center" 
+        -label "Ik Leg System" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ikL" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "activeDeselectedAnimLayer.png" 
+        -image1 "activeDeselectedAnimLayer.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import RiggingTools as rt\nreload(rt)\nrt.ikForLegSystem()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 10
+        -height 27
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "<--------Extras" 
+        -enableBackground 0
+        -align "center" 
+        -label "Seperator" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "closeBar.png" 
+        -image1 "closeBar.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "hello" ( "print(\"User defined menuItem\");" )
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freeze Transformations of selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.makeIdentity(apply = True, t = 1, r = 1, s = 1, n = 0, pn = 1)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete construction history on the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.delete(ch = True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Center Pivots of selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.xform(cp = True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freezes Transforms, Deletes History, And Centers Pivots" 
+        -enableBackground 0
+        -align "center" 
+        -label "NUKE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/Malikeena/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/NUKE.png" 
+        -image1 "/Users/Malikeena/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/NUKE.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\n\npm.makeIdentity(apply = True, t = 1, r = 1, s = 1, n = 0, pn = 1)\n\npm.delete(ch = True)\n\npm.xform(cp = True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Group the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Group" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Grou" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.group()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Parent the selected object(s) to the last selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Pare" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.parent()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Duplicate the selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Duplicate" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Dupl" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.duplicate(rr = True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 10
+        -height 27
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Seperator" 
+        -enableBackground 0
+        -align "center" 
+        -label "Seperator" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "closeBar.png" 
+        -image1 "closeBar.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Icon Dropdown" 
+        -enableBackground 0
+        -align "center" 
+        -label "Icon Dropdown" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/Malikeena/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/CtrlIcons.png" 
+        -image1 "/Users/Malikeena/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/CtrlIcons.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "Circle" ( "import pymel.core as pm\n\npm.circle(c = [0, 0, 0], nr = [0, 1 , 0], sw = 360, r = 1, d = 3, ut = 0, tol = 0.01, s = 8, ch = False)\nselection = pm.ls(selection = True)\npm.rename(selection, \"Circle_Icon1\")" )
+        -mip 0
+        -mi "Square" ( "import pymel.core as pm\n\npm.curve(d = 1, p = [(0.5, 0.0, 0.5), (0.5, 0.0, -0.5), (-0.5, 0.0, -0.5), (-0.5, 0.0, 0.5), (0.5, 0 , 0.5) ], k = [0, 1, 2, 3, 4] )\nselection = pm.ls(selection = True)\npm.rename(selection, \"Square_Icon1\")" )
+        -mip 1
+        -mi "Cube" ( "import pymel.core as pm\n\npm.curve(d = 1, p = [(0.5, -0.5, 0.5), (0.5, -0.5, -0.5), (-0.5, -0.5, -0.5), (-0.5, -0.5, 0.5), (0.5, -0.5, 0.5), (0.5, 0.5, 0.5), (0.5, 0.5, -0.5), (0.5, -0.5, -0.5), (-0.5, -0.5, -0.5), (-0.5, 0.5, -0.5), (0.5, 0.5, -0.5), (0.5, 0.5, 0.5), (-0.5, 0.5, 0.5), (-0.5, 0.5, -0.5), (-0.5, -0.5, -0.5), (-0.5, -0.5, 0.5), (-0.5, 0.5, 0.5), (0.5, 0.5, 0.5), (0.5, -0.5, 0.5), (-0.5, -0.5, 0.5)], k = [0, 1, 2, 3 , 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19])\nselection = pm.ls(selection = True)\npm.rename(selection, \"Cube_Icon1\")\n" )
+        -mip 2
+        -mi "Arrow" ( "import pymel.core as pm\n\npm.curve(d = 1, p = [(-4, 0, 8), (4, 0, 8), (4, 0, 0), (8, 0, 0), (0, 0, -8), (-8, 0, 0), (-4, 0, 0), (-4, 0, 8)], k = (1, 2, 3, 4, 5, 6, 7, 8))\npm.scale(.13, .13, .13)\npm.rotate(0, 180, 0)\npm.makeIdentity(apply = True, t = 1, r = 1, s = 1, n = 0, pn = 1)\nselection = pm.ls(selection = True)\npm.rename(selection, \"Arrow_Icon1\")\n" )
+        -mip 3
+        -mi "Diamond" ( "import pymel.core as pm\n\nmel_line = \"curve -d 1 -p 6.817404 1 0 -p 6.817404 0 1 -p 6.817404 -1 0 -p 6.817404 0 -1 -p 6.817404 1 0 -p 5.817404 0 0 -p 6.817404 -1 0 -p 7.817404 0 0 -p 6.817404 1 0 -p 5.817404 0 0 -p 6.817404 0 1 -p 7.817404 0 0 -p 6.817404 0 -1 -p 5.817404 0 0 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13\" \n\npm.mel.eval(mel_line)\n\nselection = pm.ls(selection = True)\n\npm.xform(cp = True)\n\npm.makeIdentity(apply = True, t = 1, r = 1, s = 1, n = 0, pn = 1)\n\npm.rename(selection, \"Diamond_Icon1\")" )
+        -mip 4
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\n\n\n\npm.parentConstraint(mo = True, weight = 1)" 
+        -sourceType "python" 
+        -doubleClickCommand "import pymel.core as pm\n\npm.parentConstraint(mo = False, weight = 1)" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Orient" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.orientConstraint(mo = True, weight = 1)" 
+        -sourceType "python" 
+        -doubleClickCommand "import pymel.core as pm\n\npm.orientConstraint(mo = False, weight = 1)" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Point" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "posConstraint.png" 
+        -image1 "posConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.pointConstraint(mo = True, weight = 1)\n" 
+        -sourceType "python" 
+        -doubleClickCommand "import pymel.core as pm\n\npm.pointConstraint(mo = False, weight = 1)\n" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the object to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Scale" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "scaleConstraint.png" 
+        -image1 "scaleConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.scaleConstraint(mo = True, weight = 1)\n" 
+        -sourceType "python" 
+        -doubleClickCommand "import pymel.core as pm\n\npm.scaleConstraint(mo = False, weight = 1)\n" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select one or more targets followed by the Rotate Plane ikHandle to constrain." 
+        -enableBackground 0
+        -align "center" 
+        -label "Pole Vector" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.poleVectorConstraint()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates cluster on selected CV's" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cluster" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\npm.cluster()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Creates Float Attribute for selected object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Add Float Attribute" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/Malikeena/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/FLOATattr.png" 
+        -image1 "/Users/Malikeena/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/FLOATattr.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.addAttr(ln = raw_input(), at = \"double\", keyable = True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Add seperater Attribute" 
+        -enableBackground 0
+        -align "center" 
+        -label "Add Seperater Enum Attribute" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "/Users/Malikeena/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/SEPattr.png" 
+        -image1 "/Users/Malikeena/Library/Preferences/Autodesk/maya/2014-x64/prefs/icons/SEPattr.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.addAttr(ln = \"_______\", at = \"enum\", en = \"_______\", keyable = True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

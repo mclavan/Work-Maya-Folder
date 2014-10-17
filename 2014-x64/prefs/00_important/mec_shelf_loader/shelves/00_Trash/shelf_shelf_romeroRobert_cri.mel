@@ -1,0 +1,224 @@
+global proc shelf_shelf_romeroRobert_cri () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This tool completes a finger system applying pad and adding icons exc." 
+        -enableBackground 1
+        -align "center" 
+        -label "Hierarchy" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hier" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "out_nucleus.png" 
+        -image1 "out_nucleus.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Romero_Robert_riggingTools_cri1_1405\nreload(Romero_Robert_riggingTools_cri1_1405)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This tool will apply pads to joints selected." 
+        -enableBackground 0
+        -align "center" 
+        -label "Padding" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Pad" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "createPose.png" 
+        -image1 "createPose.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Romero_Robert_riggingTools_cri1_1405\nreload (Romero_Robert_riggingTools_cri1_1405)\nRomero_Robert_riggingTools_cri1_1405.padding_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This tool will prime joints with single click" 
+        -enableBackground 0
+        -align "center" 
+        -label "Prim" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Prim" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.287625 0.287625 0.287625 0.2 
+        -image "ghostOff.png" 
+        -image1 "ghostOff.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Romero_Robert_riggingTools_cri1_1405\nreload(Romero_Robert_riggingTools_cri1_1405)\nRomero_Robert_riggingTools_cri1_1405.priming_tool()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This tool will rename your joints. Be sure when the pop ups come up you first put the orientation area (lt,rt,ct) then the piece it is attached to (arm, leg, exc.)" 
+        -enableBackground 0
+        -align "center" 
+        -label "JoRename" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "JoRename" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "detachSkin.png" 
+        -image1 "detachSkin.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Romero_Robert_riggingTools_cri1_1405\nreload(Romero_Robert_riggingTools_cri1_1405)\nRomero_Robert_riggingTools_cri1_1405.joint_renamer()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This tool will lock and hide your fks from being toggled with." 
+        -enableBackground 1
+        -align "center" 
+        -label "LHFK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "LHFK" 
+        -overlayLabelColor 1 1 0 
+        -overlayLabelBackColor 0 0 0 0.5 
+        -image "lock.png" 
+        -image1 "lock.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Romero_Robert_riggingTools_cri1_1405\nreload(Romero_Robert_riggingTools_cri1_1405)\nRomero_Robert_riggingTools_cri1_1405.Color_Icon_Lock_hide_FK()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This tool will color your icons blue." 
+        -enableBackground 1
+        -align "center" 
+        -label "IcBlue" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IcBlue" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "colorPickCursor.png" 
+        -image1 "colorPickCursor.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Romero_Robert_riggingTools_cri1_1405\nreload(Romero_Robert_riggingTools_cri1_1405)\nRomero_Robert_riggingTools_cri1_1405.Color_Icon_Blue()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This tool will change the color of your icon to yellow." 
+        -enableBackground 1
+        -align "center" 
+        -label "IcYellow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IcYellow" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "colorPickCursor.png" 
+        -image1 "colorPickCursor.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Romero_Robert_riggingTools_cri1_1405\nreload(Romero_Robert_riggingTools_cri1_1405)\nRomero_Robert_riggingTools_cri1_1405.Color_Icon_Yellow()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This tool will change your icon color to red." 
+        -enableBackground 1
+        -align "center" 
+        -label "IcRed" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IcRed" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "colorPickCursor.png" 
+        -image1 "colorPickCursor.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Romero_Robert_riggingTools_cri1_1405\nreload(Romero_Robert_riggingTools_cri1_1405)\nRomero_Robert_riggingTools_cri1_1405.Color_Icon_Red()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

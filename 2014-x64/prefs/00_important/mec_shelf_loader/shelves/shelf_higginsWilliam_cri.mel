@@ -1,0 +1,35 @@
+global proc shelf_higginsWilliam_cri () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select the root joint" 
+        -enableBackground 1
+        -align "center" 
+        -label "Higgins" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Higgins" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "polyAlignUVs.png" 
+        -image1 "polyAlignUVs.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import higginsWilliam_riggingTools_cri1_1405\nreload(higginsWilliam_riggingTools_cri1_1405)\nhigginsWilliam_riggingTools_cri1_1405.hierarchy()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

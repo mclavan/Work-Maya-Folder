@@ -1,0 +1,598 @@
+global proc shelf_shelf_Terry_Kelvin_Ci1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.makeIdentity(apply=True, t=1, r=1, s=1, n=0)" 
+        -enableBackground 0
+        -align "center" 
+        -label "FrzT" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FrzT" 
+        -overlayLabelColor 0.901961 0.330586 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.makeIdentity(apply=True, t=1, r=1, s=1, n=0)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.delete(ch=True)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "delH" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "delH" 
+        -overlayLabelColor 0.901961 0.330586 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "menuIconEdit.png" 
+        -image1 "menuIconEdit.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.delete(ch=True)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.xform(cp=1)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "cenP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "cenP" 
+        -overlayLabelColor 0.901961 0.330586 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.xform(cp=1)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 10
+        -height 27
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "empty" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "closeBar.png" 
+        -image1 "closeBar.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "selected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\n\npm.ikHandle( sj=first_selected, ee=second_selected, p=1, w=1, solver='ikRPsolver' )\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "ikH" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ikH" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\n\npm.ikHandle( sj=first_selected, ee=second_selected, p=1, w=1, solver='ikRPsolver' )\n" 
+        -sourceType "python" 
+        -doubleClickCommand "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\n\npm.ikHandle( sj=first_selected, ee=second_selected, p=1, w=1, solver='ikSCsolver' )\n" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.cluster()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "cluster" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "cluster" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.cluster()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 10
+        -height 27
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "empty" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "closeBar.png" 
+        -image1 "closeBar.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pm.cluster()\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "markers" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "markers" 
+        -overlayLabelColor 1 1 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "Circle" ( "import pymel.core as pm\npm.circle()" )
+        -mip 0
+        -mi "Square" ( "square='curve -d 1 -p -1 0 -1 -p 1 0 -1 -p 1 0 1 -p -1 0 1 -p -1 0 -1 -k 0 -k 1 -k 2 -k 3 -k 4 ;'\npm.mel.eval(square)\n" )
+        -mip 1
+        -mi "Cube" ( "import pymel.core as pm\ncube = 'curve -d 1 -p -1 0 -1 -p 1 0 -1 -p 1 0 1 -p -1 0 1 -p -1 0 -1 -p -1 2 -1 -p 1 2 -1 -p 1 0 -1 -p 1 0 1 -p 1 2 1 -p 1 2 -1 -p -1 2 -1 -p -1 2 1 -p 1 2 1 -p 1 0 1 -p -1 0 1 -p -1 0 -1 -p -1 2 -1 -p -1 2 1 -p -1 0 1 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 -k 17 -k 18 -k 19 ;'\npm.mel.eval(cube)" )
+        -mip 2
+        -mi "Arrow" ( "import pymel.core as pm\narrow = 'curve -d 1 -p 4 0 3 -p 2 0 1 -p 3 0 1 -p 3 0 -2 -p 5 0 -2 -p 5 0 1 -p 6 0 1 -p 4 0 3 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;'\npm.mel.eval(arrow)" )
+        -mip 3
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 10
+        -height 27
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "empty" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "closeBar.png" 
+        -image1 "closeBar.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "selected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\n\npm.parentConstraint(first_selected, second_selected, mo=True)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "parC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "parC" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\n\npm.parentConstraint(first_selected, second_selected, mo=True)\n" 
+        -sourceType "python" 
+        -doubleClickCommand "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\n\npm.parentConstraint(first_selected, second_selected, mo=False)\n" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "selected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\npm.orientConstraint(first_selected, second_selected, mo=True)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "oriC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "oriC" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\npm.orientConstraint(first_selected, second_selected, mo=True)\n" 
+        -sourceType "python" 
+        -doubleClickCommand "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\npm.orientConstraint(first_selected, second_selected, mo=False)\n" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "selected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\npm.pointConstraint(first_selected, second_selected, mo=True)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "poiC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "poiC" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\npm.pointConstraint(first_selected, second_selected, mo=True)\n" 
+        -sourceType "python" 
+        -doubleClickCommand "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\npm.pointConstraint(first_selected, second_selected, mo=False)\n" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "selected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\npm.poleVectorConstraint(first_selected, second_selected,)" 
+        -enableBackground 0
+        -align "center" 
+        -label "polV" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "polV" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nsecond_selected = selected[1]\npm.poleVectorConstraint(first_selected, second_selected,)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 10
+        -height 27
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "empty" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "closeBar.png" 
+        -image1 "closeBar.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "selected = pm.ls(selection=True)\nfirst_selected = selected[0]\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name,  keyable=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "fltAtt" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "fltAtt" 
+        -overlayLabelColor 0 0 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "attributes.png" 
+        -image1 "attributes.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name,  keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "selected = pm.ls(selection=True)\nfirst_selected = selected[0]\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, keyable=True,\n\t at='enum' ,en=\"------------:\")\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "sepAtt" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "sepAtt" 
+        -overlayLabelColor 0 0 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "attributes.png" 
+        -image1 "attributes.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nattribute_name = raw_input()\nfirst_selected.addAttr(attribute_name, keyable=True,\n\t at='enum' ,en=\"------------:\")\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "selected = pm.ls(selection=True)\nfirst_selected = selected[0]\nfirst_selected.addAttr('FINGERS', keyable=True,\n\t at='enum' ,en=\"------------:\")\nfirst_selected.FINGERS.set(lock=True)\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nfirst_selected.addAttr('CURL', keyable=True,\n\t at='enum' ,en=\"------------:\")\nfirst_selected.CURL.set(lock=True)\n\nfirst_selected.addAttr('indexCurl', keyable=True)\nfirst_selected.addAttr('middleCurl', keyable=True)\nfirst_selected.addAttr('pinkyCurl', keyable=True)\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nfirst_selected.addAttr('SPREAD', keyable=True,\n\t at='enum' ,en=\"------------:\")\nfirst_selected.SPREAD.set(lock=True)\n\nfirst_selected.addAttr('indexSpread', keyable=True)\nfirst_selected.addAttr('middleSpread', keyable=True)\nfirst_selected.addAttr('pinkySpread', keyable=True)\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nfirst_selected.addAttr('THUMB', keyable=True,\n\t at='enum' ,en=\"------------:\")\nfirst_selected.THUMB.set(lock=True)\n\nfirst_selected.addAttr('thumbCurl', keyable=True)\nfirst_selected.addAttr('thumbDrop', keyable=True)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "attGroup" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "atGr" 
+        -overlayLabelColor 0 0 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "attributes.png" 
+        -image1 "attributes.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nfirst_selected.addAttr('FINGERS', keyable=True,\n\t at='enum' ,en=\"------------:\")\nfirst_selected.FINGERS.set(lock=True)\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nfirst_selected.addAttr('CURL', keyable=True,\n\t at='enum' ,en=\"------------:\")\nfirst_selected.CURL.set(lock=True)\n\nfirst_selected.addAttr('indexCurl', keyable=True)\nfirst_selected.addAttr('middleCurl', keyable=True)\nfirst_selected.addAttr('pinkyCurl', keyable=True)\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nfirst_selected.addAttr('SPREAD', keyable=True,\n\t at='enum' ,en=\"------------:\")\nfirst_selected.SPREAD.set(lock=True)\n\nfirst_selected.addAttr('indexSpread', keyable=True)\nfirst_selected.addAttr('middleSpread', keyable=True)\nfirst_selected.addAttr('pinkySpread', keyable=True)\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nfirst_selected.addAttr('THUMB', keyable=True,\n\t at='enum' ,en=\"------------:\")\nfirst_selected.THUMB.set(lock=True)\n\nfirst_selected.addAttr('thumbCurl', keyable=True)\nfirst_selected.addAttr('thumbDrop', keyable=True)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 10
+        -height 27
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "empty" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "closeBar.png" 
+        -image1 "closeBar.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 23
+        -height 23
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\n# Select joints\n\njoint_chain = pm.ls(selection=True, dag=True)\nprint 'Selected items:', joint_chain\n\n# Find out naming convention\n\nori= raw_input()\nsystem_name = raw_input() \ncount = 0\nsuffix = 'bind' \n\n\n# Loop Joint Chain Naming\n\n\n\nfor current_joint in joint_chain:\n    count = count + 1\n    new_name = '{0}_{1}_0{2}_{3}'.format(ori, system_name, count, suffix)\n    print 'New Name:', new_name\n    current_joint.rename(new_name)\n        \n\nnew_name = '{0}_{1}_0{2}_{3}'.format(ori, system_name, count, 'waste')\ncurrent_joint.rename(new_name)\n\n\n\nprint 'Joints Have Been Renamed!'" 
+        -enableBackground 0
+        -align "center" 
+        -label "jtRename" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "jtRename" 
+        -overlayLabelColor 0 1 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "rename.png" 
+        -image1 "rename.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\n# Select joints\n\njoint_chain = pm.ls(selection=True, dag=True)\nprint 'Selected items:', joint_chain\n\n# Find out naming convention\n\nori= raw_input()\nsystem_name = raw_input() \ncount = 0\nsuffix = 'bind' \n\n\n# Loop Joint Chain Naming\n\n\n\nfor current_joint in joint_chain:\n    count = count + 1\n    new_name = '{0}_{1}_0{2}_{3}'.format(ori, system_name, count, suffix)\n    print 'New Name:', new_name\n    current_joint.rename(new_name)\n        \n\nnew_name = '{0}_{1}_0{2}_{3}'.format(ori, system_name, count, 'waste')\ncurrent_joint.rename(new_name)\n\n\n\nprint 'Joints Have Been Renamed!'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n# get selected joint\nselected = pm.ls(selection=True)\nprint 'Current Selected:' , selected\n\nfirst_selected = selected[0]\n\n\n\n# #create an empty group.\npad = pm.group(empty=True, name = 'lt_middle_00_pad')\nprint 'Root Pad Created:', pad\n\n#Move group to root joint\n# Point constrain group to root joint.\n#   offest off (Snapping)\npC = pm.pointConstraint(first_selected, pad)\n\n# Delete Constraint\npm.delete(pC)\n\n# Freeze transforms on group\npm.makeIdentity(pad, apply=True, t=1, r=1, s=1, n=0)\n\n# Parent root joint to group.\npm.parent(first_selected, pad)\n\n\n# print done\nprint 'Padding Has Been Completed!'\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "pad" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "pad" 
+        -overlayLabelColor 0 1 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n# get selected joint\nselected = pm.ls(selection=True)\nprint 'Current Selected:' , selected\n\nfirst_selected = selected[0]\n\n\n\n# #create an empty group.\npad = pm.group(empty=True, name = 'lt_middle_00_pad')\nprint 'Root Pad Created:', pad\n\n#Move group to root joint\n# Point constrain group to root joint.\n#   offest off (Snapping)\npC = pm.pointConstraint(first_selected, pad)\n\n# Delete Constraint\npm.delete(pC)\n\n# Freeze transforms on group\npm.makeIdentity(pad, apply=True, t=1, r=1, s=1, n=0)\n\n# Parent root joint to group.\npm.parent(first_selected, pad)\n\n\n# print done\nprint 'Padding Has Been Completed!'\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\n# get selected joint\nselected = pm.ls(selection=True)\n# print 'Joint Selected:' , selected\n\n#target_joint =  selected[0]\n\nfor target_joint in selected:\n    control_icon_name = target_joint.replace('joint', raw_input())\n    local_pad_name = target_joint.replace('joint', raw_input())\n      \n    # Create Control\n\n    control_icon = pm.circle(normal=[1,0,0], radius=1.8, \n        name=control_icon_name)[0]\n\n    # Group control (Not empty group)\n\n    local_pad = pm.group(name=local_pad_name)\n\n    print 'Control Icon:',control_icon\n    print 'Pad Created:', local_pad \n\n    #Move group to target joint.\n\n    temp_constraint = pm.parentConstraint(target_joint, local_pad)\n    # delete contraint \n    pm.delete(temp_constraint)\n\n    # Orient Contraint joint to control.\n    pm.orientConstraint(control_icon, target_joint)\n\nprint'Priming Complete!!!!:'\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "prime" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "prime" 
+        -overlayLabelColor 0 1 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\n# get selected joint\nselected = pm.ls(selection=True)\n# print 'Joint Selected:' , selected\n\n#target_joint =  selected[0]\n\nfor target_joint in selected:\n    control_icon_name = target_joint.replace('joint', raw_input())\n    local_pad_name = target_joint.replace('joint', raw_input())\n      \n    # Create Control\n\n    control_icon = pm.circle(normal=[1,0,0], radius=1.8, \n        name=control_icon_name)[0]\n\n    # Group control (Not empty group)\n\n    local_pad = pm.group(name=local_pad_name)\n\n    print 'Control Icon:',control_icon\n    print 'Pad Created:', local_pad \n\n    #Move group to target joint.\n\n    temp_constraint = pm.parentConstraint(target_joint, local_pad)\n    # delete contraint \n    pm.delete(temp_constraint)\n\n    # Orient Contraint joint to control.\n    pm.orientConstraint(control_icon, target_joint)\n\nprint'Priming Complete!!!!:'\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "selected = pm.ls(selection=True)\nprint 'Current Selected:' , selected\n        \n# loop color for all icons\nfor current_item in selected:\n    current_item.overrideEnabled.set(1)\n    blue=6\n    current_item.overrideColor.set(blue)\n\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "Color" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Color" 
+        -overlayLabelColor 0 1 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'Current Selected:' , selected\n        \n# loop color for all icons\nfor current_item in selected:\n    current_item.overrideEnabled.set(1)\n    blue=6\n    current_item.overrideColor.set(blue)\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

@@ -1,0 +1,60 @@
+affected object
+attendance
+attribute
+binding
+center of gravity
+clean up
+component
+constraint
+control
+converting
+data type
+direct connection
+echo on
+fk
+flags
+float
+forward kinematics
+function
+gps
+gui
+hierarchy
+if statement
+ik
+integer
+interface
+inverse kinematics
+joints
+layouts
+list
+loops
+maya command
+mel
+node editor
+orientation
+parent constraint
+parenting
+pivot point
+pole vector
+professionalism
+pymel
+python
+research commands
+reverse foot lock
+rigging
+rotate plane solver
+script editor
+scripting
+set driven keyframe
+setparent
+setup
+shelves
+skinning
+smooth binding
+string
+td
+technical arts
+technical director
+variable
+weight painting
+window

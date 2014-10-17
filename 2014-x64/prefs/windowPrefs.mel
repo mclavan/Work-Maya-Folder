@@ -1,0 +1,17 @@
+//Maya Preference 2014 (Release 1)
+//
+//
+windowPref -topLeftCorner 225 150 -widthHeight 250 400 -maximized false outlinerPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 700 400 -maximized false hyperGraphPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized false graphEditor1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized false dopeSheetPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 660 400 -maximized false clipEditorPanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 524 470 -maximized false devicePanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 700 400 -maximized false hyperShadePanel1Window;
+windowPref -topLeftCorner 250 200 -widthHeight 700 400 -maximized false dynPaintScriptedPanelWindow;
+windowPref -topLeftCorner 250 200 -widthHeight 550 562 -maximized false blindDataEditor1Window;
+windowPref -topLeftCorner 81 96 -widthHeight 1397 840 -maximized false MayaWindow;
+windowPref -topLeftCorner 551 655 -widthHeight 450 320 -maximized false NewFeatureHighlightWnd;
+windowPref -topLeftCorner 414 533 -widthHeight 694 595 -maximized false learningMoviesLaunchWnd;
+windowPref -topLeftCorner 357 640 -widthHeight 248 75 -maximized false jdsWnd;
+windowPref -topLeftCorner 594 2715 -widthHeight 546 350 -maximized false OptionBoxWindow;

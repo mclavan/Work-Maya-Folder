@@ -1,0 +1,8 @@
+global proc shelf_Silva_Gustavo_cri1_1409 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+
+} 

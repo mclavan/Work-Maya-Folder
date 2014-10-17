@@ -1,0 +1,883 @@
+global proc shelf_Hernandez_Gabriel_Cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "hierarchy" 
+        -enableBackground 0
+        -align "center" 
+        -label "Hierarchy" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hierarchy" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Hernandez_Gabriel_riggingTools_cri1_1405\nreload (Hernandez_Gabriel_riggingTools_cri1_1405)\nHernandez_Gabriel_riggingTools_cri1_1405.hierarchy()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "priming" 
+        -enableBackground 0
+        -align "center" 
+        -label "Priming" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Priming" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconAnimCurves.png" 
+        -image1 "menuIconAnimCurves.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Hernandez_Gabriel_riggingTools_cri1_1405\nreload (Hernandez_Gabriel_riggingTools_cri1_1405)\nHernandez_Gabriel_riggingTools_cri1_1405.priming()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "padding" 
+        -enableBackground 0
+        -align "center" 
+        -label "Padding" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Padding" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconAdd.png" 
+        -image1 "menuIconAdd.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Hernandez_Gabriel_riggingTools_cri1_1405\nreload (Hernandez_Gabriel_riggingTools_cri1_1405)\nHernandez_Gabriel_riggingTools_cri1_1405.padding()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "joint rename" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Rename" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Joint Rename" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconSkinning.png" 
+        -image1 "menuIconSkinning.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Hernandez_Gabriel_riggingTools_cri1_1405\nreload (Hernandez_Gabriel_riggingTools_cri1_1405)\nHernandez_Gabriel_riggingTools_cri1_1405.joint_rename()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "color icons" 
+        -enableBackground 0
+        -align "center" 
+        -label "Color icons" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Color icons" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconPaintEffects.png" 
+        -image1 "menuIconPaintEffects.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Hernandez_Gabriel_riggingTools_cri1_1405\nreload (Hernandez_Gabriel_riggingTools_cri1_1405)\nHernandez_Gabriel_riggingTools_cri1_1405.color_icons()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "lock and hide tsv" 
+        -enableBackground 0
+        -align "center" 
+        -label "LH tsv" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "L tsv" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Hernandez_Gabriel_riggingTools_cri1_1405\nreload (Hernandez_Gabriel_riggingTools_cri1_1405)\nHernandez_Gabriel_riggingTools_cri1_1405.Lock_hide_tsv()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "lock and hide rsv" 
+        -enableBackground 0
+        -align "center" 
+        -label "LH rsv" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "L rsv" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Hernandez_Gabriel_riggingTools_cri1_1405\nreload (Hernandez_Gabriel_riggingTools_cri1_1405)\nHernandez_Gabriel_riggingTools_cri1_1405.Lock_hide_rsv()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "lock and hide sv" 
+        -enableBackground 0
+        -align "center" 
+        -label "LH sv" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "L sv" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Hernandez_Gabriel_riggingTools_cri1_1405\nreload (Hernandez_Gabriel_riggingTools_cri1_1405)\nHernandez_Gabriel_riggingTools_cri1_1405.Lock_hide_sv()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "unlock and show trsv" 
+        -enableBackground 0
+        -align "center" 
+        -label "UNLOCK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "UNLOCK" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import Hernandez_Gabriel_riggingTools_cri1_1405\nreload (Hernandez_Gabriel_riggingTools_cri1_1405)\nHernandez_Gabriel_riggingTools_cri1_1405.Unlock_show_trsv()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "frezze transforms" 
+        -enableBackground 0
+        -align "center" 
+        -label "frz.T" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "frz.T" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconFocus.png" 
+        -image1 "menuIconFocus.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.makeIdentity( apply=True, t=1, r=1, s=1, n=2 )" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "delte histori" 
+        -enableBackground 0
+        -align "center" 
+        -label "Del His" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Del His" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconAttributeFilter.png" 
+        -image1 "menuIconAttributeFilter.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.delete(ch=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "center pivot" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cp" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cp" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.xform (cp= True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "IK" 
+        -enableBackground 0
+        -align "center" 
+        -label "IK's" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IK" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "RP" ( "import pymel.core as pm\npm.ikHandle( sol=\"ikRPsolver\")" )
+        -mip 0
+        -mi "SC" ( "import pymel.core as pm\npm.ikHandle( sol=\"ikSCsolver\")" )
+        -mip 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "IK RP" 
+        -enableBackground 0
+        -align "center" 
+        -label "IKRP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IKRP" 
+        -overlayLabelColor 0.795213 0.8 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.ikHandle( sol=\"ikRPsolver\")" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "IK SC" 
+        -enableBackground 0
+        -align "center" 
+        -label "IKSC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IKSC" 
+        -overlayLabelColor 0.795213 0.8 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.ikHandle( sol=\"ikSCsolver\")" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "circle, square,cube,arrow curves" 
+        -enableBackground 0
+        -align "center" 
+        -label "Curves" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CVs" 
+        -overlayLabelColor 0.8 0 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "curveCV.png" 
+        -image1 "curveCV.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "cube" ( "print(\"User defined menuItem\");" )
+        -mip 0
+        -mi "arrow" ( "import pymel.core as pm\nmel_line=\"curve -d 1 -p -0.2 0 -0.2 -p -0.0666667 0 -0.2 -p -0.0666667 0 -0.0666667 -p 0 0 -0.0666667 -p -0.133333 0 0.133333 -p -0.266667 0 -0.0666667 -p -0.2 0 -0.0666667 -p -0.2 0 -0.2 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;\"\npm.mel.eval(mel_line)" )
+        -mip 1
+        -mi "circle" ( "import pymel.core as pm\npm.circle()[0]" )
+        -mip 2
+        -mi "square" ( "import pymel.core as pm\nline=\"curve -d 1 -p -0.30263 0.30263 0.30263 -p -0.30263 0.30263 -0.30263 -p 0.30263 0.30263 -0.30263 -p 0.30263 -0.30263 -0.30263 -p -0.30263 -0.30263 -0.292834 -p -0.30263 0.30263 -0.30263 -p 0.30263 0.30263 -0.30263 -p 0.30263 0.30263 0.30263 -p 0.30263 -0.30263 0.30263 -p 0.30263 -0.30263 -0.30263 -p -0.30263 -0.30263 -0.30263 -p -0.30263 -0.30263 0.30263 -p -0.30263 0.30263 0.30263 -p -0.30263 0.30263 0.30263 -p 0.30263 0.30263 0.30263 -p 0.30263 0.30263 0.30263 -p 0.30263 -0.30263 0.30263 -p -0.30263 -0.30263 0.30263 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 -k 17 ;\"\npm.mel.eval (line)" )
+        -mip 3
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "CV circle" 
+        -enableBackground 0
+        -align "center" 
+        -label "circle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "circle" 
+        -overlayLabelColor 0.795213 0.8 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.circle()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "sqare" 
+        -enableBackground 0
+        -align "center" 
+        -label "Square CV" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SqCV" 
+        -overlayLabelColor 0.795213 0.8 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nline=\"curve -d 1 -p -0.30263 0.30263 0.30263 -p -0.30263 0.30263 -0.30263 -p 0.30263 0.30263 -0.30263 -p 0.30263 -0.30263 -0.30263 -p -0.30263 -0.30263 -0.292834 -p -0.30263 0.30263 -0.30263 -p 0.30263 0.30263 -0.30263 -p 0.30263 0.30263 0.30263 -p 0.30263 -0.30263 0.30263 -p 0.30263 -0.30263 -0.30263 -p -0.30263 -0.30263 -0.30263 -p -0.30263 -0.30263 0.30263 -p -0.30263 0.30263 0.30263 -p -0.30263 0.30263 0.30263 -p 0.30263 0.30263 0.30263 -p 0.30263 0.30263 0.30263 -p 0.30263 -0.30263 0.30263 -p -0.30263 -0.30263 0.30263 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 -k 17 ;\"\npm.mel.eval (line)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "cube CV" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cube CV" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "cube CV" 
+        -overlayLabelColor 0.795213 0.8 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nmel_line=\"curve -d 1 -p -0.30263 0.30263 0.30263 -p -0.30263 0.30263 -0.30263 -p 0.30263 0.30263 -0.30263 -p 0.30263 -0.30263 -0.30263 -p -0.30263 -0.30263 -0.292834 -p -0.30263 0.30263 -0.30263 -p 0.30263 0.30263 -0.30263 -p 0.30263 0.30263 0.30263 -p 0.30263 -0.30263 0.30263 -p 0.30263 -0.30263 -0.30263 -p -0.30263 -0.30263 -0.30263 -p -0.30263 -0.30263 0.30263 -p -0.30263 0.30263 0.30263 -p -0.30263 0.30263 0.30263 -p 0.30263 0.30263 0.30263 -p 0.30263 0.30263 0.30263 -p 0.30263 -0.30263 0.30263 -p -0.30263 -0.30263 0.30263 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 -k 16 -k 17 ;\"\npm.mel.eval(mel_line)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Arrow CV" 
+        -enableBackground 0
+        -align "center" 
+        -label "arrow CV" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "arrow curve" 
+        -overlayLabelColor 0.831306 0.83631 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "curveCV.png" 
+        -image1 "curveCV.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\nmel_line=\"curve -d 1 -p -0.2 0 -0.2 -p -0.0666667 0 -0.2 -p -0.0666667 0 -0.0666667 -p 0 0 -0.0666667 -p -0.133333 0 0.133333 -p -0.266667 0 -0.0666667 -p -0.2 0 -0.0666667 -p -0.2 0 -0.2 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;\"\npm.mel.eval(mel_line)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "cluster" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cluster" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cluster" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.cluster()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "curls to fingers (index middle pinky)" 
+        -enableBackground 0
+        -align "center" 
+        -label "AttC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FCurl (index middle pinky)" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "flipTube.png" 
+        -image1 "flipTube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.addAttr(ln'index_curl', keyable=True)\npm.addAttr(ln='middle_curl', keyable=True)\npm.addAttr(ln='pinky_curl', keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "parent constraints >>>" 
+        -enableBackground 0
+        -align "center" 
+        -label "PC->" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PC->" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0.266667 0.266667 0.266667 1 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print \"not here\"" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Parent with offest" 
+        -enableBackground 0
+        -align "center" 
+        -label "ParentC MO" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PCMO" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "menuIconConstraints.png" 
+        -image1 "menuIconConstraints.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.parentConstraint(mo=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "parent w/o offset" 
+        -enableBackground 0
+        -align "center" 
+        -label "Parent Con NMO" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PCNO" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.parentConstraint(mo=False)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Orient constraiant>>>" 
+        -enableBackground 0
+        -align "center" 
+        -label "OC->" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OC->" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0.266667 0.266667 0.266667 1 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print\"not here\"" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "orient with offset" 
+        -enableBackground 0
+        -align "center" 
+        -label "OriC MO" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OCMO" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "menuIconConstraints.png" 
+        -image1 "menuIconConstraints.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.orientConstraint(mo=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "orient w/o offset" 
+        -enableBackground 0
+        -align "center" 
+        -label "OrientC NMO" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OCNO" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.orientConstraint(mo=False)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "point constraints >>" 
+        -enableBackground 0
+        -align "center" 
+        -label "*C->" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "*c->" 
+        -overlayLabelColor 0 0 0 
+        -overlayLabelBackColor 0.266667 0.266667 0.266667 1 
+        -image "pointlight.png" 
+        -image1 "pointlight.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print\"not here\"" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "point with offset" 
+        -enableBackground 0
+        -align "center" 
+        -label "Point C MO" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "*CMO" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "menuIconConstraints.png" 
+        -image1 "menuIconConstraints.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.pointConstraint(mo=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "point w/o offset" 
+        -enableBackground 0
+        -align "center" 
+        -label "Point C NMO" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "*CNO" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "constraint.png" 
+        -image1 "constraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.pointConstraint(mo=False)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "pole vector" 
+        -enableBackground 0
+        -align "center" 
+        -label "Pole vector" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PV" 
+        -overlayLabelColor 0 1 1 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.poleVectorConstraint()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

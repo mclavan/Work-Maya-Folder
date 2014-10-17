@@ -1,0 +1,143 @@
+global proc shelf_shelf_McLeanAneef_cri () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "\tselected_joint = pm.ls(selection = True)\n\tprint 'selected joints', selected_joint\n\n\t#create empty group\n\t\n\tpad = pm.group(empty=True, name = 'pad')\n\t\n\tprint 'root pad made:', pad\n\n\tcst_temp = pm.parentConstraint(selected_joint, pad , maintainOffset = False)\n\n\tpm.delete(cst_temp)\n\tprint 'deleted constraint'\n\n\n\tprint 'pad name'\n\n\n\tprint 'pad created'\t" 
+        -enableBackground 0
+        -align "center" 
+        -label "Pad" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Pad" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.705882 0.51997 0.8 
+        -image "pasOrangeScribble.png" 
+        -image1 "pasOrangeScribble.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "\tselected_joint = pm.ls(selection = True)\n\tprint 'selected joints', selected_joint\n\n\t#create empty group\n\t\n\tpad = pm.group(empty=True, name = 'pad')\n\t\n\tprint 'root pad made:', pad\n\n\tcst_temp = pm.parentConstraint(selected_joint, pad , maintainOffset = False)\n\n\tpm.delete(cst_temp)\n\tprint 'deleted constraint'\n\n\n\tprint 'pad name'\n\n\n\tprint 'pad created'\t" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "\tjoint_chain = pm.ls(selection=True, dag=True)\n\tprint 'joint_chain', joint_chain\n\t\n\n\tori = raw_input()\n\tname = raw_input()\n\tcount = 1\n\tsuffix = 'bind'\n\n\tfor current_joint in joint_chain:\n\n\t\tnew_name = '{0}_{1}_{2}_{3}'.format(ori, name, count, suffix)\n\t\tprint 'joint name:', new_name\n\n\t\tcount = count + 1\n\n\t\tcurrent_joint.rename(new_name)\n\tnew_name = '{0}_{1}_{2}_{3}'.format(ori, name, count-1, 'waste')\n\tprint 'Joint name: ', new_name\n\tcurrent_joint.rename(new_name)\n\n\n\n\tprint 'joint chain renamed'" 
+        -enableBackground 0
+        -align "center" 
+        -label "Name" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Name" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.705882 0.51997 0.8 
+        -image "neonBlue.png" 
+        -image1 "neonBlue.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "\tjoint_chain = pm.ls(selection=True, dag=True)\n\tprint 'joint_chain', joint_chain\n\t\n\n\tori = raw_input()\n\tname = raw_input()\n\tcount = 1\n\tsuffix = 'bind'\n\n\tfor current_joint in joint_chain:\n\n\t\tnew_name = '{0}_{1}_{2}_{3}'.format(ori, name, count, suffix)\n\t\tprint 'joint name:', new_name\n\n\t\tcount = count + 1\n\n\t\tcurrent_joint.rename(new_name)\n\tnew_name = '{0}_{1}_{2}_{3}'.format(ori, name, count-1, 'waste')\n\tprint 'Joint name: ', new_name\n\tcurrent_joint.rename(new_name)\n\n\n\n\tprint 'joint chain renamed'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "\tselected_joint_pt = pm.ls(selection=True, dag=True)\n\n\tselected_joint_pt.pop(-1)\n\n\n\tfor priming in selected_joint_pt:\n\n\t\ticon = pm.circle(normal=[1,0,0])[0]\n\t\tprint 'created icon'\n\n\t\tgrp = pm.group()\n\t\tprint 'group created'\n\n\t\ttemp = pm.parentConstraint(priming, grp, maintainOffset=False)\n\n\t\tpm.delete(temp)\n\t\tprint 'removed constraint'\n\n\t\tpm.delete(icon, ch=True)\n\n\t\tprint 'deleted history'\n\n\t\tnew_name = priming.replace('bind', 'icon')\n\t\ticon.rename(new_name)\n\t\tnew_name = priming.replace('bind', 'null')\n\t\tgrp.rename(new_name)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Prim" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Prim" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.705882 0.51997 0.8 
+        -image "pruneCluster.png" 
+        -image1 "pruneCluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "\tselected_joint_pt = pm.ls(selection=True, dag=True)\n\n\tselected_joint_pt.pop(-1)\n\n\n\tfor priming in selected_joint_pt:\n\n\t\ticon = pm.circle(normal=[1,0,0])[0]\n\t\tprint 'created icon'\n\n\t\tgrp = pm.group()\n\t\tprint 'group created'\n\n\t\ttemp = pm.parentConstraint(priming, grp, maintainOffset=False)\n\n\t\tpm.delete(temp)\n\t\tprint 'removed constraint'\n\n\t\tpm.delete(icon, ch=True)\n\n\t\tprint 'deleted history'\n\n\t\tnew_name = priming.replace('bind', 'icon')\n\t\ticon.rename(new_name)\n\t\tnew_name = priming.replace('bind', 'null')\n\t\tgrp.rename(new_name)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "\n\tuser_input = raw_input()\n\n\tselected_icons = pm.ls(selection=True)\n\n\n\tduplicated = pm.duplicate(selected_icons)\n\n\tprint 'duplicated icons'\n\n\tgrp = pm.group(empty=True)\n\tpm.parent(duplicated, grp)\n\tprint 'grouped icons'\n\n\tpm.setAttr(grp + '.s' + user_input, -1)\n\n\n\tprint 'mirrored objects'" 
+        -enableBackground 0
+        -align "center" 
+        -label "Mirr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Mirr" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.705882 0.51997 0.8 
+        -image "mirrorSkinWeight.png" 
+        -image1 "mirrorSkinWeight.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "\n\tuser_input = raw_input()\n\n\tselected_icons = pm.ls(selection=True)\n\n\n\tduplicated = pm.duplicate(selected_icons)\n\n\tprint 'duplicated icons'\n\n\tgrp = pm.group(empty=True)\n\tpm.parent(duplicated, grp)\n\tprint 'grouped icons'\n\n\tpm.setAttr(grp + '.s' + user_input, -1)\n\n\n\tprint 'mirrored objects'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "selected_objects = pm.ls(selection=True)[0]\n\tprint 'objects selected:', selected_objects\n\n\n\tselected_objects.setAttr('overrideEnabled', 1)\n\tprint 'override enabled'\n\n\n\tselected_objects.setAttr('overrideColor', 13)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "Colr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Colr" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.705882 0.51997 0.8 
+        -image "colorPickCursor.png" 
+        -image1 "colorPickCursor.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "selected_objects = pm.ls(selection=True)[0]\n\tprint 'objects selected:', selected_objects\n\n\n\tselected_objects.setAttr('overrideEnabled', 1)\n\tprint 'override enabled'\n\n\n\tselected_objects.setAttr('overrideColor', 13)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

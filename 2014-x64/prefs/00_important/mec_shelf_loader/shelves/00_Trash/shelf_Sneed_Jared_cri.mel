@@ -1,0 +1,116 @@
+global proc shelf_Sneed_Jared_cri () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Hierarchy" 
+        -enableBackground 1
+        -align "center" 
+        -label "Hierarchy" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "HIER" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\n\tprint 'Hierarchy Generated'\n\n\t# The user will select the root joint and the tool\n\t#\twill apply systems\n\n\troot_joint = 'lt_middle_01_bind'\n\tsecond_joint = 'lt_middle_02_bind'\n\tthird_joint = 'lt_middle_03_bind'\n\n\t'''\n\t# Pad root joint.\n\t'''\n\n\t# Create an empty group\n\tpad = pm.group(empty=True, name='lt_middle_00_pad')\n\tprint 'Root Pad Created', pad\n\n\t# Move group to root joint\n\t# Point contrain group to root joint\n\t#\tmaintain offset off (Snapping)\n\tkenny = pm.pointConstraint(root_joint, pad)\n\n\t# Delete Constraint\n\tpm.delete(kenny)\n\n\t# Freeze Transforms\n\tpm.makeIdentity(pad, apply=True, t=1, r=1, s=1, n=0)\n\n\t# Parent root joint to group\n\tpm.parent(root_joint, pad)\n\n\n\n\t# Create a local oriented control for each joint.\n\t# lt_middle_01_bind, lt_middle_02_bind, and lt_middle_03_bind\n\n\n\n\t# First Joint -------------------------------------------------------------------\n\n\t# Create control (Circle)\n\tcontrol_01_icon = pm.circle(name='lt_middle_01_icon', normal=[1,0,0])[0]\n\n\t# Create group (NOT EMPTY)\n\t#\tThis will automatically parent the control under \n\t# \tthe group.\n\troot_local = pm.group(control_01_icon, name='lt_middle_01_local');\n\n\n\t# Move group to the target joint\n\t# Use a Parent constrain driver is the joint\n\t#\tWhere driver is the group\n\t# \tOffset is off (Snapping)\n\tkenny = pm.parentConstraint(root_joint, root_local)\n\t# Delete the constraint \n\tpm.delete(kenny)\n\n\t# Delete History on control\n\tpm.delete(control_01_icon, ch=True)\n\n\t# Orient Constraint driver: control\n\t#\t\t\t\t\tdriven: joint\n\tpm.orientConstraint(control_01_icon, root_joint)\n\n\n\n\t# Second Joint -------------------------------------------------------------------\n\n\t# Create control (Circle)\n\tcontrol_02_icon = pm.circle(name='lt_middle_02_icon', normal=[1,0,0])[0]\n\n\t# Create group (NOT EMPTY)\n\t#\tThis will automatically parent the control under \n\t# \tthe group.\n\tsecond_local = pm.group(control_02_icon, name='lt_middle_02_local');\n\n\n\t# Move group to the target joint\n\t# Use a Parent constrain driver is the joint\n\t#\tWhere driver is the group\n\t# \tOffset is off (Snapping)\n\tkenny = pm.parentConstraint(second_joint, second_local)\n\t# Delete the constraint \n\tpm.delete(kenny)\n\n\t# Delete History on control\n\tpm.delete(control_02_icon, ch=True)\n\n\t# Orient Constraint driver: control\n\t#\t\t\t\t\tdriven: joint\n\tpm.orientConstraint(control_02_icon, second_joint)\n\n\n\t# Third Joint -------------------------------------------------------------------\n\n\t# Create control (Circle)\n\tcontrol_03_icon = pm.circle(name='lt_middle_03_icon', normal=[1,0,0])[0]\n\n\t# Create group (NOT EMPTY)\n\t#\tThis will automatically parent the control under \n\t# \tthe group.\n\tthird_local = pm.group(control_03_icon, name='lt_middle_03_local');\n\n\n\t# Move group to the target joint\n\t# Use a Parent constrain driver is the joint\n\t#\tWhere driver is the group\n\t# \tOffset is off (Snapping)\n\tkenny = pm.parentConstraint(third_joint, third_local)\n\t# Delete the constraint \n\tpm.delete(kenny)\n\n\t# Delete History on control\n\tpm.delete(control_03_icon, ch=True)\n\n\t# Orient Constraint driver: control\n\t#\t\t\t\t\tdriven: joint\n\tpm.orientConstraint(control_03_icon, third_joint)\n\n\t# Pad Parenting -----------------------------------------------------------------\n\n\t# Parent Pads together \n\tpm.parent('lt_middle_03_local', 'lt_middle_02_local');\n\tpm.parent('lt_middle_02_local', 'lt_middle_01_local');" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Rename" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Rename" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NAME" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "kinJoint.png" 
+        -image1 "kinJoint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "joint_chain = pm.ls(selection=True, dag=True)\n\n\tprint 'Selected Items', joint_chain\n\n\t# Build our new name\n\t# 'lt'\n\t# 'arm'\n\t# 01\n\t# 'bind'\n\tori = raw_input()\n\tname = raw_input()\n\tcount = 1\n\tsuffix = 'bind'\n\n\tfor current_joint in joint_chain:\n\t\tnew_name = '{0}_{1}_0{2}_{3}'.format(ori, name, count, suffix)\n\n\t\tprint 'Joint Name', new_name\n\n\t\tcount = count + 1\n\n\t\tcurrent_joint.rename(new_name)\n\n\tnew_name = '{0}_{1}_0{2}_{3}'.format(ori, name, count-1, 'waste')\n\tprint 'Joint Name', new_name\n\tcurrent_joint.rename(new_name)\n\n\n\tprint 'Joint Renamed Active'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Padding" 
+        -enableBackground 0
+        -align "center" 
+        -label "Padding" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PAD" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "selected = pm.ls(selection=True)\n\t# print 'current_slected', selected\n\troot_joint = selected[0]\n\n\t# Create empty group\n\t# empty=True will create empty group\n\tpad =pm.group(empty=True)\n\n\t# move group joint.\n\t#\tand delete constraint\n\tkenny = pm.pointConstraint(root_joint, pad)\n\tpm.delete(kenny)\n\n\t#Freeze Transforms on the group\n\tpm.makeIdentity(pad, apply=True, t=1, r=1, s=1, n=0)\n\n\t# Parent joint to the group\n\tpm.parent(root_joint, pad)\n\n\t# Rename the group\n\tpad_name = root_joint.replace('01_bind', '00_pad')\n\tpad.rename(pad_name)\n\n\n\tprint 'Padding Group Created'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Primer" 
+        -enableBackground 0
+        -align "center" 
+        -label "Primer" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PRIM" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "# Get Selected\n\tselected = pm.ls(selection=True)\n\t# print 'Joint Selected:', selected\n\t# target_joint = selected[0]\n\n\tfor target_joint in selected:\n\t\tcontrol_icon_name = target_joint.replace('_bind', '_icon')\n\t\tlocal_pad_name = target_joint.replace('_bind', '_local')\n\n\t\t# Create control icon\n\t\t\t# Normal set to x\n\t\t\t# Radius set to 1.8\n\t\tcontrol_icon = pm.circle(normal=[1, 0, 0], radius=1.8,\n\t\t\tname=control_icon_name)[0]\n\n\n\t\t# Group icon (Filled)\n\t\tlocal_pad = pm.group(name=local_pad_name)\n\n\n\t\t# Move group to target joint (Snapping)\n\t\t\t# Parent Constrain\n\t\tkenny = pm.parentConstraint(target_joint, local_pad)\n\n\t\t# Delete Constraint\n\t\tpm.delete(kenny)\n\n\t\t# OrientConstrain\n\t\tpm.orientConstraint(control_icon, target_joint)\n\n\n\tprint 'Local Oriented Control Created'" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

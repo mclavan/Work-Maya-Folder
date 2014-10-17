@@ -1,0 +1,18 @@
+# Lists
+
+name = 'Jack'
+#               0            1           2
+#               -3           -2          -1
+inventory = ['apples', 'personality', 'broom']
+
+print '{0} has Inventory: {1}'.format(name, inventory)
+print 'First Item:', inventory[0]
+print 'Last Item:', inventory[-1]
+
+# Appending and Popping
+inventory.append('horse shoe')
+print '{0} has Inventory: {1}'.format(name, inventory)
+
+inventory.pop(0)
+print '{0} has Inventory: {1}'.format(name, inventory)
+

@@ -1,0 +1,446 @@
+global proc shelf_YepesChristopher_Research_cri1_1406 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "this will freeze transformations on selected objects" 
+        -enableBackground 0
+        -align "center" 
+        -label "FT" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.freeze_transforms()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "this will delete history on selected objects" 
+        -enableBackground 0
+        -align "center" 
+        -label "D.HIS" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "D.HIS" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.delete_history()\n\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "this will center pivot on selected objects" 
+        -enableBackground 0
+        -align "center" 
+        -label "CP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.center_pivot()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "this will create an IK Handle tool, DROP MENU: SC- Single Chain, RP-Rotate Plane, right click here to open the menu" 
+        -enableBackground 0
+        -align "center" 
+        -label "IKHT" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IKHT" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "RP" ( "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.ikRPsolver()" )
+        -mip 0
+        -mi "SC" ( "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.ikSCsolver()" )
+        -mip 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "this will create a cluster" 
+        -enableBackground 0
+        -align "center" 
+        -label "CLUS" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CLUS" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.cluster()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "GROUPING : popout MENU - EG= Empty Group, GS= Group Selected, right click here to open the menu" 
+        -enableBackground 0
+        -align "center" 
+        -label "GP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "GP" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+        -mi "EG" ( "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.grouping_empty()" )
+        -mip 0
+        -mi "GS" ( "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.grouping_selected()" )
+        -mip 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "this command will parent two objecst selected in the outliner,\nthis is not a parent constraint!" 
+        -enableBackground 0
+        -align "center" 
+        -label "PAR" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PAR" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.parenting()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "this command will duplicate a selected object" 
+        -enableBackground 0
+        -align "center" 
+        -label "DUPL" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "DUPL" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.duplicating()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This command will create a circle control\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "CIR" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CIR" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.circle()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This command will create a square control\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "SQR" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SQR" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.square()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This command will create a cube control\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "CUBE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CUBE" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.cube()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "This command will create an Arrow control\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "ARRW" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "ARRW" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.arrow()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "this tool will create a parent constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "pCS" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "pCS" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.parent_constraint()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "this tool will create an orient constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "aim" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "oCS" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.aim_constraint()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "this tool will create a point constraint" 
+        -enableBackground 0
+        -align "center" 
+        -label "point" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "point" 
+        -overlayLabelColor 1 0 1 
+        -overlayLabelBackColor 0 0 0 0 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.point_constraint()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "this tool activates the use of a NUCLEAR BOMB meaning that: TRANSFORMATIONS WILL BE FREEZED, HISTORY WILL BE DELETED AND PIVOTS WILL BE CENTERED, in all selected objects. with great power comes great responsibiliti" 
+        -enableBackground 0
+        -align "center" 
+        -label "NUKE" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "NUKE" 
+        -overlayLabelColor 1 0 0 
+        -overlayLabelBackColor 0 0 0 1 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import YepesChristopher_researchNotes\nreload(YepesChristopher_researchNotes)\nYepesChristopher_researchNotes.nuke()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

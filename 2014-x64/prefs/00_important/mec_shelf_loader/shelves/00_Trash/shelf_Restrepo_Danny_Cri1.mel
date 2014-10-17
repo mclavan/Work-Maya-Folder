@@ -1,0 +1,278 @@
+global proc shelf_Restrepo_Danny_Cri1 () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Freeze Transforms" 
+        -enableBackground 0
+        -align "center" 
+        -label "import pymel.core as pm\npm.makeIdentity(apply=True, t=1, r=1, s=..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FRZ" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "snow.png" 
+        -image1 "snow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.makeIdentity(apply=True, t=1, r=1, s=1, n=2)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete History" 
+        -enableBackground 0
+        -align "center" 
+        -label "import pymel.core as pm\npm.delete(ch=True)" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Hist" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "deleteTimeWarp.png" 
+        -image1 "deleteTimeWarp.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.delete(ch=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Center Pivot" 
+        -enableBackground 0
+        -align "center" 
+        -label "import pymel.core as pm\npm.xform(cp=True)" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CPiv" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "create.png" 
+        -image1 "create.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.xform(cp=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "single chain IK" 
+        -enableBackground 0
+        -align "center" 
+        -label "import pymel.core as pm\npm.ikHandle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IK1C" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "geometryToBoundingBox.png" 
+        -image1 "geometryToBoundingBox.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.ikHandle" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Rotate Plane IK" 
+        -enableBackground 0
+        -align "center" 
+        -label "import pymel.core as pm\npm.ikHandle(sol=ikRPsolver)" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RPIK" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "geometryToBoundingBox.png" 
+        -image1 "geometryToBoundingBox.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.ikHandle(sol=ikRPsolver)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "creates Cluster" 
+        -enableBackground 0
+        -align "center" 
+        -label "import pymel.core as pm\npm.cluster" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Clus" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.cluster" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "create nurb circle" 
+        -enableBackground 0
+        -align "center" 
+        -label "import pymel.core as pm\npm.circle(ch=True, object=True, nr=(0,1,..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Circ" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.circle(ch=True, object=True, nr=(0,1,0), r=5)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "create nurbs square" 
+        -enableBackground 0
+        -align "center" 
+        -label "import pymel.core as pm\npm.curve(d=1, p=[(1, 0, 1), (-1, 0, 1), ..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Squa" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.curve(d=1, p=[(1, 0, 1), (-1, 0, 1), (-1, 0, -1), (1, 0, -1), (1, 0, 1)], k=[0,1,2,3,4])" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "create nurbs cube" 
+        -enableBackground 0
+        -align "center" 
+        -label "import pymel.core as pm\npm.curve(d=1, p=[(0.5, -0.5, 0.5), (0.5,..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.curve(d=1, p=[(0.5, -0.5, 0.5), (0.5, 0.5, 0.5), (-0.5, 0.5, 0.5)(-0.5, -0.5, 0.5), (0.5, -0.5, 0.5), (0.5, -0.5, -0.5), (0.5, 0.5, -0.5), (0.5, 0.5, 0.5), (-0.5, 0.5, 0.5), (-0.5, 0.5, -0.5), (0.5, 0.5, -0.5), (0.5, -0.5, -0.5)(-0.5, -0.5, -0.5), (-0.5, 0.5, -0.5), (-0.5, -0.5, 0.5), (-0.5, -0.5, -0.5)], k=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16])" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "create nurbs arrow" 
+        -enableBackground 0
+        -align "center" 
+        -label "import pymel.core as pm\npm.curve(d=1, p=[(3.333333, 0, 0), (0, 0..." 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Arrw" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "undo.png" 
+        -image1 "undo.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\npm.curve(d=1, p=[(3.333333, 0, 0), (0, 0, 3.333333), (0, 0, 1.666667), (-3.333333, 0, 1.666667), (-3.333333, 0, -1.666667), (0, 0, -1.666667), (0, 0, -3.333333), (3.333333, 0, 0)], k=[0,1,2,3,4,5,6,7])" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

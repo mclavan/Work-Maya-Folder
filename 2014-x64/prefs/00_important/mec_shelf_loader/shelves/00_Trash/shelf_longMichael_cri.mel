@@ -1,0 +1,442 @@
+global proc shelf_longMichael_cri () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "improt maya commands, pymel, and mel" 
+        -enableBackground 0
+        -align "center" 
+        -label "Import code libraries" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IMP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\nimport maya.mel as mel\nimport pymel.core as pm" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "SELECT JOINT CHAIN: Joint Rename: User inputs requiered" 
+        -enableBackground 0
+        -align "center" 
+        -label "Joint Rename Tool" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Rename" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\nimport maya.mel as mel\nimport pymel.core as pm\n\nimport jointRenamer\nreload (jointRenamer)\njointRenamer.function()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import maya.cmds as cmds\nimport maya.mel as mel\nimport pymel.core as pm\n\nimport padding\nreload (padding)\npadding.function()" 
+        -enableBackground 0
+        -align "center" 
+        -label "PAD" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PAD" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\nimport maya.mel as mel\nimport pymel.core as pm\n\nimport padding\nreload (padding)\npadding.function()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "NAME JOINTS FIRST  import maya.cmds as cmds\nimport maya.mel as mel\nimport pymel.core as pm\n\nimport priming\nreload (priming)\npriming.function()" 
+        -enableBackground 0
+        -align "center" 
+        -label "PRIME" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PRIME" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\nimport maya.mel as mel\nimport pymel.core as pm\n\nimport priming\nreload (priming)\npriming.function()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "NAME JOINTS FIRST SELECT JOINT CHAIN: Creates controls over an existing joint chain. Then pads the controls and joints to a world group" 
+        -enableBackground 0
+        -align "center" 
+        -label "Hierarchy\n Creator" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "HIR" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\nimport maya.mel as mel\nimport pymel.core as pm\n\nimport hierarchy\nreload (hierarchy)\nhierarchy.function()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "NAME JOINTS FIRST  import maya.cmds as cmds\nimport maya.mel as mel\nimport pymel.core as pm\n\nimport ikfk\nreload (ikfk)\nikfk.function()" 
+        -enableBackground 0
+        -align "center" 
+        -label "IKFK" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "IKFK" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "pythonFamily.png" 
+        -image1 "pythonFamily.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import maya.cmds as cmds\nimport maya.mel as mel\nimport pymel.core as pm\n\nimport ikfk\nreload (ikfk)\nikfk.function()" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create curve circle" 
+        -enableBackground 0
+        -align "center" 
+        -label "curveCircle" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.circle(name = iconName, r=2, normal=[1,0,0])[0]" 
+        -sourceType "python" 
+        -doubleClickCommand "CreateNURBSCircleOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Create curve square" 
+        -enableBackground 0
+        -align "center" 
+        -label "curveSquare" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.curve(d=1, p=[(-1,0,-1),(1,0,-1),(1,0,1),(-1,0,1), (-1,0,-1)])" 
+        -sourceType "python" 
+        -doubleClickCommand "CreateNURBSSquareOptions" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Make selected Red" 
+        -enableBackground 1
+        -align "center" 
+        -label "Red" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Red" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 1 0 0 1 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "\nselected=pm.ls(sl=True)\nfor sel in selected:\n    pm.setAttr(sel+\".overrideEnabled\",1)\n    pm.setAttr(sel+\".overrideColor\",13)\nprint 'Object is now RED'\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Make selected Yellow" 
+        -enableBackground 1
+        -align "center" 
+        -label "Yellow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Yellow" 
+        -overlayLabelColor 1 1 1 
+        -overlayLabelBackColor 1 1 0 0.9 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "selected=pm.ls(sl=True)\nfor sel in selected:\n    pm.setAttr(sel+\".overrideEnabled\",1)\n    pm.setAttr(sel+\".overrideColor\",17)\nprint 'Object is now YELLOW'\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Make selected Blue" 
+        -enableBackground 1
+        -align "center" 
+        -label "Blue" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Blue" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 1 1 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "selected=pm.ls(sl=True)\nfor sel in selected:\n    pm.setAttr(sel+\".overrideEnabled\",1)\n    pm.setAttr(sel+\".overrideColor\",6)\nprint 'Object is now BLUE'\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Freeze Transformations" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.makeIdentity(apply=True)\nprint \"Transforms have been FROZEN.\";" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Select an object(s)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Center Pivot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "menuIconModify.png" 
+        -image1 "menuIconModify.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.xform(centerPivots=True)\nprint \"Poivot has been CENTERED.\";" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "delete History" 
+        -enableBackground 0
+        -align "center" 
+        -label "Delete History" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "HIS" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "print(\"User defined macro\");" 
+        -sourceType "mel" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 37
+        -height 37
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "Delete history, freeze transformations, and centers the pivot.  " 
+        -enableBackground 0
+        -align "center" 
+        -label "Nuke" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Nuke" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "mayaIcon.png" 
+        -image1 "mayaIcon.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "delete_historyButton_Commands()\nfreeze_transformsButton_Commands()\ncenter_pivot_Button_Commands()" 
+        -sourceType "python" 
+        -doubleClickCommand "print \"Nuclear Launch Detected\";\nDeleteAllHistory;\nFreezeTransformations;\nCenterPivot;\nlaunch -web \"http://www.youtube.com/watch?v=3XpImo80neo\";\nprint \"Object has been NUKED\";" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "parent Constraint maintain=one click offset = two clicks" 
+        -enableBackground 0
+        -align "center" 
+        -label "parent Constraint" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PAR" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "commandButton.png" 
+        -image1 "commandButton.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "pm.parentConstraint()" 
+        -sourceType "python" 
+        -doubleClickCommand "pm.parentConstraint(mo=True)" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 

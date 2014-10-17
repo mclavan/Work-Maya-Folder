@@ -1,0 +1,12 @@
+import maya.cmds as cmds
+
+cmds.FBXLoadExportPresetFile
+help(cmds.FBXLoadExportPresetFile)
+pm.mel.eval('FBXLoadExportPresetFile -f "C:/Users/Stephen/Documents/maya/FBX/Presets/2014.1/export/Animation.fbxexportpreset";')
+pm.mel.eval('file -force -options "v=0;" -typ "FBX export" -pr -es "E:/Dropbox/MekTek/HeavyGear/StephenWong/animTest.fbx";')
+
+
+cmds.FBXLoadExportPresetFile(f="C:/Users/Stephen/Documents/maya/FBX/Presets/2014.1/export/Animation.fbxexportpreset")
+cmds.file("E:/Dropbox/MekTek/HeavyGear/StephenWong/animTest.fbx", force=True,
+    options="v=0;", type="FBX export", pr=True, es=True)
+    

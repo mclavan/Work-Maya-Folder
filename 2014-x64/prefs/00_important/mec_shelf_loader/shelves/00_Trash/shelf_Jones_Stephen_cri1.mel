@@ -1,0 +1,467 @@
+global proc shelf_McLean_Aneef_CRI () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm" 
+        -enableBackground 0
+        -align "center" 
+        -label "Clust" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Clust" 
+        -overlayLabelColor 0.758389 0.758389 0.758389 
+        -overlayLabelBackColor 1 0 0 0.8 
+        -image "cluster.png" 
+        -image1 "cluster.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\n\npm.ikHandle( sol = 'ikRPsolver')\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "RPHndl" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "RPHndl" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 1 0 0 0.8 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\n\npm.ikHandle( sol = 'ikRPsolver')\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\n\npm.ikHandle( sol = 'ikSCsolver')\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "SCHndl" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "SCHndl" 
+        -overlayLabelColor 0.825503 0.825503 0.825503 
+        -overlayLabelBackColor 1 0 0 1 
+        -image "kinHandle.png" 
+        -image1 "kinHandle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\n\npm.ikHandle( sol = 'ikSCsolver')\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.delete(selected, ch=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "DelH" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "DelH" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 1 0 0 0.8 
+        -image "deleteActive.png" 
+        -image1 "deleteActive.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.delete(selected, ch=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.makeIdentity(selected, apply=True, t=1, r=1, s=1, n=0)" 
+        -enableBackground 0
+        -align "center" 
+        -label "FrzT" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "FrzT" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 1 0 0 0.8 
+        -image "transformation.png" 
+        -image1 "transformation.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.makeIdentity(selected, apply=True, t=1, r=1, s=1, n=0)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.xform(cp = True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "CtrP" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "CtrP" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 1 0 0 0.8 
+        -image "addSkinInfluence.png" 
+        -image1 "addSkinInfluence.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.xform(cp = True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.circle( nr = (0, 1, 0) )" 
+        -enableBackground 0
+        -align "center" 
+        -label "Crcl" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Crcl" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 1 0.8 
+        -image "circle.png" 
+        -image1 "circle.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.circle( nr = (0, 1, 0) )" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.nurbsSquare( nr = (0, 1, 0) )" 
+        -enableBackground 0
+        -align "center" 
+        -label "Sqre" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Sqre" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 1 0.8 
+        -image "square.png" 
+        -image1 "square.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\nmel_line=\"curve -d 1 -p 0 0 0 -p 0 0 1 -p 1 0 1 -p 1 0 0 -p 0 0 0 -k 0 -k 1 -k 2 -k 3 -k 4 ;\"\npm.mel.eval(mel_line)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.nurbsCube()" 
+        -enableBackground 0
+        -align "center" 
+        -label "Cube" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Cube" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 1 0.8 
+        -image "cube.png" 
+        -image1 "cube.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\nmel_line=\"curve -d 1 -p -0.5 0.5 0.5 -p -0.5 -0.5 0.5 -p -0.5 -0.5 -0.5 -p -0.5 0.5 -0.5 -p -0.5 0.5 0.5 -p 0.5 0.5 0.5 -p 0.5 -0.5 0.5 -p -0.5 -0.5 0.5 -p -0.5 -0.5 -0.5 -p 0.5 -0.5 -0.5 -p 0.5 0.5 -0.5 -p -0.5 0.5 -0.5 -p 0.5 0.5 -0.5 -p 0.5 0.5 0.5 -p 0.5 -0.5 0.5 -p 0.5 -0.5 -0.5 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 -k 8 -k 9 -k 10 -k 11 -k 12 -k 13 -k 14 -k 15 ;\"\npm.mel.eval(mel_line)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\nmel_line=\"curve -d 1 -p -1.193544 0 -0.249049 -p -1.195521 0 0.317346 -p -0.0194022 0 0.347562 -p -0.00778073 0 0.902027 -p 0.837515 0 0.0112026 -p -0.0291822 0 -0.734218 -p -0.0309758 0 -0.22039 -p -1.207121 0 -0.222098 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;\"\n\npm.mel.eval(mel_line)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Arow" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Arow" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 1 0.8 
+        -image "aselect.png" 
+        -image1 "aselect.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\nmel_line=\"curve -d 1 -p -1.193544 0 -0.249049 -p -1.195521 0 0.317346 -p -0.0194022 0 0.347562 -p -0.00778073 0 0.902027 -p 0.837515 0 0.0112026 -p -0.0291822 0 -0.734218 -p -0.0309758 0 -0.22039 -p -1.207121 0 -0.222098 -k 0 -k 1 -k 2 -k 3 -k 4 -k 5 -k 6 -k 7 ;\"\n\npm.mel.eval(mel_line)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.parentConstraint(selected, maintainOffset = False)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "PrtC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PrtC" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.4 0 0.8 
+        -image "parentConstraint.png" 
+        -image1 "parentConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.parentConstraint(selected, maintainOffset = False)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.orientConstraint(selected, maintainOffset = False)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "OrtC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "OrtC" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.4 0 0.8 
+        -image "orientConstraint.png" 
+        -image1 "orientConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.orientConstraint(selected, maintainOffset = False)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.pointConstraint(selected, maintainOffset = False)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "PntC" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PntC" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.4 0 0.8 
+        -image "pointOnPolyConstraint.png" 
+        -image1 "pointOnPolyConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.pointConstraint(selected, maintainOffset = False)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.poleVectorConstraint(selected)\n" 
+        -enableBackground 0
+        -align "center" 
+        -label "PlVr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "PlVr" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0.4 0 0.8 
+        -image "poleVectorConstraint.png" 
+        -image1 "poleVectorConstraint.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nprint 'current Selected', selected\n\npm.poleVectorConstraint(selected)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'current Selected', selected\n\nfirst_selected.addAttr('FINGERS', keyable=True, at='enum', en=\"----------------------:\")\nfirst_selected.FINGERS.set(lock=True)\nfirst_selected.addAttr('CURL', keyable=True, at='enum', en=\"----------------------:\")\nfirst_selected.CURL.set(lock=True)\nfirst_selected.addAttr('index_curl', keyable=True)\nfirst_selected.addAttr('middle_curl', keyable=True)\nfirst_selected.addAttr('pinky_curl', keyable=True)\n\nfirst_selected.addAttr('SPREAD', keyable=True, at='enum', en=\"----------------------:\")\nfirst_selected.SPREAD.set(lock=True)\nfirst_selected.addAttr('index_spread', keyable=True)\nfirst_selected.addAttr('middle_spread', keyable=True)\nfirst_selected.addAttr('pinky_spread', keyable=True)\n\nfirst_selected.addAttr('THUMB', keyable=True, at='enum', en=\"----------------------:\")\nfirst_selected.THUMB.set(lock=True)\nfirst_selected.addAttr('thumb_spread', keyable=True)\nfirst_selected.addAttr('thumb_curl', keyable=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Temp" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Temp" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.443 0 0.443 0.8 
+        -image "templateBrushSettings.png" 
+        -image1 "templateBrushSettings.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'current Selected', selected\n\nfirst_selected.addAttr('FINGERS', keyable=True, at='enum', en=\"----------------------:\")\nfirst_selected.FINGERS.set(lock=True)\nfirst_selected.addAttr('CURL', keyable=True, at='enum', en=\"----------------------:\")\nfirst_selected.CURL.set(lock=True)\nfirst_selected.addAttr('index_curl', keyable=True)\nfirst_selected.addAttr('middle_curl', keyable=True)\nfirst_selected.addAttr('pinky_curl', keyable=True)\n\nfirst_selected.addAttr('SPREAD', keyable=True, at='enum', en=\"----------------------:\")\nfirst_selected.SPREAD.set(lock=True)\nfirst_selected.addAttr('index_spread', keyable=True)\nfirst_selected.addAttr('middle_spread', keyable=True)\nfirst_selected.addAttr('pinky_spread', keyable=True)\n\nfirst_selected.addAttr('THUMB', keyable=True, at='enum', en=\"----------------------:\")\nfirst_selected.THUMB.set(lock=True)\nfirst_selected.addAttr('thumb_spread', keyable=True)\nfirst_selected.addAttr('thumb_curl', keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'current Selected', selected\n\nfirst_selected.addAttr('FINGERS', keyable=True, at='enum', en=\"----------------------:\")\nfirst_selected.FINGERS.set(lock=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Sptr" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Sptr" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.443 0 0.443 0.8 
+        -image "sepCell.png" 
+        -image1 "sepCell.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'current Selected', selected\n\nfirst_selected.addAttr('FINGERS', keyable=True, at='enum', en=\"----------------------:\")\nfirst_selected.FINGERS.set(lock=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -annotation "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'current Selected', selected\n\nfirst_selected.addAttr('index_curl', keyable=True)\nfirst_selected.addAttr('middle_curl', keyable=True)\nfirst_selected.addAttr('pinky_curl', keyable=True)" 
+        -enableBackground 0
+        -align "center" 
+        -label "Flot" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -imageOverlayLabel "Flot" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0.443 0 0.443 0.8 
+        -image "flow.png" 
+        -image1 "flow.png" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pymel.core as pm\n\nselected = pm.ls(selection=True)\nfirst_selected = selected[0]\nprint 'current Selected', selected\n\nfirst_selected.addAttr('index_curl', keyable=True)\nfirst_selected.addAttr('middle_curl', keyable=True)\nfirst_selected.addAttr('pinky_curl', keyable=True)" 
+        -sourceType "python" 
+        -commandRepeatable 1
+        -flat 1
+    ;
+
+} 
